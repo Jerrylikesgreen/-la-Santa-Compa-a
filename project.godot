@@ -1,0 +1,18 @@
+config_version=5
+
+[application]
+
+config/name="la Santa Compaña"
+config/version="0.01"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="uid://dn3scpw51q8ah"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Autoloads/": "orange",
+"res://Resources/": "yellow",
+"res://Scenes/": "green",
+"res://Scripts/": "purple"
+}
