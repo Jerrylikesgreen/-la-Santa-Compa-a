@@ -3,7 +3,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrh88"]
 bg_color = Color(0.36078432, 0.29803923, 0.29803923, 1)
 border_width_bottom = 5
-border_color = Color(0.40392157, 0.22352941, 0.22352941, 0.78431374)
+border_color = Color(0.30588236, 0, 0, 0.6)
 
 [resource]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_vrh88")

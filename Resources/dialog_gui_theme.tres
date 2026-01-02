@@ -1,4 +1,23 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dc834v3v77k4d"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dc834v3v77k4d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6b74"]
+bg_color = Color(0.24705882, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6235835, 0.5375183, 0.5373169, 0.6313726)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2tia"]
+bg_color = Color(0.40392157, 0.22352941, 0.22352941, 0.74509805)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyy7d"]
 bg_color = Color(0.40392157, 0.22352941, 0.22352941, 0.78431374)
@@ -27,8 +46,13 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+expand_margin_bottom = 2.0
 
 [resource]
+Button/styles/normal = SubResource("StyleBoxFlat_u6b74")
+Button/styles/pressed = SubResource("StyleBoxFlat_i2tia")
+HBoxContainer/constants/separation = 6
 Panel/styles/panel = SubResource("StyleBoxFlat_tyy7d")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_lxn2k")
 RichTextLabel/styles/background = null
+VBoxContainer/constants/separation = 3
