@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckq03dinbdt6a"]
+
+[ext_resource type="Texture2D" uid="uid://deeppxlem3yt0" path="res://Assets/Background/background_test.png" id="1_3dogw"]
+
+[sub_resource type="Theme" id="Theme_3dogw"]
+
+[node name="TestScene" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3dogw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_3dogw")
+expand_mode = 1
