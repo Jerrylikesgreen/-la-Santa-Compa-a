@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://jwv8wc12q1j"]
+[gd_scene load_steps=5 format=3 uid="uid://jwv8wc12q1j"]
 
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/dialog_gui_theme.tres" id="1_t61ho"]
 [ext_resource type="Theme" uid="uid://bd0l6ql83cnxo" path="res://Resources/OutputTextTheme.tres" id="3_0kst1"]
+[ext_resource type="Texture2D" uid="uid://07d6gitjwo1s" path="res://Assets/Gui/Knife Man Color Palette - color-hex.com.png" id="3_7ydem"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0kst1"]
 
@@ -15,7 +16,7 @@ anchor_bottom = 1.0
 offset_left = 15.0
 offset_top = -3.0517578e-05
 offset_right = -17.0
-offset_bottom = -2.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -48,21 +49,25 @@ theme = ExtResource("1_t61ho")
 [node name="HideButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
 text = "Hide Dialog"
 
 [node name="NextButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
 text = "Next"
 
 [node name="SkipButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
 text = "Skip"
 
 [node name="AutoButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
 text = "Auto"
 
 [node name="SpeakerNameLabel" type="Label" parent="."]
@@ -83,3 +88,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="KnifeManColorPaletteColorHex_com" type="Sprite2D" parent="."]
+position = Vector2(1429, 365)
+scale = Vector2(0.2822222, 0.25666666)
+texture = ExtResource("3_7ydem")
