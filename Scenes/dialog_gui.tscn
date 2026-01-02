@@ -1,8 +1,77 @@
-[gd_scene format=3 uid="uid://jwv8wc12q1j"]
+[gd_scene load_steps=4 format=3 uid="uid://jwv8wc12q1j"]
+
+[ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/dialog_gui_theme.tres" id="1_t61ho"]
+[ext_resource type="Theme" uid="uid://bd0l6ql83cnxo" path="res://Resources/OutputTextTheme.tres" id="3_0kst1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kst1"]
 
 [node name="DialogGui" type="CanvasLayer"]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="DialogContainer" type="PanelContainer" parent="."]
+offset_top = 484.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme = ExtResource("1_t61ho")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogContainer"]
+layout_mode = 2
+
+[node name="TextOutputContainer" type="PanelContainer" parent="DialogContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_0kst1")
+
+[node name="TextOutput" type="RichTextLabel" parent="DialogContainer/VBoxContainer/TextOutputContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "fsdfsdfsfsdfsdfdsfdsfdsf
+Dialog Test "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogOptions" type="HBoxContainer" parent="DialogContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.5
+
+[node name="HideButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Hide Dialog"
+
+[node name="NextButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Next"
+
+[node name="SkipButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Skip"
+
+[node name="AutoButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Auto"
+
+[node name="SpeakerNameLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 455.0
+offset_right = 75.0
+offset_bottom = 478.0
+size_flags_horizontal = 0
+theme = ExtResource("1_t61ho")
+text = "Speaker Name"
+label_settings = SubResource("LabelSettings_0kst1")
+
+[node name="Panel" type="Panel" parent="SpeakerNameLabel"]
+z_index = -1
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
