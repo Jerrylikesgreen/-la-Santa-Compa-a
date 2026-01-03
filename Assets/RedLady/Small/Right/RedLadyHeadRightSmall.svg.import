@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsg7kfgx2ugjd"
-path="res://.godot/imported/red_lady_shoe_small.svg-61ff3bbd279af135dfb329b62eb9f57e.ctex"
+uid="uid://cjtl0shdgdfe6"
+path="res://.godot/imported/RedLadyHeadRightSmall.svg-a029517e90acd5ea89554ff2988a8dc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RedLady/Small/red_lady_shoe_small.svg"
-dest_files=["res://.godot/imported/red_lady_shoe_small.svg-61ff3bbd279af135dfb329b62eb9f57e.ctex"]
+source_file="res://Assets/RedLady/Small/Right/RedLadyHeadRightSmall.svg"
+dest_files=["res://.godot/imported/RedLadyHeadRightSmall.svg-a029517e90acd5ea89554ff2988a8dc7.ctex"]
 
 [params]
 

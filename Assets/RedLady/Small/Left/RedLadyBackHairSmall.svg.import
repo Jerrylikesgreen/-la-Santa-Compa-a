@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6ndi8dwwjsjr"
-path="res://.godot/imported/RedLadyBackHairSmall.svg-8f11b56a4eef1d662626bef7af56e3b6.ctex"
+path="res://.godot/imported/RedLadyBackHairSmall.svg-34389d1bbde982dd658ab1f1cdbb5221.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RedLady/Small/RedLadyBackHairSmall.svg"
-dest_files=["res://.godot/imported/RedLadyBackHairSmall.svg-8f11b56a4eef1d662626bef7af56e3b6.ctex"]
+source_file="res://Assets/RedLady/Small/Left/RedLadyBackHairSmall.svg"
+dest_files=["res://.godot/imported/RedLadyBackHairSmall.svg-34389d1bbde982dd658ab1f1cdbb5221.ctex"]
 
 [params]
 

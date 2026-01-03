@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1x764qxfolbw"
-path="res://.godot/imported/Hands Small.svg-de96e9b88d7157f7a6f875174c0a5121.ctex"
+uid="uid://q3ksys8llb74"
+path="res://.godot/imported/RedLadyFrontHairRightSmall.svg-49c5e8e91baff5932d60614f715dd235.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RedLady/Small/Hands Small.svg"
-dest_files=["res://.godot/imported/Hands Small.svg-de96e9b88d7157f7a6f875174c0a5121.ctex"]
+source_file="res://Assets/RedLady/Small/Right/RedLadyFrontHairRightSmall.svg"
+dest_files=["res://.godot/imported/RedLadyFrontHairRightSmall.svg-49c5e8e91baff5932d60614f715dd235.ctex"]
 
 [params]
 

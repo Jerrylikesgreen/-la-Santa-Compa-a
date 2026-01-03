@@ -38,4 +38,4 @@ func play_animation(moving: bool) -> void:
 
 	if anim.current_animation != anim_name:
 		print(anim_name)
-		#anim.play(anim_name)
+		anim.play(anim_name)
