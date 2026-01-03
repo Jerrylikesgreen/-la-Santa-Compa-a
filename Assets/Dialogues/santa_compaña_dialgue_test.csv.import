@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bku8cy3j4m6vo"
+valid=false
+
+[deps]
+
+source_file="res://Assets/Dialogues/santa_compaña_dialgue_test.csv"
+
+[params]
+
+compress=true
+delimiter=0

@@ -59,6 +59,10 @@ Enter={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Assets/Dialogues/santa_compaña_dialgue_test.en.translation", "res://Assets/Dialogues/santa_compaña_dialgue_test.es.translation", "res://Assets/Dialogues/santa_compaña_dialgue_test.gl.translation")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=2
