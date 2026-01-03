@@ -4,8 +4,16 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @onready var anim: AnimationPlayer = %AnimationPlayer
 
+
+
 var front_facing := true
 var facing_left := true
+
+
+
+func _on_body_entered()->void:
+	print("Enterd")
+
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO

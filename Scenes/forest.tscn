@@ -1,3 +1,65 @@
-[gd_scene format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=5 format=3 uid="uid://byqulbln575fs"]
+
+[ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/bush.tscn" id="1_uee5o"]
+[ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://tree_small.tscn" id="2_8hnfc"]
+[ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/tree_large.tscn" id="3_5ip0q"]
+[ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/player.tscn" id="4_5ip0q"]
 
 [node name="Forest" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.44313726, 0.12156863, 1)
+
+[node name="MobsContainer" type="Node2D" parent="."]
+
+[node name="Player" parent="MobsContainer" instance=ExtResource("4_5ip0q")]
+
+[node name="EnviormentContainer" type="Node2D" parent="."]
+
+[node name="TreeLarge3" parent="EnviormentContainer" instance=ExtResource("3_5ip0q")]
+position = Vector2(347, 460)
+
+[node name="Bushes" type="Node2D" parent="EnviormentContainer"]
+
+[node name="Bush" parent="EnviormentContainer/Bushes" instance=ExtResource("1_uee5o")]
+position = Vector2(966, 158)
+
+[node name="Bush2" parent="EnviormentContainer/Bushes" instance=ExtResource("1_uee5o")]
+position = Vector2(405, 168)
+
+[node name="Bush3" parent="EnviormentContainer/Bushes" instance=ExtResource("1_uee5o")]
+position = Vector2(146, 415)
+
+[node name="Bush4" parent="EnviormentContainer/Bushes" instance=ExtResource("1_uee5o")]
+position = Vector2(758, 544)
+
+[node name="Trees" type="Node2D" parent="EnviormentContainer"]
+
+[node name="TreeSmall" parent="EnviormentContainer/Trees" instance=ExtResource("2_8hnfc")]
+position = Vector2(97, 73)
+
+[node name="TreeSmall2" parent="EnviormentContainer/Trees" instance=ExtResource("2_8hnfc")]
+position = Vector2(137, 98)
+
+[node name="TreeSmall3" parent="EnviormentContainer/Trees" instance=ExtResource("2_8hnfc")]
+position = Vector2(538, 113)
+
+[node name="TreeSmall4" parent="EnviormentContainer/Trees" instance=ExtResource("2_8hnfc")]
+position = Vector2(564, 117)
+
+[node name="TreeSmall5" parent="EnviormentContainer/Trees" instance=ExtResource("2_8hnfc")]
+position = Vector2(512, 117)
+
+[node name="TreeLarge" parent="EnviormentContainer/Trees" instance=ExtResource("3_5ip0q")]
+position = Vector2(755, -19)
+
+[node name="TreeLarge2" parent="EnviormentContainer/Trees" instance=ExtResource("3_5ip0q")]
+position = Vector2(1038, 446)
