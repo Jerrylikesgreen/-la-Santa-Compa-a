@@ -24,3 +24,7 @@ folder_colors={
 "res://Scenes/": "green",
 "res://Scripts/": "purple"
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=2
