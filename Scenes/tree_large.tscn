@@ -106,7 +106,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_niuhb"]
-size = Vector2(68, 66)
+size = Vector2(72, 46)
 
 [node name="TreeLarge" type="Node2D"]
 
@@ -133,5 +133,5 @@ autoplay = "Idle"
 collision_layer = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TreeBody"]
-position = Vector2(0, 52)
+position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_niuhb")
