@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://jwv8wc12q1j"]
+[gd_scene load_steps=5 format=3 uid="uid://jwv8wc12q1j"]
 
+[ext_resource type="Script" uid="uid://bwt6af5pu0b3r" path="res://dialog_system.gd" id="1_0kst1"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/dialog_gui_theme.tres" id="1_t61ho"]
 [ext_resource type="Theme" uid="uid://bd0l6ql83cnxo" path="res://Resources/OutputTextTheme.tres" id="3_0kst1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0kst1"]
 
 [node name="DialogGui" type="CanvasLayer"]
+script = ExtResource("1_0kst1")
 
 [node name="DialogContainer" type="PanelContainer" parent="."]
 anchors_preset = -1
@@ -46,6 +48,7 @@ size_flags_stretch_ratio = 0.5
 theme = ExtResource("1_t61ho")
 
 [node name="HideButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 theme = ExtResource("1_t61ho")
@@ -58,12 +61,14 @@ theme = ExtResource("1_t61ho")
 text = "Next"
 
 [node name="SkipButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 theme = ExtResource("1_t61ho")
 text = "Skip"
 
 [node name="AutoButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 theme = ExtResource("1_t61ho")
