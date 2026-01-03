@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bk267ky1rjels" path="res://Assets/Enviorment/Bush1.svg" id="1_8cy4n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8cy4n"]
-radius = 40.024994
+radius = 30.016663
 
 [sub_resource type="Animation" id="Animation_8cy4n"]
 resource_name = "Idle"
@@ -120,7 +120,7 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BushBody"]
-position = Vector2(3, 5)
+position = Vector2(7, 23)
 shape = SubResource("CircleShape2D_8cy4n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

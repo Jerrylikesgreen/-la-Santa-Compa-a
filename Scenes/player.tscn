@@ -15,8 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://byk27f8c66v65" path="res://Assets/RedLady/Small/Right/red_lady_shoe__right_small.svg" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dq1bqngyjsq27" path="res://Assets/RedLady/Small/Right/RedLadyBackHairRight.svg" id="14_7dp3o"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fkybt"]
-radius = 31.400637
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dp3o"]
+radius = 26.0
+height = 94.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x3wgy"]
 load_path = "res://.godot/imported/RedLadyBackHairSmall.svg-8f11b56a4eef1d662626bef7af56e3b6.ctex"
@@ -2858,8 +2859,8 @@ script = ExtResource("1_3smsa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true
-position = Vector2(515, 408)
-shape = SubResource("CircleShape2D_fkybt")
+position = Vector2(515, 398)
+shape = SubResource("CapsuleShape2D_7dp3o")
 
 [node name="VisualRoot" type="Node2D" parent="PlayerBody"]
 
