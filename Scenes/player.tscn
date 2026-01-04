@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://csvilirrsotay"]
+[gd_scene load_steps=30 format=3 uid="uid://csvilirrsotay"]
 
 [ext_resource type="Script" uid="uid://byeotvtet8m7a" path="res://Scripts/player_body.gd" id="1_3smsa"]
 [ext_resource type="Script" uid="uid://clxmsn8p1dfai" path="res://Scripts/player.gd" id="1_h4iuc"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://byk27f8c66v65" path="res://Assets/RedLady/Small/Right/red_lady_shoe__right_small.svg" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dq1bqngyjsq27" path="res://Assets/RedLady/Small/Right/RedLadyBackHairRight.svg" id="14_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="16_fd4e3"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fd4e3"]
+polygon = PackedVector2Array(524, 442, 525, 427, 532, 420, 520, 407, 523, 397, 519, 389, 529, 383, 532, 373, 527, 362, 518, 359, 507, 364, 504, 373, 508, 383, 514, 387, 509, 398, 512, 408, 500, 419, 507, 425, 505, 433, 505, 444)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dp3o"]
 radius = 26.0
@@ -2858,8 +2861,12 @@ script = ExtResource("1_h4iuc")
 
 [node name="PlayerBody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
+z_index = 1
 collision_mask = 6
 script = ExtResource("1_3smsa")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="PlayerBody"]
+occluder = SubResource("OccluderPolygon2D_fd4e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true
@@ -2948,6 +2955,27 @@ polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), 
 bones = ["BodyCore", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop", PackedFloat32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop/FrontHairLeftMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop/FrontHairLeftMiddle/FrontHairLeftEnd", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0), "BodyCore/BodyTop/Head/FrontHairRightTop", PackedFloat32Array(0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1), "BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle/FrontHairRightEnd", PackedFloat32Array(0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/BackHair", PackedFloat32Array(1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1), "BodyCore/BodyTop/HandRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/HandLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom/ShoeLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom/ShoeRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 6
 
+[node name="PlaceholderLampRight" type="Polygon2D" parent="PlayerBody/VisualRoot/Left"]
+position = Vector2(513, 413)
+scale = Vector2(0.18992244, 0.18992244)
+color = Color(0.15070069, 0.1337299, 0.059832603, 1)
+polygon = PackedVector2Array(-199.5, -12, -157.18301, -59.584934, -114.767944, -60, -70.5, -11, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -13)
+uv = PackedVector2Array(-195.5, -9, -166.5, -53, -108.5, -54, -74.5, -13, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -15)
+
+[node name="PointLight2D" type="PointLight2D" parent="PlayerBody/VisualRoot/Left/PlaceholderLampRight"]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-136.8981, -5.265414)
+color = Color(1, 1, 1, 0.8392157)
+energy = 0.5
+range_z_max = 0
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 40.0
+texture = ExtResource("16_fd4e3")
+texture_scale = 10.0
+height = 794.0
+
 [node name="Right" type="Node2D" parent="PlayerBody/VisualRoot"]
 
 [node name="HandsRightSmall" type="Polygon2D" parent="PlayerBody/VisualRoot/Right"]
@@ -3026,6 +3054,27 @@ uv = PackedVector2Array(31, 0, 10.6, 0, 0, 5.7, 0, 47, 7.3, 46, 11.4, 46, 13.4, 
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), PackedInt32Array(14, 3, 4, 6, 15), PackedInt32Array(14, 13, 20, 6, 15), PackedInt32Array(13, 20, 19), PackedInt32Array(13, 7, 8, 18, 16), PackedInt32Array(17, 16, 18, 8, 9, 10)]
 bones = ["BodyCore", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop/FrontHairLeftMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairLeftTop/FrontHairLeftMiddle/FrontHairLeftEnd", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairRightTop", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle/FrontHairRightEnd", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/Head/BackHair", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "BodyCore/BodyTop/HandRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyTop/HandLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom/ShoeLeft", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "BodyCore/BodyBottom/ShoeRight", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 9
+
+[node name="PlaceholderLampLeft" type="Polygon2D" parent="PlayerBody/VisualRoot/Right"]
+position = Vector2(568, 412)
+scale = Vector2(0.18992244, 0.18992244)
+color = Color(0.15070069, 0.1337299, 0.059832603, 1)
+polygon = PackedVector2Array(-199.5, -12, -157.18301, -59.584934, -114.767944, -60, -70.5, -11, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -13)
+uv = PackedVector2Array(-195.5, -9, -166.5, -53, -108.5, -54, -74.5, -13, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -15)
+
+[node name="PointLight2D" type="PointLight2D" parent="PlayerBody/VisualRoot/Right/PlaceholderLampLeft"]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-136.8981, -5.265414)
+color = Color(1, 1, 1, 0.8392157)
+energy = 0.5
+range_z_max = 0
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 7.6
+texture = ExtResource("16_fd4e3")
+texture_scale = 10.0
+height = 794.0
 
 [node name="Skeleton2D" type="Skeleton2D" parent="PlayerBody/VisualRoot"]
 modulate = Color(1, 1, 1, 0.23921569)
@@ -3108,20 +3157,6 @@ rest = Transform2D(1, 0, 0, 1, -2, 16)
 
 [node name="PlayerPosition" type="Marker2D" parent="PlayerBody"]
 position = Vector2(515, 406)
-
-[node name="PlaceholderLamp" type="Polygon2D" parent="PlayerBody"]
-position = Vector2(584.00006, 416.00003)
-scale = Vector2(0.18992244, 0.18992244)
-color = Color(0.15070069, 0.1337299, 0.059832603, 1)
-polygon = PackedVector2Array(-199.5, -12, -157.18301, -59.584934, -114.767944, -60, -70.5, -11, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -13)
-uv = PackedVector2Array(-195.5, -9, -166.5, -53, -108.5, -54, -74.5, -13, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -15)
-
-[node name="PointLight2D" type="PointLight2D" parent="PlayerBody/PlaceholderLamp"]
-position = Vector2(-136.89844, 15.795654)
-scale = Vector2(8, 8)
-color = Color(1, 1, 1, 0.8392157)
-energy = 0.5
-texture = ExtResource("16_fd4e3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

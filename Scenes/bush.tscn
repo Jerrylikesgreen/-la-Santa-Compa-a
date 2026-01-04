@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxsrwakxllvjb"]
+[gd_scene load_steps=7 format=3 uid="uid://dxsrwakxllvjb"]
 
 [ext_resource type="Texture2D" uid="uid://bk267ky1rjels" path="res://Assets/Enviorment/Bush1.svg" id="1_8cy4n"]
 
@@ -107,9 +107,13 @@ _data = {
 &"RESET": SubResource("Animation_28u5p")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tld8b"]
+polygon = PackedVector2Array(-9, 53, 28, 50, 38, 39, 52, 31, 47, -8, 28, -27, -2, -34, -15, -25, -30, -22, -36, -6, -42, 4, -39, 16, -39, 33, -24, 45)
+
 [node name="Bush" type="Node2D"]
 
 [node name="BushSprite" type="Polygon2D" parent="."]
+z_index = 1
 position = Vector2(-47.988106, -38.04282)
 texture = ExtResource("1_8cy4n")
 polygon = PackedVector2Array(80.663124, 1.8580399, 62, -1, 35.663124, -0.3419609, 29.163124, 5.2580376, 26.863125, 4.658039, 23.163124, 4.658039, 17.163124, 7.658039, 14.663124, 7.658039, 10.663124, 12.658039, 9.263123, 12.658039, 4.663124, 26.35804, 4.663124, 29.65804, -0.03687668, 33.65804, -0.33687592, 53.45804, -0.23687744, 54.35804, -0.33687592, 74.45804, 0.6631241, 76.158035, 0.6631241, 78.658035, 10.663124, 85.558044, 10.663124, 87.658035, 24.063124, 87.658035, 31.863125, 92.658035, 74.563126, 92.658035, 96.163124, 79.658035, 98.663124, 79.658035, 103.663124, 72.658035, 103.663124, 28.35804, 101.663124, 25.058039, 101.663124, 22.65804, 91.36312, 14.658039, 88.86312, 14.658039, 86.663124, 10.158039, 86.663124, 7.5580406, 80.663124, 3.5580406)
@@ -128,3 +132,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_28u5p")
 }
 autoplay = "Idle"
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+z_index = 2
+occluder = SubResource("OccluderPolygon2D_tld8b")
