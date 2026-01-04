@@ -1,26 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=6 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/bush.tscn" id="1_uee5o"]
 [ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://tree_small.tscn" id="2_8hnfc"]
+[ext_resource type="Script" uid="uid://bituivhn4dln4" path="res://Scripts/player_spawn_point.gd" id="2_u53w3"]
 [ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/tree_large.tscn" id="3_5ip0q"]
-[ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/player.tscn" id="4_5ip0q"]
+[ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="5_u53w3"]
 
 [node name="Forest" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -10
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1152, 648)
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.11764706, 0.44313726, 0.12156863, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+z_index = -12
+texture_repeat = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_u53w3")
+centered = false
+region_enabled = true
+region_rect = Rect2(18.156494, 22.45279, 2307.367, 1829.2137)
 
-[node name="MobsContainer" type="Node2D" parent="."]
-
-[node name="Player" parent="MobsContainer" instance=ExtResource("4_5ip0q")]
+[node name="PlayerSpawnPoint" type="Node2D" parent="."]
+script = ExtResource("2_u53w3")
 
 [node name="EnviormentContainer" type="Node2D" parent="."]
 
@@ -63,3 +64,8 @@ position = Vector2(755, -19)
 
 [node name="TreeLarge2" parent="EnviormentContainer/Trees" instance=ExtResource("3_5ip0q")]
 position = Vector2(1038, 446)
+
+[node name="WorldLight" type="DirectionalLight2D" parent="."]
+energy = 0.9
+blend_mode = 1
+shadow_enabled = true

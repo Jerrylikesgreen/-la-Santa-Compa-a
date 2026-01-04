@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://csvilirrsotay"]
+[gd_scene load_steps=29 format=3 uid="uid://csvilirrsotay"]
 
 [ext_resource type="Script" uid="uid://byeotvtet8m7a" path="res://Scripts/player_body.gd" id="1_3smsa"]
+[ext_resource type="Script" uid="uid://clxmsn8p1dfai" path="res://Scripts/player.gd" id="1_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://d1x764qxfolbw" path="res://Assets/RedLady/Small/Left/Hands Small.svg" id="1_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dgfrpwwyje3nm" path="res://Assets/RedLady/Small/Left/RedLadyBodySmall.svg" id="3_8erm5"]
 [ext_resource type="Texture2D" uid="uid://e77j07k7yqag" path="res://Assets/RedLady/Small/Left/RedLadyFrontHairSmall.svg" id="4_f1ek2"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://q3ksys8llb74" path="res://Assets/RedLady/Small/Right/RedLadyFrontHairRightSmall.svg" id="11_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://byk27f8c66v65" path="res://Assets/RedLady/Small/Right/red_lady_shoe__right_small.svg" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dq1bqngyjsq27" path="res://Assets/RedLady/Small/Right/RedLadyBackHairRight.svg" id="14_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="16_fd4e3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dp3o"]
 radius = 26.0
@@ -2852,8 +2854,10 @@ _data = {
 }
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_h4iuc")
 
 [node name="PlayerBody" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
 collision_mask = 6
 script = ExtResource("1_3smsa")
 
@@ -3102,8 +3106,22 @@ position = Vector2(-2, 16)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(1, 0, 0, 1, -2, 16)
 
-[node name="Camera2D" type="Camera2D" parent="PlayerBody"]
-position = Vector2(578, 327)
+[node name="PlayerPosition" type="Marker2D" parent="PlayerBody"]
+position = Vector2(515, 406)
+
+[node name="PlaceholderLamp" type="Polygon2D" parent="PlayerBody"]
+position = Vector2(584.00006, 416.00003)
+scale = Vector2(0.18992244, 0.18992244)
+color = Color(0.15070069, 0.1337299, 0.059832603, 1)
+polygon = PackedVector2Array(-199.5, -12, -157.18301, -59.584934, -114.767944, -60, -70.5, -11, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -13)
+uv = PackedVector2Array(-195.5, -9, -166.5, -53, -108.5, -54, -74.5, -13, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -15)
+
+[node name="PointLight2D" type="PointLight2D" parent="PlayerBody/PlaceholderLamp"]
+position = Vector2(-136.89844, 15.795654)
+scale = Vector2(8, 8)
+color = Color(1, 1, 1, 0.8392157)
+energy = 0.5
+texture = ExtResource("16_fd4e3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
