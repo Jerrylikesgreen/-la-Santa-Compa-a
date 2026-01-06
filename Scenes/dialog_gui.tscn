@@ -1,11 +1,268 @@
-[gd_scene load_steps=4 format=3 uid="uid://jwv8wc12q1j"]
+[gd_scene load_steps=18 format=3 uid="uid://jwv8wc12q1j"]
 
+[ext_resource type="Script" uid="uid://bwt6af5pu0b3r" path="res://dialog_system.gd" id="1_0kst1"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/dialog_gui_theme.tres" id="1_t61ho"]
-[ext_resource type="Theme" uid="uid://bd0l6ql83cnxo" path="res://Resources/OutputTextTheme.tres" id="3_0kst1"]
+[ext_resource type="AudioStream" uid="uid://dbc2d8xebnk8a" path="res://Assets/Sounds/sans_sound_placeholder.mp3" id="4_7ydem"]
+[ext_resource type="Texture2D" uid="uid://dn3scpw51q8ah" path="res://icon.svg" id="4_opk4c"]
+
+[sub_resource type="Animation" id="Animation_ifq3v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpeakerNameLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogContainer/EndLine:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_53n05"]
+resource_name = "end_line"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogContainer/EndLine:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_86ohs"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("SpeakerNameLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("DialogContainer/EndLine:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_as34n"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpeakerNameLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7oimb"]
+resource_name = "idle"
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_opk4c"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_hhnlu"]
+resource_name = "show_name"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7oimb"]
+_data = {
+&"RESET": SubResource("Animation_ifq3v"),
+&"end_line": SubResource("Animation_53n05"),
+&"fade_in": SubResource("Animation_86ohs"),
+&"fade_out": SubResource("Animation_as34n"),
+&"idle": SubResource("Animation_7oimb"),
+&"new_animation": SubResource("Animation_opk4c"),
+&"show_name": SubResource("Animation_hhnlu")
+}
+
+[sub_resource type="Animation" id="Animation_3fvow"]
+resource_name = "show_name"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpeakerNameLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ht2jx"]
+resource_name = "hide_name"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpeakerNameLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_5dtf6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpeakerNameLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5dtf6"]
+_data = {
+&"RESET": SubResource("Animation_5dtf6"),
+&"hide_name": SubResource("Animation_ht2jx"),
+&"show_name": SubResource("Animation_3fvow")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_0kst1"]
 
 [node name="DialogGui" type="CanvasLayer"]
+script = ExtResource("1_0kst1")
+languaje_key = "es"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7oimb")
+}
+autoplay = "fade_in"
+
+[node name="AnimName" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5dtf6")
+}
 
 [node name="DialogContainer" type="PanelContainer" parent="."]
 anchors_preset = -1
@@ -21,15 +278,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_t61ho")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DialogContainer"]
-layout_mode = 2
-
-[node name="TextOutputContainer" type="PanelContainer" parent="DialogContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("3_0kst1")
-
-[node name="TextOutput" type="RichTextLabel" parent="DialogContainer/VBoxContainer/TextOutputContainer"]
+[node name="TextOutput" type="RichTextLabel" parent="DialogContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
@@ -38,7 +287,19 @@ Dialog Test "
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="EndLine" type="TextureRect" parent="DialogContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("4_opk4c")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogContainer"]
+visible = false
+layout_mode = 2
+
 [node name="DialogOptions" type="HBoxContainer" parent="DialogContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -70,13 +331,14 @@ theme = ExtResource("1_t61ho")
 text = "Auto"
 
 [node name="SpeakerNameLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = 22.0
 offset_top = 454.0
 offset_right = 136.0
 offset_bottom = 477.0
 size_flags_horizontal = 0
 theme = ExtResource("1_t61ho")
-text = "Speaker Name"
+text = "no_name"
 label_settings = SubResource("LabelSettings_0kst1")
 
 [node name="Panel" type="Panel" parent="SpeakerNameLabel"]
@@ -87,3 +349,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7ydem")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
