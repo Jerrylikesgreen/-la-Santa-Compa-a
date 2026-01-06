@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d1x764qxfolbw" path="res://Assets/RedLady/Small/Left/Hands Small.svg" id="1_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dgfrpwwyje3nm" path="res://Assets/RedLady/Small/Left/RedLadyBodySmall.svg" id="3_8erm5"]
 [ext_resource type="Texture2D" uid="uid://e77j07k7yqag" path="res://Assets/RedLady/Small/Left/RedLadyFrontHairSmall.svg" id="4_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://6ndi8dwwjsjr" path="res://Assets/RedLady/Small/Left/RedLadyBackHairSmall.svg" id="4_qqcod"]
 [ext_resource type="Texture2D" uid="uid://ylb520vnpdoq" path="res://Assets/RedLady/Small/Left/RedLadyHeadSmall.svg" id="5_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://dsg7kfgx2ugjd" path="res://Assets/RedLady/Small/Left/red_lady_shoe_small.svg" id="6_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://cbg61clxumpxa" path="res://Assets/RedLady/Small/Right/HandsRightSmall.svg" id="7_pu2lt"]
@@ -23,9 +24,6 @@ polygon = PackedVector2Array(524, 442, 525, 427, 532, 420, 520, 407, 523, 397, 5
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dp3o"]
 radius = 26.0
 height = 94.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x3wgy"]
-load_path = "res://.godot/imported/RedLadyBackHairSmall.svg-8f11b56a4eef1d662626bef7af56e3b6.ctex"
 
 [sub_resource type="Animation" id="Animation_7dp3o"]
 resource_name = "IdleBackLeft"
@@ -1477,6 +1475,50 @@ tracks/26/keys = {
 "update": 1,
 "values": [true, true]
 }
+tracks/27/type = "bezier"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("PlayerBody/VisualRoot/Left/RedLadyShoeSmall:position:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(508, -0.25, 0, 0.25, 0, 508, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("PlayerBody/VisualRoot/Left/RedLadyShoeSmall:position:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(437, -0.25, 0, 0.25, 0, 437, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("PlayerBody/VisualRoot/Left/RedLadyShoeSmall2:position:x")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(513, -0.25, 0, 0.25, 0, 513, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/30/type = "bezier"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("PlayerBody/VisualRoot/Left/RedLadyShoeSmall2:position:y")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(437, -0.25, 0, 0.25, 0, 437, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
 
 [sub_resource type="Animation" id="Animation_h4iuc"]
 resource_name = "MovingBackRight"
@@ -2890,7 +2932,7 @@ bones = ["BodyCore", PackedFloat32Array(0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0
 [node name="RedLadyBackHairSmall" type="Polygon2D" parent="PlayerBody/VisualRoot/Left"]
 visible = false
 position = Vector2(515, 383)
-texture = SubResource("CompressedTexture2D_x3wgy")
+texture = ExtResource("4_qqcod")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(-15, -10, -15, 10, 15, 10, 15, -10)
 uv = PackedVector2Array(0, 0, 0, 20, 30, 20, 30, 0)
@@ -2962,19 +3004,17 @@ color = Color(0.15070069, 0.1337299, 0.059832603, 1)
 polygon = PackedVector2Array(-199.5, -12, -157.18301, -59.584934, -114.767944, -60, -70.5, -11, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -13)
 uv = PackedVector2Array(-195.5, -9, -166.5, -53, -108.5, -54, -74.5, -13, -107.5, -12, -106.5, 78, -163.5, 79, -162.5, -15)
 
-[node name="PointLight2D" type="PointLight2D" parent="PlayerBody/VisualRoot/Left/PlaceholderLampRight"]
+[node name="PointLight2D2" type="PointLight2D" parent="PlayerBody/VisualRoot/Left/PlaceholderLampRight"]
 z_index = -1
 y_sort_enabled = true
-position = Vector2(-136.8981, -5.265414)
+position = Vector2(-273.7964, -10.531006)
 color = Color(1, 1, 1, 0.8392157)
-energy = 0.5
 range_z_max = 0
 shadow_enabled = true
 shadow_filter = 2
-shadow_filter_smooth = 40.0
+shadow_filter_smooth = 7.6
 texture = ExtResource("16_fd4e3")
 texture_scale = 10.0
-height = 794.0
 
 [node name="Right" type="Node2D" parent="PlayerBody/VisualRoot"]
 
@@ -3067,14 +3107,12 @@ z_index = -1
 y_sort_enabled = true
 position = Vector2(-136.8981, -5.265414)
 color = Color(1, 1, 1, 0.8392157)
-energy = 0.5
 range_z_max = 0
 shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 7.6
 texture = ExtResource("16_fd4e3")
 texture_scale = 10.0
-height = 794.0
 
 [node name="Skeleton2D" type="Skeleton2D" parent="PlayerBody/VisualRoot"]
 modulate = Color(1, 1, 1, 0.23921569)
@@ -3091,7 +3129,7 @@ rest = Transform2D(1, 0, 0, 1, 0, -11)
 [node name="Head" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop"]
 position = Vector2(0, -11)
 rotation = -1.4835298
-scale = Vector2(0.99999964, 0.99999964)
+scale = Vector2(0.9999996, 0.9999996)
 rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 0, -11)
 
 [node name="FrontHairLeftTop" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop/Head"]
@@ -3118,7 +3156,7 @@ rest = Transform2D(-4.371139e-08, 1, -1, -4.371139e-08, 22, -8.999997)
 
 [node name="FrontHairRightMiddle" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop/Head/FrontHairRightTop"]
 position = Vector2(-8, 8)
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999996, 0.9999996)
 rest = Transform2D(1, 0, 0, 1, -8, 8)
 
 [node name="FrontHairRightEnd" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle"]
@@ -3152,7 +3190,7 @@ rest = Transform2D(-0.98849386, 0.15126081, -0.15126081, -0.98849386, 6, 15)
 
 [node name="ShoeRight" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom"]
 position = Vector2(-2, 16)
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(1, 0, 0, 1, -2, 16)
 
 [node name="PlayerPosition" type="Marker2D" parent="PlayerBody"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3yws4mqhe6ru"]
+[gd_scene load_steps=9 format=3 uid="uid://d3yws4mqhe6ru"]
 
 [ext_resource type="Texture2D" uid="uid://d1sx8ha2c6uvp" path="res://Assets/Enviorment/SmallTree/TreeTrunkSmall.svg" id="1_5xa6y"]
 [ext_resource type="Texture2D" uid="uid://c0tyasjt3ngb0" path="res://Assets/Enviorment/SmallTree/TreeTopSmall.svg" id="2_tmx6r"]
+[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="3_mymk0"]
 
 [sub_resource type="Animation" id="Animation_5xa6y"]
 resource_name = "Idle"
@@ -142,6 +143,10 @@ collision_layer = 4
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TreeBody"]
 position = Vector2(0, 26)
 shape = SubResource("RectangleShape2D_5xa6y")
+
+[node name="PointLight2D" type="PointLight2D" parent="TreeBody"]
+energy = 0.2
+texture = ExtResource("3_mymk0")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 z_index = 1
