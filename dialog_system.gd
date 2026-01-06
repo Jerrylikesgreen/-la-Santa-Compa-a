@@ -5,15 +5,14 @@ extends CanvasLayer
 @export var path_csv = "res://Assets/Dialogues/santa_compaña_dialgue_test.csv"
 @export var languaje_key = "gl"
 # OnReady
-@onready var dialogue_text = $DialogContainer/VBoxContainer/TextOutputContainer/TextOutput
+@onready var dialogue_text = $DialogContainer/TextOutput
 @onready var name_text = $SpeakerNameLabel
-@onready var next_button = $DialogContainer/VBoxContainer/DialogOptions/NextButton
 @onready var asp_talk = $AudioStreamPlayer2D
 @onready var anim_controller = $AnimationPlayer
-@onready var end_line_icon = $DialogContainer/VBoxContainer/EndLine
+@onready var anim_name_box = $AnimName
+@onready var end_line_icon = $DialogContainer/EndLine
 @onready var timer = $Timer
 # Text
-#var arr_dialogue = ["Hola","Antonio Recio!","Mayorista!","No limpio el pescado!"]
 var arr_dialogue = []
 var text_speed = 0.05
 var index_text = 0
@@ -39,87 +38,122 @@ const voice_01 = preload("res://Assets/Sounds/undyne_sound_placeholder.mp3")
 ## FUNC
 # ready-process
 func _ready():
-	
-	start_dialogue.connect(func_inicio_dialogo)
-	end_line.connect(func_end_line)
-	
+	load_csv(path_csv)
+	dialogue_text.text = ""
+	start_dialogue.connect(signal_inicio_dialogo)
+	end_line.connect(signal_end_line)
 func _process(_delta):
 	if !end:
-		if fin_fade_in and (Input.is_action_just_pressed("Enter") or click_auto):
+		
+		if fin_fade_in and \
+			((Input.is_action_just_pressed("Enter") and !auto_mode_normal) \
+			or click_auto):
 			
-			click_auto = false
-			anim_controller.play("idle")
-			if writting:
-				writting = false
-				end_line.emit()
-				dialogue_text.text = arr_dialogue[index_text - 1][languaje_key]
-			else:
-				# The CSV ended?
-				if index_text >= arr_dialogue.size():
-					anim_controller.play("fade_out")
-					pass
+				click_auto = false
+				anim_controller.play("idle")
+				
+				if writting:
+					
+					# If auto we return
+					if auto_mode_normal: return
+					
+					# Set variables/signal
+					writting = false
+					end_line.emit()
+					
+					# Set text
+					dialogue_text.text = arr_dialogue[index_text - 1][languaje_key]
+				
 				else:
 					
-					get_next_line()
-				
+					# The CSV ended?
+					if index_text >= arr_dialogue.size():
+						anim_controller.play("fade_out")
+					
+					# Next line
+					else:
+						get_next_line()
 
-
-# Extra
-
-func func_inicio_dialogo():
+# Signals
+func signal_inicio_dialogo():
 	if auto_mode_normal: timer.start()
-	load_csv(path_csv)
 	get_next_line()
 	fin_fade_in = true
-func func_end_line():
+func signal_end_line():
 	if auto_mode_normal: timer.start()
 	anim_controller.play("end_line")
-	
+func _on_timer_timeout() -> void:
+	click_auto = true
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_in":
+		start_dialogue.emit()
+	elif anim_name == "fade_out":
+		end_dialogue.emit()
+		end = true
+
+# Extra
 func load_csv(path: String) -> void:
+	
+	# Try to get the file
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
 		push_error("ERROR WHEN ENTER THE CSV FILE")
 		return
 
+	# Get values from CSV
 	var headers := []
 	while not file.eof_reached():
+		
+		# Check if exit loop
 		var line := file.get_line()
 		if line.is_empty():
 			continue
 
+		# Split line values from ;
 		var values := line.split(";")
 
-		# Primera linea
+		# Check first line
 		if headers.is_empty():
 			headers = values
 			continue
 
+		# Appemd array
 		var row := {}
 		for i in range(headers.size()):
 			row[headers[i]] = values[i]
-
 		arr_dialogue.append(row)
 
+	# Close CSV
 	file.close()
-
 func get_next_line():
+	
+	# If we ended the text we return function
 	if index_text >= arr_dialogue.size():
 		return
-
-	var row = arr_dialogue[index_text]
+	
+	# Get the next value
 	index_text += 1
+	
+	# Check if line is a code and id
+	var row = arr_dialogue[index_text]
 	var code = row["key"].split("-")
 	match code[0]:
+		# Change the text name
 		"change_name":
 			changue_voice(code[1],row[languaje_key])
+		# No Code
 		_:
 			progressive_text(row[languaje_key])
-			print(row[languaje_key])
-	print(row)
-	pass
 func changue_voice(id,name_voice):
+	
+	# We turn on the name box
+	if name_text.text == "no_name":
+		anim_name_box.play("show_name")
+	
+	# We set te name text
 	name_text.text = name_voice
 	
+	# We change te text sound
 	match id:
 		"manolo":
 			asp_talk.stream = voice_00
@@ -127,6 +161,8 @@ func changue_voice(id,name_voice):
 			asp_talk.stream = voice_01
 		_:
 			asp_talk.stream = voice_missigno
+			
+	# Process the next line
 	get_next_line()
 func progressive_text(new_text):
 	
@@ -145,14 +181,3 @@ func progressive_text(new_text):
 
 	end_line.emit()
 	writting = false
-
-func _on_timer_timeout() -> void:
-	click_auto = true
-
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "fade_in":
-		start_dialogue.emit()
-	elif anim_name == "fade_out":
-		end_dialogue.emit()
-		end = true
