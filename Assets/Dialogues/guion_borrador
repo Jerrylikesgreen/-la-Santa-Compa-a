@@ -1,1 +1,156 @@
 GUION
+
+ESCENA 0 (Animacion)
+	Pone a;o y galicia, espa;a
+	La chica se acerca a la puerta de su casa y ve que hay una nota pegada
+	Coge la carta y comienza a alejarse
+	Fundido a negro
+	
+ESCENA 1 (Bosque, Movimiento libre, Dialogo automatico por movimiento)
+	La chica aparece por abajo y anda hasta el centro
+	Activar dialogo normal
+	Imagen carta
+	
+	"Hola Querida, te espero en lo alto de la montaña"
+	"Ven de noche, sola"
+	"Te lo explicare todo"
+	-Desde luego parece que le cobraban por cada letra
+	-No podia andarse con mas aires de misterioso aunque quisiera
+	-A quien se le ocurre llevar dias desaparecido y enviar esto?
+	-Desde luego es su letra, solo el escribe tan mal
+	-No quiero tardar mucho mas, debo seguir todo recto
+	
+	Salir dialogo
+	Movimiento libre
+	Activar dialogo auto al andar
+	
+	- Porque diablos a dicho de vernos tan lejos?
+	- Me da miedo salir a estas horas de noche
+	- Puede pasar cualquier cosa
+	- ¿Que habrás liado esta vez para que no puedas volver a entrar al pueblo?
+	- La ultima vez te fuiste 2 semanas pero esta vez ha sido todo un mes
+	- Ademas no podia ser mas inoportuno
+	- Mama lleva varias noches mala y solo esta empeorando
+	- Y no es como si pueda permitirme otra vez poner un plato mas en la mesa
+	- En el fondo... estaba deseando que nunca volvieras
+	- Y ha sido que des una minima señal de vida y me obligues a vagar por la noche
+	- Volveras rogandome que te perdone y cambiaras?
+	- Todo el mundo me lo dice, que no eres buena persona, y que si me quedo contigo estoy loca
+	- Pero yo se... que hay bondad en ti, se que solo has tenido mala suerte en la vida
+	- Se que si la gente comienza a tratarte bien, cambiaras a mejor
+	- ...
+	- Creo que empiezo a verlo
+	- Mejor me doy prisa
+
+ESCENA 2 (Animacion/Novela visual Clasica)
+
+	Imagen/Animacion de ellos abrazandose y dandose un beso
+	
+	[Conversacion con el amante]
+	[Al final de esta, el hombre le da la cruz de la santa compaña y escapa]
+	
+	Chica
+	- Pense que no volveria a verte esta vez
+	- Me has dado un susto de muerte
+	Chico
+	- Siento el haberte preocupado
+	Chica
+	- Te encuentras bien? Estas herido?
+	Chico
+	- Descuida, no me ha pasado nada
+	La chica respira aliviada
+	Chica
+	- Mas vale que te expliques
+	- En el pueblo hay rumores de que has vuelto a las andadas
+	Chico
+	- ...
+	- ......
+	Chica
+	- Dimelo
+	Chico
+	- Asi es... Pero puedo explicarlo
+	Chica
+	- Me lo prometiste
+	- Prometiste que pararias
+	Chico
+	- Esta vez era distinto
+	- Lo hice por nosotros...
+	Chica
+	- Pero de que estas hablando?
+	Chico
+	- Hace mas de un mes conoci a un tipo en un bar
+	- Era raro y no paraba de toser, pero hicimos un trato
+	- Si todo hubiera ido bien, ahora mismo nosotros dos estariamos en argentina como siempre hemos dicho
+	Chica
+	- Pero de que estas hablando?
+	- Como que si todo hubiera ido bien?
+	Chico
+	- El plan era entrar a la casa del alcalde aprovechando que estaba fuera de viaje
+	- Y robarle todo lo que podiamos
+	- Todo iba bien hasta que salimos de la casa
+	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y fuera
+	
+	El hombre escapa corriendo con la lampara sin mirar en la chica
+	La mujer se queda mirandole y la pantalla esta casi oscura
+	[Un dialogo donde pide que vuelva]
+	Comienza a acercarse luz azulada por varios lados de la pantalla
+	[Dialogo de la chica sorprendida]
+	Comienzan a sonar sonidos etereos por todas partes
+	Los espirituos se acercan a ella y acaban a su alrededor
+	[Dialogo de la chica pidiendoles que se vayan]
+	Sonido extra;o
+	La cruz comienza a brillar y la chica empieza a moverse por su cuenta
+	[Dialogo de la chica asustada diciendo que ella no se esta moviendo]
+	Fundido a negro
+
+ESCENA 3 (Bosque, Movimiento automatico, Dialogo automatico normal)
+	Camino con la santa compa;a
+	[Dialogo explicando que es la santa compa;a y describir como se siente]
+	[Termina cuando dice que se esta acercando a casa]
+	
+ESCENA 4 (Escena negra, madre)
+	[La chica se acerca a la madre]
+	[La madre dice que el chico ha entrado y les ha robado todos sus ahorros]
+	[La madre muere por la santa compa;a y la chica se derrumba]
+	Fundido a negro
+
+ESCENA 5 (Escena negra, loop)
+	Se ve a una persona en cama
+	La chica se acerca
+	Hace animacion y muere el hombre
+	Desaparece la cama y comienza a andar
+	[Todo eso se repite en bucle con distintas siluetas]
+	[La chica comienza a hablar de como es su dia a dia]
+	[Maldice todo]
+	[Dice que solo vive por el odio]
+	
+ESCENA 6 (Visual novel final)
+	Ahora pone otro a;o en el futuro, en argentino
+	Escena negra
+	Se ve una cama con un anciano
+	La chica comienza a acercarse
+	[La chica habla con el]
+	Imagen de beso de la chica en la frente
+	Sonido agonico del hombre
+	La chica se sienta en una silla
+	Respira (Conseguir voz femenina que sople?)
+	Suelta la cruz
+
+FINAL (Creditos) (Aqui que suente otra cantiga mediaval, pero de escarnio e maldicer? Que son mas de broma o con mas chicha)
+	Un juego de PyramidHead83 y jerrylikes_72469 (pendiente nombre mio/tuyo final)
+	Codigo: PyramidHead83 y jerrylikes_72469
+	Arte/Textos en ingles: jerrylikes_72469
+	Sonido/Historia/Textos en español/gallego: PyramidHead883
+	
+	
+	Programas usados:
+		Godot
+		Audacity
+		(Añadir mas programas usados)
+	
+	Agradecimientos/Menciones:
+		(Mencion cantiga mediaval si la usamos)
+		(Fuente de texto que usemos si no son nuetros)
+		(Efectos de sonidos que usemos)
+		(Agradecimientos mios)
+		(Agradecimientos tuyos)
