@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c18uy5f2nsmyl"]
+
+[ext_resource type="Script" uid="uid://dpa73qogys6aa" path="res://Scripts/activador_dialogo.gd" id="1_sc8nv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g3rgj"]
+radius = 14.0
+
+[node name="ActivadorDialogo" type="Area2D"]
+script = ExtResource("1_sc8nv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g3rgj")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

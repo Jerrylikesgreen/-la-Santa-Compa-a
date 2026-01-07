@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=7 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/bush.tscn" id="1_uee5o"]
 [ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/tree_small.tscn" id="2_8hnfc"]
 [ext_resource type="Script" uid="uid://bituivhn4dln4" path="res://Scripts/player_spawn_point.gd" id="2_u53w3"]
 [ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/tree_large.tscn" id="3_5ip0q"]
 [ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="5_u53w3"]
+[ext_resource type="PackedScene" uid="uid://c18uy5f2nsmyl" path="res://Scenes/activador_dialogo.tscn" id="6_qq45g"]
 
 [node name="Forest" type="Node2D"]
 
@@ -69,3 +70,6 @@ position = Vector2(1038, 446)
 color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 energy = 0.9
 blend_mode = 1
+
+[node name="ActivadorDialogo" parent="." instance=ExtResource("6_qq45g")]
+position = Vector2(526, 232)

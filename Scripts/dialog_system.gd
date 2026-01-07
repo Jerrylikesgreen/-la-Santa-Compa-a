@@ -21,7 +21,7 @@ var fin_fade_in = false
 # AutoMode
 var click_auto = false
 var end = false
-var auto_mode_normal = true
+var auto_mode_normal = false
 var auto_mode_walk = false
 # Signals
 signal start_dialogue
@@ -34,6 +34,8 @@ const RANDOM_PITCH_MAX = 1.05
 const voice_missigno = preload("res://Assets/Sounds/sans_sound_placeholder.mp3")
 const voice_00 = preload("res://Assets/Sounds/papyrus_sound_placeholder.mp3")
 const voice_01 = preload("res://Assets/Sounds/undyne_sound_placeholder.mp3")
+# Delete
+var delete_after_end = true
 
 ## FUNC
 # ready-process
@@ -67,13 +69,14 @@ func _process(_delta):
 				else:
 					
 					# The CSV ended?
-					if index_text >= arr_dialogue.size():
+					#var aaaa = arr_dialogue.size()
+					if index_text >= arr_dialogue.size()-1:
 						anim_controller.play("fade_out")
 					
 					# Next line
 					else:
 						get_next_line()
-
+	elif delete_after_end: queue_free()
 # Signals
 func signal_inicio_dialogo():
 	if auto_mode_normal: timer.start()
