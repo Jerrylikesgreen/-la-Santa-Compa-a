@@ -1,6 +1,7 @@
 class_name PlayerBody
 extends CharacterBody2D
 
+@export var debug: bool = false
 @export var speed: float = 200.0
 @onready var anim: AnimationPlayer = %AnimationPlayer
 
@@ -45,5 +46,6 @@ func play_animation(moving: bool) -> void:
 	anim_name += "Left" if facing_left else "Right"
 
 	if anim.current_animation != anim_name:
-		print(anim_name)
+		if debug:
+			print(anim_name)
 		anim.play(anim_name)
