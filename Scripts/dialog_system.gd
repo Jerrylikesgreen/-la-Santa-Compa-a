@@ -12,6 +12,7 @@ extends CanvasLayer
 @onready var anim_name_box = $AnimName
 @onready var end_line_icon = $DialogContainer/EndLine
 @onready var timer = $Timer
+@onready var spr_img = $Image
 # Text
 var arr_dialogue = []
 var text_speed = 0.05
@@ -21,8 +22,7 @@ var fin_fade_in = false
 # AutoMode
 var click_auto = false
 var end = false
-var auto_mode_normal = false
-var auto_mode_walk = false
+var can_start_timer = false
 # Signals
 signal start_dialogue
 signal end_line
@@ -30,25 +30,36 @@ signal end_dialogue
 # Sound
 const RANDOM_PITCH_MIN = 0.95
 const RANDOM_PITCH_MAX = 1.05
+# Char Img Path
+const char_img_path = "res://Assets/Characters/"
+const bkgr_img_path = "res://Assets/Background/"
 # Path Sounds
 const voice_missigno = preload("res://Assets/Sounds/sans_sound_placeholder.mp3")
 const voice_00 = preload("res://Assets/Sounds/papyrus_sound_placeholder.mp3")
 const voice_01 = preload("res://Assets/Sounds/undyne_sound_placeholder.mp3")
 # Delete
 var delete_after_end = true
+# Player
+var mov_player = Vector2i(1,0)
 
 ## FUNC
 # ready-process
 func _ready():
 	load_csv(path_csv)
 	dialogue_text.text = ""
+	CD.player_movement = false
 	start_dialogue.connect(signal_inicio_dialogo)
 	end_line.connect(signal_end_line)
 func _process(_delta):
 	if !end:
 		
+		# Stop timer if is auto mode walk and you are not walking
+		if CD.auto_mode == CD.auto_mode_enum.AUTO_WALK and  timer.time_left > 0:
+			if CD.moving: timer.paused = false
+			else: timer.paused = true
+			
 		if fin_fade_in and \
-			((Input.is_action_just_pressed("Enter") and !auto_mode_normal) \
+			((Input.is_action_just_pressed("Enter") and !CD.auto_mode_normal) \
 			or click_auto):
 			
 				click_auto = false
@@ -57,7 +68,7 @@ func _process(_delta):
 				if writting:
 					
 					# If auto we return
-					if auto_mode_normal: return
+					if CD.auto_mode_normal: return
 					
 					# Set variables/signal
 					writting = false
@@ -76,16 +87,21 @@ func _process(_delta):
 					# Next line
 					else:
 						get_next_line()
-	elif delete_after_end: queue_free()
+	elif delete_after_end: 
+		CD.player_movement = true
+		queue_free()
 # Signals
 func signal_inicio_dialogo():
-	if auto_mode_normal: timer.start()
+	if CD.auto_mode_normal: timer.start() #can_start_timer = true
+	#timer.start()
 	get_next_line()
 	fin_fade_in = true
 func signal_end_line():
-	if auto_mode_normal: timer.start()
+	if CD.auto_mode_normal: timer.start() #can_start_timer = true
+	#timer.start()
 	anim_controller.play("end_line")
 func _on_timer_timeout() -> void:
+	can_start_timer = false
 	click_auto = true
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_in":
@@ -144,6 +160,12 @@ func get_next_line():
 		# Change the text name
 		"change_name":
 			changue_voice(code[1],row[languaje_key])
+		# Change the img of the character
+		"character_img":
+			changue_char_img(code[1])
+		# Change the background image
+		"background_img":
+			changue_background_img(code[1])
 		# No Code
 		_:
 			progressive_text(row[languaje_key])
@@ -165,6 +187,16 @@ func changue_voice(id,name_voice):
 		_:
 			asp_talk.stream = voice_missigno
 			
+	# Process the next line
+	get_next_line()
+func changue_char_img(id):
+	# We change the character sprite
+	spr_img.texture = load(char_img_path+id+".png")
+	# Process the next line
+	get_next_line()
+func changue_background_img(id):
+	# We change the character sprite
+	spr_img.texture = load(bkgr_img_path+id+".png")
 	# Process the next line
 	get_next_line()
 func progressive_text(new_text):
