@@ -17,20 +17,21 @@ func _on_body_entered()->void:
 
 
 func _physics_process(_delta: float) -> void:
+	#if CD.player_movement:
 	var direction := Vector2.ZERO
 	direction.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
 	direction.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
 
-	var moving := direction != Vector2.ZERO
+	CD.moving = direction != Vector2.ZERO
 
-	if moving:
+	if CD.moving and (CD.player_movement or CD.auto_mode == CD.auto_mode_enum.AUTO_WALK):
 		direction = direction.normalized()
 		velocity = direction * speed
 		update_facing(direction)
 	else:
 		velocity = Vector2.ZERO
 
-	play_animation(moving)
+	play_animation(CD.moving)
 	move_and_slide()
 
 func update_facing(direction: Vector2) -> void:

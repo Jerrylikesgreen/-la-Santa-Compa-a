@@ -1,5 +1,6 @@
 key;en;es;gl
 change_name-manolo;Manolo;Manolo;Manolo
+character_img-sans_char_placeholder;;;
 text_000;Hey;Hey;Hei
 text_001;I am Manolo;Soy Manolo;Son Manolo
 text_002;I sell bongo gongos;Vendo bongo gongos;Vendo bongo gongos
@@ -13,11 +14,14 @@ text_009;Oh...;Oh...;Oh...
 text_010;You have bought all my bongo gongos;Compraste todos mis bongo gongos;Compraches todos os meus bongo gongos
 text_011;Now I don´t have bongos;Ahora no tengo bongos;Agora non teño bongos
 change_name-customer;Customer;Cliente;Cliente
+character_img-papyrus_char_placeholder;;;
 text_012;NOW BONGOS ARE MY YOU BITCH;AHORA LOS BONGOS SON MIOS ZORRA;AGORA OS BONGOS SON MEUS MIÑOCA
 change_name-manolo;Manolo;Manolo;Manolo
 text_013;Noooooooooooooooo....;Noooooooooooooooo....;Noooooooooooooooo....
 text_014;ooooooo...;ooooooo...;ooooooo...
+background_img-ForestFloor;;;
 text_015;ooooo......;ooooo......;ooooo......
 text_016;:(;:(;:(
 change_name-aaaa;M.Rajoy;M.Rajoy;M.Rajoy
+character_img-mrajoy_char_placeholder;;;
 text_017;END FOR TEST, VIVA EL VINO;SE ACABO EL TEST, VIVA EL VINO;ACABOUSE O TEST, VIVA O VIÑO
