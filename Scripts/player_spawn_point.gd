@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func spawn_player()->void:
 	player = PLAYER.instantiate()
+	player.current_step_terrain = player.StepTerrain.GRASS
 	add_child(player)
 	
 func spawn_player_camera()->void:

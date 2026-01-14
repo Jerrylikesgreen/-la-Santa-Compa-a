@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://64x64138l86m"]
+[gd_scene load_steps=5 format=3 uid="uid://64x64138l86m"]
 
-[ext_resource type="Theme" uid="uid://cfxplfmm37w83" path="res://Resources/sound_options_theme.tres" id="1_yem1f"]
+[ext_resource type="Theme" uid="uid://cfxplfmm37w83" path="res://Resources/Themes/sound_options_theme.tres" id="1_yem1f"]
 [ext_resource type="Script" uid="uid://crmuoruf33eai" path="res://Scripts/sound_options.gd" id="1_yhd3f"]
+[ext_resource type="LabelSettings" uid="uid://dw1x0b0lj8b32" path="res://Resources/Themes/sound_options_lable_theme.tres" id="3_t03xw"]
+[ext_resource type="LabelSettings" uid="uid://bk2q64u07euvr" path="res://Resources/Themes/header.tres" id="4_ti1qn"]
 
 [node name="SoundOptions" type="CanvasLayer"]
 script = ExtResource("1_yhd3f")
@@ -22,6 +24,7 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Sfx Volume"
+label_settings = ExtResource("3_t03xw")
 
 [node name="SfxVolumeSlider" type="HSlider" parent="PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -35,6 +38,7 @@ value = -6.0
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Main Volume"
+label_settings = ExtResource("3_t03xw")
 
 [node name="MainVolumeSlider" type="HSlider" parent="PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -43,3 +47,10 @@ min_value = -60.0
 max_value = 0.0
 step = 0.5
 value = -10.0
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Sound Options"
+label_settings = ExtResource("4_ti1qn")
