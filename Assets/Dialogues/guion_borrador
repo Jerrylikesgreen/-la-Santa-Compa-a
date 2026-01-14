@@ -70,6 +70,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	Chico
 	- Asi es... Pero puedo explicarlo
 	Chica
+	- Joder...
 	- Me lo prometiste
 	- Prometiste que pararias
 	Chico
@@ -88,7 +89,55 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- El plan era entrar a la casa del alcalde aprovechando que estaba fuera de viaje
 	- Y robarle todo lo que podiamos
 	- Todo iba bien hasta que salimos de la casa
-	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y fuera
+	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y fuera...
+	Chica
+	- ...
+	- ......
+	Chico
+	- ¿Que pasa?
+	Chica
+	- ¿Estaras de broma no?
+	- ¿En serio me lo estas preguntando?
+	Chico
+	- Lo hice por nosotros
+	- ¿Cuantas veces dijimos de aprovechar cualquier oportunidad que tuvieramos para poder escapar de este vertedero?
+	- Pero porfavor, dejame seguir expli...
+	Chica
+	- Ni te atrevas a seguir
+	- Me tienes harta!
+	- Yo nunca he dicho que quiera irme, solo lo dices tu
+	- Y da igual cuanto te lo repita, no me escuchas
+	- O peor, no estas para que te lo pueda decir
+	- Y no es solo eso, aunque quisiera irme, me niego a dejar a mi madre en este estado ella sola
+	- No puede valerse por si misma desde hace tiempo, y solo ha hecho mas que empeorar
+	- Pero claro, que sabras tu de eso? Nunca te has ocupado de ella, ni mucho menos te ha importado alguna vez
+	Chico
+	- No es justo, sabes de sobra que tu madre me odia, no hace mas que maldecirme siempre que tiene oportunidad
+	Chica
+	- Y TE SORPRENDE? NO HAS HECHO MAS QUE DAR PROBLEMAS DESDE QUE NACISTE
+	- ESTOY HARTA DE SALIR POR TI SIEMPRE
+	- NO SOLO EL PUEBLO ENTERO ME IGNORA, HASTA MI MADRE ME LLAMA FRACASADA Y DICE QUE TE TIRE A LA CALLE
+	Chico
+	- Pero...
+	Chica
+	- PERO QUE?
+	Chico
+	- Lo hice por nosotros...
+	Chica
+	- No, lo hiciste por ti, como haces siempre
+	- Que crees que pasará cuando consigas irte? Crees que todo mejorara?
+	Chico
+	- Es una posibilidad
+	Chica
+	- No pasara
+	- Porque el problema eres tu
+	Chico
+	- Eso no lo sabes
+	Chica
+	- Por supuesto que lo se
+	- Antes de que mudarnos aqui, mi padre era un monstruo
+	- Y como tu, muchas veces dijo que cambiaria, eso era lo que siempre decia luego de sobrepasarse conmigo o con mi madre mientras lloraba
+	- Incluso para evitar problemas vinimos al pueblo
 	
 	El hombre escapa corriendo con la lampara sin mirar en la chica
 	La mujer se queda mirandole y la pantalla esta casi oscura
@@ -121,6 +170,7 @@ ESCENA 5 (Escena negra, loop)
 	Desaparece la cama y comienza a andar
 	[Todo eso se repite en bucle con distintas siluetas]
 	[La chica comienza a hablar de como es su dia a dia]
+	[Explica tambien un poco que es la santa compaña]
 	[Maldice todo]
 	[Dice que solo vive por el odio]
 	

@@ -39,8 +39,6 @@ const voice_00 = preload("res://Assets/Sounds/papyrus_sound_placeholder.mp3")
 const voice_01 = preload("res://Assets/Sounds/undyne_sound_placeholder.mp3")
 # Delete
 var delete_after_end = true
-# Player
-var mov_player = Vector2i(1,0)
 
 ## FUNC
 # ready-process
