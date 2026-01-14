@@ -2904,6 +2904,7 @@ script = ExtResource("1_h4iuc")
 [node name="PlayerBody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
 z_index = 1
+position = Vector2(-515, -406)
 collision_mask = 6
 script = ExtResource("1_3smsa")
 
