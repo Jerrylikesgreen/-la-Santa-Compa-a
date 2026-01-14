@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://csvilirrsotay"]
+[gd_scene load_steps=31 format=3 uid="uid://csvilirrsotay"]
 
 [ext_resource type="Script" uid="uid://byeotvtet8m7a" path="res://Scripts/player_body.gd" id="1_3smsa"]
 [ext_resource type="Script" uid="uid://clxmsn8p1dfai" path="res://Scripts/player.gd" id="1_h4iuc"]
@@ -17,8 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://byk27f8c66v65" path="res://Assets/RedLady/Small/Right/red_lady_shoe__right_small.svg" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dq1bqngyjsq27" path="res://Assets/RedLady/Small/Right/RedLadyBackHairRight.svg" id="14_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="16_fd4e3"]
-[ext_resource type="AudioStream" uid="uid://cm834m2uwyv7q" path="res://Assets/Sounds/step_grass.wav" id="18_fs7ks"]
-[ext_resource type="Script" uid="uid://ebx4g41roshb" path="res://Scenes/player_sfx.gd" id="18_igrcy"]
+[ext_resource type="Script" uid="uid://ebx4g41roshb" path="res://Scripts/player_sfx.gd" id="18_igrcy"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fd4e3"]
 polygon = PackedVector2Array(524, 442, 525, 427, 532, 420, 520, 407, 523, 397, 519, 389, 529, 383, 532, 373, 527, 362, 518, 359, 507, 364, 504, 373, 508, 383, 514, 387, 509, 398, 512, 408, 500, 419, 507, 425, 505, 433, 505, 444)
@@ -3293,6 +3292,5 @@ autoplay = "MovingBackLeft"
 
 [node name="PlayerSfx" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("18_fs7ks")
 bus = &"SFX"
 script = ExtResource("18_igrcy")
