@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=10 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/bush.tscn" id="1_uee5o"]
 [ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/tree_small.tscn" id="2_8hnfc"]
@@ -6,13 +6,24 @@
 [ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/tree_large.tscn" id="3_5ip0q"]
 [ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="5_u53w3"]
 [ext_resource type="PackedScene" uid="uid://c18uy5f2nsmyl" path="res://Scenes/activador_dialogo.tscn" id="6_qq45g"]
+[ext_resource type="Shader" uid="uid://y3qq6ykhcw3p" path="res://Resources/Shaders/fog_shader.gdshader" id="7_wo0py"]
+[ext_resource type="Texture2D" uid="uid://cnv8ikey2s5xt" path="res://Assets/NoiseTextures/smoke.png" id="8_vh310"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vh310"]
+shader = ExtResource("7_wo0py")
+shader_parameter/noise_tex = ExtResource("8_vh310")
+shader_parameter/tiling = Vector2(1, 1)
+shader_parameter/scroll_speed = Vector2(0.05, 0.02)
+shader_parameter/density = 0.75
+shader_parameter/softness = 0.3
+shader_parameter/fog_color = Color(0.32285896, 0.3147444, 0.3633848, 1)
 
 [node name="Forest" type="Node2D"]
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(1152, 648)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+[node name="Ground" type="Sprite2D" parent="Parallax2D"]
 z_index = -12
 texture_repeat = 2
 scale = Vector2(0.5, 0.5)
@@ -73,3 +84,16 @@ blend_mode = 1
 
 [node name="ActivadorDialogo" parent="." instance=ExtResource("6_qq45g")]
 position = Vector2(526, 232)
+
+[node name="FogLayer" type="CanvasLayer" parent="."]
+
+[node name="FogTexture" type="ColorRect" parent="FogLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_vh310")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.29709315, 0.29709288, 0.2970929, 0.3764706)
