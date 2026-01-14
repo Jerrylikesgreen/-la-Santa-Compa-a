@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://jwv8wc12q1j"]
+[gd_scene load_steps=18 format=3 uid="uid://jwv8wc12q1j"]
 
 [ext_resource type="Script" uid="uid://bwt6af5pu0b3r" path="res://Scripts/dialog_system.gd" id="1_0kst1"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/dialog_gui_theme.tres" id="1_t61ho"]
-[ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="2_opk4c"]
 [ext_resource type="AudioStream" uid="uid://dbc2d8xebnk8a" path="res://Assets/Sounds/sans_sound_placeholder.mp3" id="4_7ydem"]
 [ext_resource type="Texture2D" uid="uid://dn3scpw51q8ah" path="res://icon.svg" id="4_opk4c"]
 
@@ -264,10 +263,6 @@ autoplay = "fade_in"
 libraries = {
 &"": SubResource("AnimationLibrary_5dtf6")
 }
-
-[node name="Image" type="Sprite2D" parent="."]
-position = Vector2(571, 257)
-texture = ExtResource("2_opk4c")
 
 [node name="DialogContainer" type="PanelContainer" parent="."]
 anchors_preset = -1
