@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var debug: bool = false
 @export var speed: float = 200.0
 @onready var anim: AnimationPlayer = %AnimationPlayer
-
+@onready var player_sfx: PlayerSfx = %PlayerSfx
 
 
 var front_facing := true
@@ -50,3 +50,4 @@ func play_animation(moving: bool) -> void:
 		if debug:
 			print(anim_name)
 		anim.play(anim_name)
+		
