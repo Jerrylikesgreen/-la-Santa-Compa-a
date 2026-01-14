@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://64x64138l86m"]
 
-[ext_resource type="Theme" uid="uid://cfxplfmm37w83" path="res://Resources/sound_options_theme.tres" id="1_yem1f"]
+[ext_resource type="Theme" uid="uid://cfxplfmm37w83" path="res://Resources/Themes/sound_options_theme.tres" id="1_yem1f"]
 [ext_resource type="Script" uid="uid://crmuoruf33eai" path="res://Scripts/sound_options.gd" id="1_yhd3f"]
-[ext_resource type="LabelSettings" uid="uid://dw1x0b0lj8b32" path="res://Resources/sound_options_lable_theme.tres" id="3_t03xw"]
-[ext_resource type="LabelSettings" uid="uid://bk2q64u07euvr" path="res://Resources/header.tres" id="4_ti1qn"]
+[ext_resource type="LabelSettings" uid="uid://dw1x0b0lj8b32" path="res://Resources/Themes/sound_options_lable_theme.tres" id="3_t03xw"]
+[ext_resource type="LabelSettings" uid="uid://bk2q64u07euvr" path="res://Resources/Themes/header.tres" id="4_ti1qn"]
 
 [node name="SoundOptions" type="CanvasLayer"]
 script = ExtResource("1_yhd3f")

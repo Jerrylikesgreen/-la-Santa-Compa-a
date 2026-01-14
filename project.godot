@@ -15,6 +15,10 @@ config/version="0.01"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://dn3scpw51q8ah"
 
+[audio]
+
+buses/default_bus_layout="res://Resources/Audio/default_bus_layout.tres"
+
 [autoload]
 
 CD="*res://Scripts/Autoloads/CommonData.gd"

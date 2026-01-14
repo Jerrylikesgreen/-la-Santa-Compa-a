@@ -195,7 +195,7 @@ position = Vector2(1038, 446)
 position = Vector2(357, 460)
 
 [node name="TreeLarge5" parent="EnviormentContainer/Trees" instance=ExtResource("3_5ip0q")]
-position = Vector2(610, 481)
+position = Vector2(707, 340)
 
 [node name="WorldBoudary" type="Node2D" parent="EnviormentContainer"]
 
