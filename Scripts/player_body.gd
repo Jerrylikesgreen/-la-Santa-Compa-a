@@ -7,7 +7,6 @@ extends CharacterBody2D
 @onready var player_sfx: PlayerSfx = %PlayerSfx
 
 
-
 var front_facing := true
 var facing_left := true
 
@@ -51,3 +50,4 @@ func play_animation(moving: bool) -> void:
 		if debug:
 			print(anim_name)
 		anim.play(anim_name)
+		

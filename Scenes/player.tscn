@@ -1521,29 +1521,22 @@ tracks/30/keys = {
 "points": PackedFloat32Array(437, -0.25, 0, 0.25, 0, 437, -0.33333334, 0, 0, 0),
 "times": PackedFloat32Array(0, 2)
 }
-tracks/31/type = "value"
+tracks/31/type = "method"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("PlayerSfx:stream")
+tracks/31/path = NodePath("PlayerSfx")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0.033333335, 1.0333333),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("18_fs7ks"), ExtResource("18_fs7ks")]
-}
-tracks/32/type = "value"
-tracks/32/imported = false
-tracks/32/enabled = true
-tracks/32/path = NodePath("PlayerSfx:playing")
-tracks/32/interp = 1
-tracks/32/loop_wrap = true
-tracks/32/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
+"values": [{
+"args": [],
+"method": &"play_step"
+}, {
+"args": [],
+"method": &"play_step"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_h4iuc"]
@@ -1842,29 +1835,22 @@ tracks/25/keys = {
 "update": 1,
 "values": [false, false]
 }
-tracks/26/type = "value"
+tracks/26/type = "method"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("PlayerSfx:stream")
+tracks/26/path = NodePath("PlayerSfx")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("18_fs7ks"), ExtResource("18_fs7ks")]
-}
-tracks/27/type = "value"
-tracks/27/imported = false
-tracks/27/enabled = true
-tracks/27/path = NodePath("PlayerSfx:playing")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
+"values": [{
+"args": [],
+"method": &"play_step"
+}, {
+"args": [],
+"method": &"play_step"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_fd4e3"]
@@ -2173,29 +2159,22 @@ tracks/26/keys = {
 "update": 1,
 "values": [true, true]
 }
-tracks/27/type = "value"
+tracks/27/type = "method"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("PlayerSfx:stream")
+tracks/27/path = NodePath("PlayerSfx")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 0.96666664),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("18_fs7ks"), ExtResource("18_fs7ks")]
-}
-tracks/28/type = "value"
-tracks/28/imported = false
-tracks/28/enabled = true
-tracks/28/path = NodePath("PlayerSfx:playing")
-tracks/28/interp = 1
-tracks/28/loop_wrap = true
-tracks/28/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
+"values": [{
+"args": [],
+"method": &"play_step"
+}, {
+"args": [],
+"method": &"play_step"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
@@ -2494,29 +2473,22 @@ tracks/25/keys = {
 "update": 1,
 "values": [true, true]
 }
-tracks/26/type = "value"
+tracks/26/type = "method"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("PlayerSfx:stream")
+tracks/26/path = NodePath("PlayerSfx")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0.033333335, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("18_fs7ks"), ExtResource("18_fs7ks")]
-}
-tracks/27/type = "value"
-tracks/27/imported = false
-tracks/27/enabled = true
-tracks/27/path = NodePath("PlayerSfx:playing")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
+"values": [{
+"args": [],
+"method": &"play_step"
+}, {
+"args": [],
+"method": &"play_step"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_x3wgy"]
@@ -2982,30 +2954,6 @@ tracks/40/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/41/type = "value"
-tracks/41/imported = false
-tracks/41/enabled = true
-tracks/41/path = NodePath("PlayerSfx:stream")
-tracks/41/interp = 1
-tracks/41/loop_wrap = true
-tracks/41/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("18_fs7ks")]
-}
-tracks/42/type = "value"
-tracks/42/imported = false
-tracks/42/enabled = true
-tracks/42/path = NodePath("PlayerSfx:playing")
-tracks/42/interp = 1
-tracks/42/loop_wrap = true
-tracks/42/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x3wgy"]
 _data = {
@@ -3296,7 +3244,7 @@ rest = Transform2D(-4.371139e-08, 1, -1, -4.371139e-08, 22, -8.999997)
 
 [node name="FrontHairRightMiddle" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop/Head/FrontHairRightTop"]
 position = Vector2(-8, 8)
-scale = Vector2(0.9999996, 0.9999996)
+scale = Vector2(0.99999946, 0.99999946)
 rest = Transform2D(1, 0, 0, 1, -8, 8)
 
 [node name="FrontHairRightEnd" type="Bone2D" parent="PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop/Head/FrontHairRightTop/FrontHairRightMiddle"]
@@ -3341,7 +3289,7 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_x3wgy")
 }
-autoplay = "IdleFrontRight"
+autoplay = "MovingBackLeft"
 
 [node name="PlayerSfx" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
