@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://but60y80xv8di"]
+[gd_scene load_steps=8 format=3 uid="uid://but60y80xv8di"]
 
 [ext_resource type="Texture2D" uid="uid://tqihs2p6sp60" path="res://Assets/Enviorment/LargeTree/TreeTrunkLarge.svg" id="1_niuhb"]
 [ext_resource type="Texture2D" uid="uid://d27xwf23ok0oi" path="res://Assets/Enviorment/LargeTree/TreeTopLarge.svg" id="2_7p4iv"]
-[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="3_7p4iv"]
 
 [sub_resource type="Animation" id="Animation_niuhb"]
 resource_name = "Idle"
@@ -113,7 +112,7 @@ size = Vector2(72, 46)
 polygon = PackedVector2Array(-37, 87, 35, 87, 32, 62, 26, 27, 19, -66, 27, -60, 46, -62, 57, -76, 62, -87, 71, -102, 74, -115, 83, -128, 80, -149, 69, -160, 49, -166, 44, -178, 25, -189, 5, -184, -12, -195, -29, -192, -44, -177, -62, -165, -71, -149, -81, -135, -82, -124, -77, -112, -65, -101, -62, -80, -50, -73, -21, -71, -15, -64, -23, 31)
 
 [node name="TreeLarge" type="Node2D"]
-z_index = 1
+z_index = 2
 
 [node name="TreeTrunkLarge" type="Polygon2D" parent="."]
 z_index = 1
@@ -123,7 +122,7 @@ uv = PackedVector2Array(58, 0.1, 56, 0, 16, 0, 16, 1, 11, 87.9, 11, 99.6, 0, 154
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
 
 [node name="TreeTopLarge" type="Polygon2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(1, -129)
 texture = ExtResource("2_7p4iv")
 polygon = PackedVector2Array(-3.5, -69, -32.7, -69, -36, -67, -38.5, -67, -49.5, -52.7, -58.6, -50, -61.3, -50, -70.3, -41, -71.8, -41, -78.5, -26.400002, -78.5, -21.7, -85.5, -13, -85.5, 17.900002, -72.4, 32, -71.5, 43.199997, -71.5, 46.6, -66.5, 53.6, -66.5, 56, -57.5, 62.899994, -57.5, 64.399994, -45.9, 69, -33, 69, -23, 64, -22.2, 64, -15.5, 69, 15, 69, 16.5, 68.899994, 47.399994, 69, 59.399994, 58, 60.899994, 58, 65.5, 46.4, 65.5, 44.800003, 70.3, 40, 71.8, 40, 77.5, 27.400002, 77.5, 16.599998, 85.399994, 7, 85.5, -23.400002, 84.5, -24.7, 84.5, -27, 69.5, -38.1, 69.5, -39.8, 55.600006, -41, 52.899994, -41, 50.5, -47.5, 50.5, -49.8, 39.5, -60.8, 39.5, -62.5, 25.5, -66.5, 25.5, -68.6, 5.4000015, -63, 4.199997, -63)
@@ -143,9 +142,6 @@ collision_layer = 4
 position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_niuhb")
 
-[node name="PointLight2D" type="PointLight2D" parent="TreeBody"]
-energy = 0.3
-texture = ExtResource("3_7p4iv")
-
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_niuhb")
+sdf_collision = false

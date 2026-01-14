@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3yws4mqhe6ru"]
+[gd_scene load_steps=8 format=3 uid="uid://d3yws4mqhe6ru"]
 
 [ext_resource type="Texture2D" uid="uid://d1sx8ha2c6uvp" path="res://Assets/Enviorment/SmallTree/TreeTrunkSmall.svg" id="1_5xa6y"]
 [ext_resource type="Texture2D" uid="uid://c0tyasjt3ngb0" path="res://Assets/Enviorment/SmallTree/TreeTopSmall.svg" id="2_tmx6r"]
-[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="3_mymk0"]
 
 [sub_resource type="Animation" id="Animation_5xa6y"]
 resource_name = "Idle"
@@ -117,14 +116,14 @@ polygon = PackedVector2Array(18, 41, -19, 41, -12, 10, -8, -40, -13, -38, -21, -
 [node name="VisualRoot" type="Node2D" parent="."]
 
 [node name="TreeTrunkSmall" type="Polygon2D" parent="VisualRoot"]
-z_index = 1
+z_index = 2
 texture = ExtResource("1_5xa6y")
 polygon = PackedVector2Array(13, -41, -13, -41, -13, -39, -18, 17.900002, -18, 41, 18, 41, 18, 21.2, 13, -28.2)
 uv = PackedVector2Array(31, 0, 5, 0, 5, 2, 0, 58.9, 0, 82, 36, 82, 36, 62.2, 31, 12.8)
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)]
 
 [node name="TreeTopSmall" type="Polygon2D" parent="VisualRoot"]
-z_index = 1
+z_index = 2
 position = Vector2(-1, -69)
 texture = ExtResource("2_tmx6r")
 polygon = PackedVector2Array(-14.700001, -33, -34.2, -20, -36.6, -20, -40.5, -14.200001, -40.5, 9.099998, -31.5, 25.599998, -31.5, 27.900002, -25.5, 32.9, 26.5, 33, 31.199997, 29, 33, 29, 36.5, 16.3, 40.300003, 12, 40.5, -11.5, 31.5, -23.7, 31.5, -25.2, 26, -28, 23.400002, -28, 19.5, -32.7)
@@ -143,10 +142,6 @@ collision_layer = 4
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TreeBody"]
 position = Vector2(0, 26)
 shape = SubResource("RectangleShape2D_5xa6y")
-
-[node name="PointLight2D" type="PointLight2D" parent="TreeBody"]
-energy = 0.2
-texture = ExtResource("3_mymk0")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 z_index = 1

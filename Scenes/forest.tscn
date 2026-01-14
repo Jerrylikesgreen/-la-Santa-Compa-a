@@ -207,11 +207,10 @@ collision_layer = 4
 shape = SubResource("WorldBoundaryShape2D_vh310")
 
 [node name="South" type="StaticBody2D" parent="EnviormentContainer/WorldBoudary"]
-position = Vector2(3, 0)
+position = Vector2(14, 1553)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnviormentContainer/WorldBoudary/South"]
-position = Vector2(-3, 1533)
 shape = SubResource("WorldBoundaryShape2D_igsr3")
 
 [node name="East" type="StaticBody2D" parent="EnviormentContainer/WorldBoudary"]
@@ -223,10 +222,10 @@ position = Vector2(0, 2)
 shape = SubResource("WorldBoundaryShape2D_xgdwn")
 
 [node name="West" type="StaticBody2D" parent="EnviormentContainer/WorldBoudary"]
+position = Vector2(-476, -2)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnviormentContainer/WorldBoudary/West"]
-position = Vector2(-506, -3)
 shape = SubResource("WorldBoundaryShape2D_y1epu")
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
