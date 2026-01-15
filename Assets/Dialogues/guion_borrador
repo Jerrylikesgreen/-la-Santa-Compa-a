@@ -38,16 +38,13 @@ ESCENA 1 (Bosque, Movimiento libre, Dialogo automatico por movimiento)
 	- Todo el mundo me lo dice, que no eres buena persona, y que si me quedo contigo estoy loca
 	- Pero yo se... que hay bondad en ti, se que solo has tenido mala suerte en la vida
 	- Se que si la gente comienza a tratarte bien, cambiaras a mejor
-	- ...
+	[SEGUIR AQUI]
 	- Creo que empiezo a verlo
 	- Mejor me doy prisa
 
 ESCENA 2 (Animacion/Novela visual Clasica)
 
 	Imagen/Animacion de ellos abrazandose y dandose un beso
-	
-	[Conversacion con el amante]
-	[Al final de esta, el hombre le da la cruz de la santa compaña y escapa]
 	
 	Chica
 	- Pense que no volveria a verte esta vez
@@ -86,7 +83,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Pero de que estas hablando?
 	- Como que si todo hubiera ido bien?
 	Chico
-	- El plan era entrar a la casa del alcalde aprovechando que estaba fuera de viaje
+	- El plan era entrar a la casa del parroco aprovechando que este estaba fuera
 	- Y robarle todo lo que podiamos
 	- Todo iba bien hasta que salimos de la casa
 	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y fuera...
@@ -137,19 +134,167 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Por supuesto que lo se
 	- Antes de que mudarnos aqui, mi padre era un monstruo
 	- Y como tu, muchas veces dijo que cambiaria, eso era lo que siempre decia luego de sobrepasarse conmigo o con mi madre mientras lloraba
-	- Incluso para evitar problemas vinimos al pueblo
+	- Incluso para evitar problemas vinimos a este pueblo
+	- Y al poco volvimos a la misma dinamica de siempre
+	- Y si paro, fue porque se rompio el cuerpo de todo lo que bebia
+	Chico
+	- Pero yo no soy tu padre, soy distinto, y yo te quiero como ninguna otra persona
+	Chica
+	- Eso es lo que nos decia el tambien
+	- Y no me estas dando ningun motivo para pensar lo contrario
+	Chico
+	- Dime que puedo hacer para que te lo replantees, cualquier cosa
+	Chica
+	- Tienes tu parte de lo que robasteis?
+	Chico
+	- Si, de hecho tengo las dos partes
+	Chica
+	- Bien, entonces vamos a ir ahora mismo a la Guardia Civil, iras voluntariamente y devolveras todo cuanto has robado
+	- Asi no tendras una pena tan larga
+	Chico
+	- Pero...
+	Chica
+	- Dijiste cualquier cosa no?
+	- Pues si realmente dices que vas a cambiar, quiero un sacrificio de verdad
+	Chico
+	- ...
+	- ......
+	- .........
+	Chica
+	- No deberias estartelo pensando tanto
+	- De verdad te importo?
+	Chico
+	- Eres la cosa mas importante de mi vida
+	Chica
+	- Pues entonces sabes cual es la respuesta correcta
+	- Y estoy segura que lo sabes de sobra
+	Chico
+	- ...
+	- Vendras a verme?
+	Chica
+	- Sabes de sobra que si
+	Chico
+	- ...
+	- Bien, entonces vamos
+	- Yo llevare este saco
+	- Puedes llevar esta cruz grande tu?
+	- El saco ya pesa lo suyo
+	Chica
+	- El cura tenia esta cruz en casa?
+	Chico
+	- Sabes que es muy creyente y rarito
+	Chica
+	- Supongo que lo tenia guardado de la iglesia
+	Chico
+	- ...
+	- Es posible
+	Chica
+	- Empecemos a andar ya, estoy agotada de trabajar y mañana tengo que volver
+	Chico
+	- Si...
+	
+	Animacion de ellos dos andando
+	
+	Fundido a negro
+	
+ESCENA
+
+	Ellos dos siguen andando
+	
+	Pero de pronto la chica se detiene
+	
+	Chico
+	- Todo bien?
+	Chica
+	- Sisi, todo esta bien
+	[Que me esta pasando? Noto que no puedo moverme]
+	- Y si descansamos un momento?
+	- Creo que no me encuentro muy bien
+	Chico
+	- Lo se...
+	- Hay algo que no te he contado...
+	Chica
+	- A que te refieres?
+	Chico
+	- No me dejaste terminar antes
+	Chica
+	- La verdad es que no quiero que sigas hablando de eso
+	Chico
+	- Es importante, te pido que me escuches
+	Chica
+	- ...
+	- Muy bien, dime lo que tengas que decir
+	Chico
+	- Cuando terminamos y bajamos de la montaña, la idea era dividirnos el botin y no volver a vernos
+	- Pero entonces paso algo muy raro...
+	Chica
+	- A que te refieres?
+	Chico
+	- Aparecio un hombre demacrado, y tenia esa cruz gigante con el
+	Chica
+	- Que le hicisteis a ese hombre? Lo heristeis?
+	Chico
+	- No, solo se acerco al viejo y lo mato
+	Chica
+	- Como que lo mato?
+	Chico
+	- Fue muy raro, ni siquiera hizo falta que le tocara, levanto la cruz y... se cayo al suelo
+	- Yo estaba aterrado, pensaba que me iba a matar a mi tambien
+	- Pero simplemente me dio su cruz y tambien cayo al suelo
+	- Estaba en los huesos, no se como podia moverse siquiera
+	Chica
+	- Porque se la cogiste?
+	Chico
+	- Yo no queria cogerla, fue mi cuerpo quien lo hizo
+	- Estaba moviendose por si solo
+	- Como te esta pasando a ti ahora
+	- Se que no te mueves porque no puedes, no porque estes cansada
+	Chica
+	- Me estas asustando
+	Chico
+	- Es normal
+	- Tengo que irme, pronto llegaran
+	Chica
+	- De que estas hablando?
+	Chico
+	- De verdad que lo siento, no queria nada de esto
+	- Solo queria que fueramos felices
+	- Tu y yo
+	- Has sido la persona mas importante de mi vida, y siempre te estare eternamente agradecido por haberme dado
+	- Y por lo que va a pasar ahora
+	Chica
+	- Que esta pasando?
+	Chico
+	- Adios...
 	
 	El hombre escapa corriendo con la lampara sin mirar en la chica
 	La mujer se queda mirandole y la pantalla esta casi oscura
-	[Un dialogo donde pide que vuelva]
+	
+	Chica
+	- A DONDE VAS?
+	- NO ME DEJES SOLA
+	- PORFAVOR AYUDAME
+	
 	Comienza a acercarse luz azulada por varios lados de la pantalla
-	[Dialogo de la chica sorprendida]
+	
+	Chica
+	- Que es eso?
+	- QUIEN ANDA AHI?
+	
 	Comienzan a sonar sonidos etereos por todas partes
 	Los espirituos se acercan a ella y acaban a su alrededor
-	[Dialogo de la chica pidiendoles que se vayan]
+	
+	Chica
+	- Quienes sois?
+	- No os acerqueis mas porfavor
+	
 	Sonido extra;o
 	La cruz comienza a brillar y la chica empieza a moverse por su cuenta
-	[Dialogo de la chica asustada diciendo que ella no se esta moviendo]
+	
+	Chica
+	- Que me esta pasando?
+	- No puedo controlar mis movimientos
+	
 	Fundido a negro
 
 ESCENA 3 (Bosque, Movimiento automatico, Dialogo automatico normal)
@@ -158,9 +303,109 @@ ESCENA 3 (Bosque, Movimiento automatico, Dialogo automatico normal)
 	[Termina cuando dice que se esta acercando a casa]
 	
 ESCENA 4 (Escena negra, madre)
-	[La chica se acerca a la madre]
-	[La madre dice que el chico ha entrado y les ha robado todos sus ahorros]
-	[La madre muere por la santa compa;a y la chica se derrumba]
+	Chica
+	- Hola mama, siento haber salido de casa sin avisarte
+	- Recibi una nota de el, pidiendo vernos en el bosque
+	Mama
+	- Acaba de irse de casa
+	- Venia cargado con un saco gigante en la espalda
+	Chica
+	- Como?
+	Madre
+	- Y nos ha robado nuestros ahorros
+	- Le grite que se fuera ahora y dejara eso donde estaba, pero no me hizo caso, intente levantarme para ir tras el y cai al suelo
+	- Me llevo un rato volver a la cama
+	Chica
+	- ...
+	- ......
+	
+	Comienza a llorar
+	
+	Madre
+	- No pasa nada vida mia
+	- Escucha, ve a la guardia civil ahora mismo, ha salido hace unos 10 minutos, no puede andar muy lejos
+	Chica
+	- Me encantaria mama, pero no puedo hacerlo
+	Madre
+	- Ya sigues con esa tonteria?
+	- Niña mia nos acaba de robar, A NOSOTRAS
+	- No busques defenderle esta vez
+	Chica
+	- Creeme que si pudiera, lo haria
+	Madre
+	- Y claro que puedes, tienes piernas para ir corriendo
+	Chica
+	- No es eso mama, es que en el bosque ha pasado algo...
+	Madre
+	- Te hizo daño?
+	Chica
+	- No fisicamente
+	- Tenia esta cruz con el y me la dio
+	- Estabamos yendo de camino a la guardia civil y entonces a mitad de camino senti que no podia moverme a voluntad
+	- Y ahora involuntariamente he llegado hasta casa
+	Madre
+	- Eso es... la cruz de la santa compaña?
+	Chica
+	- Creo... que si...
+	- Lo siento mucho mama
+	- En cuanto me di cuenta de a donde me dirigia, hice todo lo que pude para evitar venir hasta aqui
+	- Pero no fui capaz
+	- Soy una idiota
+	Madre
+	- No lo eres tesoro
+	La madre comienza a toser
+	Madre
+	- Escuchame atentamente, si lo que dices es verdad no me queda mucho tiempo ya
+	- Tienes que buscar a alguien y darle la cruz, solo asi te desaras de la maldicion
+	- Si no es solo cuestion de dias que acabes muerta
+	Chica
+	- Pero...
+	- Entonces la maldicion pasara a otra persona
+	Madre
+	- Ese ya no sera tu problema
+	- Es eso o morirte tu
+	- Y una vez hecho entonces te podras vengar de ese muchacho por todo lo que ha hecho
+	Chica
+	- No quiero hacer daño a nadie
+	Madre
+	- Y yo no quiero que tu vida termine tan joven
+	Chica
+	- Tiene que haber otra forma
+	- Solo tengo que pens...
+	
+	La chica comienza a moverse
+	
+	Chica
+	- MAMA
+	- CREO QUE ESTA PASANDO
+	Madre
+	- No te preocupes hija
+	- Estoy mas que preparada para esto
+	- Solo prometeme que te liberaras de la maldicion
+	
+	Chica
+	- Te quiero mama
+	Madre
+	- Y yo a ti hija
+	
+	La chica comienza a levantar el crucero, y el alma de la madre se une a la cruz
+	
+	Chica
+	- ...
+	- ......
+	- .........
+	- ma...ma...?
+	
+	Rompe a llorar
+	
+	Chica
+	- Dios mio... que voy a hacer?
+	
+	La chica comienza a moverse sola
+	
+	Chica
+	- NO POR FAVOR, NO TE MUEVAS
+	
 	Fundido a negro
 
 ESCENA 5 (Escena negra, loop)
@@ -168,6 +413,11 @@ ESCENA 5 (Escena negra, loop)
 	La chica se acerca
 	Hace animacion y muere el hombre
 	Desaparece la cama y comienza a andar
+	
+	Chica
+	- Y otro mas...
+	- Ya hace semanas que he perdido la cuenta de a cuantos he matado por la noche
+	
 	[Todo eso se repite en bucle con distintas siluetas]
 	[La chica comienza a hablar de como es su dia a dia]
 	[Explica tambien un poco que es la santa compaña]
@@ -180,11 +430,23 @@ ESCENA 6 (Visual novel final)
 	Se ve una cama con un anciano
 	La chica comienza a acercarse
 	[La chica habla con el]
+	[El chico dice que desde ese dia solo ha estado deprimido, pero es muy cobarde para suicidarse, asi como que tiene dinero y lujos, pero ha vivo voluntariamente en soledad y que por mas que ha intentado olvidar ese dia, no deja de lamentarse]
 	Imagen de beso de la chica en la frente
 	Sonido agonico del hombre
-	La chica se sienta en una silla
-	Respira (Conseguir voz femenina que sople?)
-	Suelta la cruz
+	
+	OPCION FINAL A	
+		La chica se sienta en una silla
+		Respira (Conseguir voz femenina que sople?)
+		Suelta la cruz
+		
+	OPCION FINAL B
+		Tras unos segundos, la chica sopla
+		Chica
+		- Porfin ha terminado
+		La mujer se convierte en polvo
+		La cruz cae al suelo
+		Pasan unos segundos
+		la cruz tambien se deshace en polvo
 
 FINAL (Creditos) (Aqui que suente otra cantiga mediaval, pero de escarnio e maldicer? Que son mas de broma o con mas chicha)
 	Un juego de PyramidHead83 y jerrylikes_72469 (pendiente nombre mio/tuyo final)
