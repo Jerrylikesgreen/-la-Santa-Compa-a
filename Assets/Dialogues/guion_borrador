@@ -17,7 +17,7 @@ ESCENA 1 (Bosque, Movimiento libre, Dialogo automatico por movimiento)
 	-Desde luego parece que le cobraban por cada letra
 	-No podia andarse con mas aires de misterioso aunque quisiera
 	-A quien se le ocurre llevar dias desaparecido y enviar esto?
-	-Desde luego es su letra, solo el escribe tan mal
+	-Desde luego es su letra, solo el escribe tan mal, aunque esta peor escrito que de normal
 	-No quiero tardar mucho mas, debo seguir todo recto
 	
 	Salir dialogo
@@ -27,8 +27,9 @@ ESCENA 1 (Bosque, Movimiento libre, Dialogo automatico por movimiento)
 	- Porque diablos a dicho de vernos tan lejos?
 	- Me da miedo salir a estas horas de noche
 	- Puede pasar cualquier cosa
+	- Asi empezaban los cuentos que me contaban mis padres antes de irme a dormir
 	- ¿Que habrás liado esta vez para que no puedas volver a entrar al pueblo?
-	- La ultima vez te fuiste 2 semanas pero esta vez ha sido todo un mes
+	- La ultima vez te fuiste 3 dias pero esta vez ha sido mas de una semana
 	- Ademas no podia ser mas inoportuno
 	- Mama lleva varias noches mala y solo esta empeorando
 	- Y no es como si pueda permitirme otra vez poner un plato mas en la mesa
@@ -38,10 +39,14 @@ ESCENA 1 (Bosque, Movimiento libre, Dialogo automatico por movimiento)
 	- Todo el mundo me lo dice, que no eres buena persona, y que si me quedo contigo estoy loca
 	- Pero yo se... que hay bondad en ti, se que solo has tenido mala suerte en la vida
 	- Se que si la gente comienza a tratarte bien, cambiaras a mejor
-	[SEGUIR AQUI]
+	- Debi haberme traido ropa mas caliente, me estoy congelando de frio
+	- Y esta lampara que llevo no me da suficiente calor
+	- ...
 	- Creo que empiezo a verlo
 	- Mejor me doy prisa
-
+	
+	La pantalla se oscurece
+	
 ESCENA 2 (Animacion/Novela visual Clasica)
 
 	Imagen/Animacion de ellos abrazandose y dandose un beso
@@ -55,6 +60,10 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Te encuentras bien? Estas herido?
 	Chico
 	- Descuida, no me ha pasado nada
+	Chica
+	- Estas bien? Te noto muy delgado y palido
+	Chico
+	- No te preocupes por eso, de verdad que estoy bien
 	La chica respira aliviada
 	Chica
 	- Mas vale que te expliques
@@ -76,7 +85,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	Chica
 	- Pero de que estas hablando?
 	Chico
-	- Hace mas de un mes conoci a un tipo en un bar
+	- Hace mas de un mes conoci a un tipo mayor en un bar
 	- Era raro y no paraba de toser, pero hicimos un trato
 	- Si todo hubiera ido bien, ahora mismo nosotros dos estariamos en argentina como siempre hemos dicho
 	Chica
@@ -86,7 +95,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- El plan era entrar a la casa del parroco aprovechando que este estaba fuera
 	- Y robarle todo lo que podiamos
 	- Todo iba bien hasta que salimos de la casa
-	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y fuera...
+	- Solo teniamos que descender la montaña y una vez abajo nos dividiriamos lo robado y ya no nos volveriamos a ver
 	Chica
 	- ...
 	- ......
@@ -113,7 +122,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	Chica
 	- Y TE SORPRENDE? NO HAS HECHO MAS QUE DAR PROBLEMAS DESDE QUE NACISTE
 	- ESTOY HARTA DE SALIR POR TI SIEMPRE
-	- NO SOLO EL PUEBLO ENTERO ME IGNORA, HASTA MI MADRE ME LLAMA FRACASADA Y DICE QUE TE TIRE A LA CALLE
+	- NO SOLO EL PUEBLO ENTERO ME IGNORA, HASTA MI MADRE ME LLAMA FRACASADA Y DICE QUE TE TIRE A LA CALLE, QUE ES A DONDE PERTENECES
 	Chico
 	- Pero...
 	Chica
@@ -156,6 +165,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	Chica
 	- Dijiste cualquier cosa no?
 	- Pues si realmente dices que vas a cambiar, quiero un sacrificio de verdad
+	- Al menos si devuelves todo y te entregas voluntariamente pasaras menos tiempo en prision
 	Chico
 	- ...
 	- ......
@@ -180,8 +190,10 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Puedes llevar esta cruz grande tu?
 	- El saco ya pesa lo suyo
 	Chica
-	- El cura tenia esta cruz en casa?
+	- El parroco tenia esta cruz en casa?
 	Chico
+	- S-si...
+	- ...
 	- Sabes que es muy creyente y rarito
 	Chica
 	- Supongo que lo tenia guardado de la iglesia
@@ -247,7 +259,8 @@ ESCENA
 	Chico
 	- Yo no queria cogerla, fue mi cuerpo quien lo hizo
 	- Estaba moviendose por si solo
-	- Como te esta pasando a ti ahora
+	- Y al poco comence a ver cosas...
+	- Como te esta empezando pasando a ti ahora
 	- Se que no te mueves porque no puedes, no porque estes cansada
 	Chica
 	- Me estas asustando
@@ -260,7 +273,7 @@ ESCENA
 	- De verdad que lo siento, no queria nada de esto
 	- Solo queria que fueramos felices
 	- Tu y yo
-	- Has sido la persona mas importante de mi vida, y siempre te estare eternamente agradecido por haberme dado
+	- Has sido la persona mas importante de mi vida, y siempre te estare eternamente agradecido por haberme dado ese mendrugo
 	- Y por lo que va a pasar ahora
 	Chica
 	- Que esta pasando?
@@ -295,11 +308,17 @@ ESCENA
 	- Que me esta pasando?
 	- No puedo controlar mis movimientos
 	
+	Fundido a negro, pero de todo el escenario menos la chica, los espiritus y la luz que estos emiten
+	
+	Chica
+	- QUE ME ESTA PASANDO?
+	- PORQUE NO PUEDO VER AHORA?
+	
 	Fundido a negro
 
 ESCENA 3 (Bosque, Movimiento automatico, Dialogo automatico normal)
 	Camino con la santa compa;a
-	[Dialogo explicando que es la santa compa;a y describir como se siente]
+	*****[ Estoy pensando que igual esta escena se podria saltar, es redundante y se puede hacer que en un par de lineas lo explique la chica en la siguiente escena ]*****
 	[Termina cuando dice que se esta acercando a casa]
 	
 ESCENA 4 (Escena negra, madre)
@@ -331,9 +350,9 @@ ESCENA 4 (Escena negra, madre)
 	- Niña mia nos acaba de robar, A NOSOTRAS
 	- No busques defenderle esta vez
 	Chica
-	- Creeme que si pudiera, lo haria
+	- No busco defenderlo, reeme que si pudiera lo haria
 	Madre
-	- Y claro que puedes, tienes piernas para ir corriendo
+	- Claro que puedes, tienes piernas para ir corriendo
 	Chica
 	- No es eso mama, es que en el bosque ha pasado algo...
 	Madre
@@ -342,13 +361,14 @@ ESCENA 4 (Escena negra, madre)
 	- No fisicamente
 	- Tenia esta cruz con el y me la dio
 	- Estabamos yendo de camino a la guardia civil y entonces a mitad de camino senti que no podia moverme a voluntad
-	- Y ahora involuntariamente he llegado hasta casa
+	- Y aparentemente ahora estoy en casa
+	- Ni siquiera veo nada, esta todo en negro, excepto tu, y los espiritus que hay detras mia
 	Madre
-	- Eso es... la cruz de la santa compaña?
+	- Eso es... la santa compaña?
 	Chica
 	- Creo... que si...
 	- Lo siento mucho mama
-	- En cuanto me di cuenta de a donde me dirigia, hice todo lo que pude para evitar venir hasta aqui
+	- En cuanto te empece a ver, hice todo lo que pude para evitar venir hasta aqui
 	- Pero no fui capaz
 	- Soy una idiota
 	Madre
@@ -369,6 +389,8 @@ ESCENA 4 (Escena negra, madre)
 	- No quiero hacer daño a nadie
 	Madre
 	- Y yo no quiero que tu vida termine tan joven
+	- Tienes una larga vida por delante
+	- Y podria ser mucho mas feliz de la que te pude dar yo
 	Chica
 	- Tiene que haber otra forma
 	- Solo tengo que pens...
@@ -414,25 +436,217 @@ ESCENA 5 (Escena negra, loop)
 	Hace animacion y muere el hombre
 	Desaparece la cama y comienza a andar
 	
+	[Todo eso se repite en bucle con distintas siluetas]
+	
 	Chica
 	- Y otro mas...
 	- Ya hace semanas que he perdido la cuenta de a cuantos he matado por la noche
+	- Se ha vuelto tal rutina esto a la noche que ya no me rompo a llorar cuando lo hago
+	- Tengo que agradecer que al menos no es otro niño, dios, ayer creo que mate a 3
+	- Lo unico que me gustaria a la noche ya en este punto es que tuviera control en algo mas que solo mis pensamientos
+	- Mis ojos por ejemplo, me gustaria ver algo mas que solo la gente antes de morir, salvo eso lo veo todo negro
+	- O almenos poder respirar cuando yo quisiera...
+	- Supongo que por eso cuando es de dia ni siquiera pienso con claridad, dejo la mente en blanco y evito pensar porque me duele la cabeza
+	- Casi ni puedo hablar ni leer, y paso la mayor parte del tiempo durmiendo para guardar energias
+	- ...
+	- Ahora mismo creo que si tuviera enfrente a cualquiera de las personas que he estado viendo estos distintos dias les habria dado la cruz a cualquiera sin dudarlo en lugar de haberlos esquivado
+	- Asi podria comer algo mas que no sean plantas e insectos que encuentro por ahi
+	- Ademas podria dejar de despertarme en sitios que no conozco
+	- Llegados a este punto ya ni siquiera se si sigo en Galicia
+	- ...
+	- ......
+	- Y si mañana al despertarme tiro la cruz en cualquier sitio y salgo corriendo?
+	- ...
+	- En verdad ya ni se que pienso, ya hice eso el primer dia que me desperte
+	- Corri durante horas en linea recta, y al llegar a una curva vi ahi a la cruz otra vez
+	- Siempre esta ahi antes de que llegue la noche, donde ya no tengo control de mi misma
+	- Y encima gaste mucha energia ese dia, no puedo hacer eso, si no creo que si que me voy a morir
+	- Esta mañana incluso empece a notarme los huesos, dios sabe cuanto peso he tenido que perder ya
+	- Al menos mi madre estaria contenta por haber perdido unos kilos de mas
+	- jaja
+	- ...
+	- Dios... es verdad...
+	- Mama... ya hasta me habia olvidado de ti...
+	- Ahora mas que nunca te hecho mucho de menos
+	- Ojala hubiera podido ir a tu entierro
+	- Al menos espero que hayan encontrado ya su cuerpo, aunque sea por el olor
+	- Pero realmente me sorprenderia, hacia mucho tiempo que teniamos visita
+	- ...
+	- Siempre pense que la Santa Compaña era un cuento que decian mis padres para que no estuviera haciendo el estupido por la noche
+	- Quiero decir, almas que se juntan en fila india guiados por un mortal con una cruz?
+	- Y que esta persona los lleva a gente que este a punto de morir?
+	- Es absurdo, y si mis ojos no lo hubieran visto lo seguiria pensando
+	- Pero lo que siempre me aterraba de niña era justo mi dia a dia ahora
+	- Que el guia carezca de control de su cuerpo llegada la noche, y que su final sea pasarle la cruz a otra persona, pasandole la maldicion a este
+	- O bien morir por desnutricion o cansancio, supongo que lo que llegue antes
+	- En verdad me aterra morir, aun no estoy lista, habia tantas cosas que queria hacer...
+	- Casarme, tener una familia, vivir una vida humilde en el campo con mis seres queridos...
+	- Ahora ya ni creo que eso sea posible
+	- Incluso si me libero de la maldicion, realmente querre seguir viviendo con todo lo vivido?
+	- ...
+	- Y todo esto... fue por su culpa...
+	- Joder, como pude ser tan idiota?
+	- Por que tuve que darle a ese vagabundo un mendrugo de pan ese dia?
+	- O al menos porque nunca cambio?
+	- Supongo que tendria que haber aprendido ya de mi padre, la gente nunca cambia
+	- Pero... el fue tan bueno conmigo muchas veces
+	- Cuando le conoci papa habia muerto hacia pocas semanas, estaba destrozada
+	- Aunque hubiera sido cruel, en el fondo lo queria
+	- Y el... siempre conseguia hacerme reir, cuando estaba a su lado me olvidava de lo dura que estaba siendo mi vida
+	- ...
+	- ......
+	- Pero que estoy diciendo?
+	- No puedo seguir disculpandole solo porque alguna vez hacia chistes
+	- Si estoy aqui, si he visto lo que he visto, ha sido por el
+	- No importa lo que vea
+	- Ni tampoco cuanto mi cuerpo se agote
+	- No voy a pasarle la maldicion a nadie
+	- ...
+	- Un dia el parroco nos conto un cuento
+	- Sobre una tortuga que eventualmente llega a la meta antes que un soldado, o algo asi
+	- No me acuerdo muy bien como iba
+	- Se me hacia tonto tambien esa historia, como muchas otras que nos contaba
+	- Pero ahora me da igual el tiempo que me lleve, yo ahora soy la tortuga
+	- Y el es ese soldado
+	- Y cuando te sobrepase...
+	- Te juro que te matare
 	
-	[Todo eso se repite en bucle con distintas siluetas]
-	[La chica comienza a hablar de como es su dia a dia]
-	[Explica tambien un poco que es la santa compaña]
-	[Maldice todo]
-	[Dice que solo vive por el odio]
+	La pantalla de comienza a oscurecer
 	
 ESCENA 6 (Visual novel final)
 	Ahora pone otro a;o en el futuro, en argentino
 	Escena negra
 	Se ve una cama con un anciano
 	La chica comienza a acercarse
-	[La chica habla con el]
-	[El chico dice que desde ese dia solo ha estado deprimido, pero es muy cobarde para suicidarse, asi como que tiene dinero y lujos, pero ha vivo voluntariamente en soledad y que por mas que ha intentado olvidar ese dia, no deja de lamentarse]
+	
+	Anciana
+	- Eres tu verdad? Cuanto tiempo sin vernos
+	Anciano
+	- Si... soy yo...
+	- Ha pasado mucho tiempo...
+	Anciana
+	- Antes de lo que vaya a pasar, te pido que me respondas a dos preguntas
+	- Donde estamos ahora mismo? Y cuantos años han pasado?
+	Anciando
+	- Veo que ni siquiera tienes conciencia de dia
+	- Supongo que es normal tras tanto tiempo
+	- Esto es argentina, y han pasado 30 años desde ese dia
+	Anciana
+	- Vaya, ahora tengo 60 años entonces
+	- Y veo que tambien que he andado bastante
+	Anciano
+	- Me sorprende que no le pasaras la cruz a nadie, eso es admirable
+	Anciana
+	- Si...
+	- Tu encambio se lo hiciste a la primera persona que viste
+	Anciano
+	- Cierto...
+	- No soy capaz de imaginar por lo que habras tenido que pasar
+	Anciana
+	- Honestamente no me acuerdo de mucho vivido excepto antes de la cruz llegados a este punto
+	Anciano
+	- Como has aguantado tanto tiempo viva?
+	Anciana
+	- Ni yo misma termino de entenderlo la verdad
+	- Supongo que comiendo lo minimo y durmiendo de dia
+	Anciano
+	- Pues la verdad es que no te noto tan demacrada
+	Anciana
+	- Ah si?
+	- Pues la ultima vez que me mire estaba en los huesos
+	- No se en que momento ha pasado eso
+	Anciano
+	- ...
+	- Supongo que has venido para vengarte no?
+	Anciana
+	- No tengo control de lo que hago de noche, y de dia casi lo mismo
+	- Se que he estado en muchos lugares distintos, zonas frias, zonas calidas, zonas selvaticas,...
+	- Pero no elijo a donde voy, ni a quien visito, eso ya no depende de mi, si no de la santa compaña
+	Anciano
+	- Me sorprende que hayas recorrido todo el mundo solo para verme, me da miedo pensar cuantas vidas has terminado
+	Anciana
+	- Con el tiempo he aprendido que yo no las he matado, y he llegado a la conclusion de que al menos puedo hacer que su inicio al mas alla sea comodo
+	- Ni siquiera hay problemas con que hablen otro idioma
+	- Descubri hace tiempo que mas bien lo que esta pasando es que son nuestras almas quienes estan hablando
+	- Creo que llevo muchos años sin hablar realmente
+	Anciano
+	- Increible
+	Anciana
+	- Dime algo, valio la pena?
+	- Al menos fuiste feliz?
+	Anciano
+	- Como siempre, nunca te equivocaste
+	- Al principio de llegar aqui era feliz, intentaba olvidar todo, y lo consegui
+	- Pero a los pocos dias... empece a recordar la ultima vez que hablamos
+	- Como gritabas imperando que te ayudara
+	- Dios... me arrepiento de tantas cosas...
+	- Ojala ese dia me hubiera quedado en casa contigo, y ojala hubiera sido un mejor hombre, tarde mucho en darme cuenta que nunca habia sido tan feliz en mi vida que eses momentos viviendo contigo
+	Anciana
+	- Vaya... asi que todo fue en vano
+	- No pudiste ser feliz, y yo no pude vivir por tu decision
+	Anciano
+	- Mas o menos
+	- Consegui un empleo, y vivi mi vida en automatico
+	- Intente ahogar mis penas en alcohol, pero cuando eso dejo de funcionar, simplemente empece a vivir con lo minimo de lo minimo, no queria ningun lujo, no queria ahogarme en comida, ni tampoco mujeres ni nada asi
+	- Solo lo minimo para no morirme
+	- Intente quitarme la vida multiples veces, pero fui muy cobarde en todas ellas, y al final solo lloraba
+	- Creo que lo mejor para todos hubiera sido que no me hubieras tirado ese pedazo de pan
+	- Te amaba con locura, es cierto, pero tambien hacia lo que hacia porque sabia que me apoyarias
+	- Y me aproveche de ti...
+	- Muchas veces...
+	- Porfavor, haz lo que viniste a hacer
+	Anciana
+	- Descuida, eso pasara lo queramos o no
+	- Pero normalmente no me dejan hablar tanto tiempo
+	- Y llevo años esperando este momento, asi que no lo desperdiciemos
+	Anciano
+	- Esta bien
+	Anciana
+	- Al principio de esto...
+	- Te odiaba con todas mis fuerzas, queria que murieras de la forma mas dolorosa que mi mente podia llegar a imaginar
+	- Y una parte de mi, sigue deseando que eso pase, y que ardas en el infierno por todo lo que has hecho
+	- Pero por otro lado... he visto morir a mucha gente a lo largo de todos estos años, y cuando no estaba con mis pensamientos internos, intente actuar frente a ellos de muchas formas distintas
+	- Triste, empatica, furiosa, sin que me importara, incluso alguna vez alegre
+	- Y era cualquier persona que te puedas imaginar, de todas las razas y edades, incluso creo que alguna vez se lo he hecho a un bebe
+	Anciano
+	- Dios...
+	Anciana
+	- Llegados a este punto, solo estoy cansada, quiero que todo esto termine de una vez
+	Anciano
+	- Espero que un dia consigas librarte de la maldicion
+	- Al menos disfrutar un poco de lo que te queda de vida
+	Anciana
+	- Hace mucho tiempo llegue a la conclusion de que morire cargando esta cruz
+	- Solo espero que esta desaparezca conmigo y que no se la transmita a nadie mas
+	- Y tras lo que vaya a pasar ahora, se que porfin podre descansar
+	- Pero lo hare habiendo cumplido mis dos promesas, no darle la cruz a nadie, y ver como tu vida termina
+	Anciano
+	- Al final llegaste a la meta, es como la fabula de aquiles y la tortuga
+	Anciana
+	- Jajaja, que idiota, no atendiste al parroco? Era un soldado
+	
+	Los dos comienzan a reir, como no lo habian hecho en años
+	
+	La anciana comienza a subir los brazos
+	
+	Anciano
+	- Veo que ya esta empezando
+	- Perdon por habernos conocido
+	- Y espero que hagas lo que hagas, puedas descansar y ser feliz
+	
+	La anciana hace animacion y el anciano muere
+	
+	Tras unos segundos, la anciana comienza a ver el resto de la sala, y a poder mover todas las partes de su cuerpo a voluntad, asi como que la santa compaña comienza a desaparecer
+	
+	La anciana sopla, como si se hubiera liberado un peso enorme de encima
+	
+	Anciana
+	- Parece que... todo ha acabado
+	- Por fin...
+	- Espero que a donde quiera que vayas tu ahora, tambien puedas descansar en paz
+	- Solo que muy lejos de mi
+	
 	Imagen de beso de la chica en la frente
-	Sonido agonico del hombre
 	
 	OPCION FINAL A	
 		La chica se sienta en una silla
@@ -440,10 +654,6 @@ ESCENA 6 (Visual novel final)
 		Suelta la cruz
 		
 	OPCION FINAL B
-		Tras unos segundos, la chica sopla
-		Chica
-		- Porfin ha terminado
-		La mujer se convierte en polvo
 		La cruz cae al suelo
 		Pasan unos segundos
 		la cruz tambien se deshace en polvo
