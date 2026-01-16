@@ -116,7 +116,7 @@ polygon = PackedVector2Array(18, 41, -19, 41, -12, 10, -8, -40, -13, -38, -21, -
 [node name="VisualRoot" type="Node2D" parent="."]
 
 [node name="TreeTrunkSmall" type="Polygon2D" parent="VisualRoot"]
-z_index = 2
+z_index = 3
 texture = ExtResource("1_5xa6y")
 polygon = PackedVector2Array(13, -41, -13, -41, -13, -39, -18, 17.900002, -18, 41, 18, 41, 18, 21.2, 13, -28.2)
 uv = PackedVector2Array(31, 0, 5, 0, 5, 2, 0, 58.9, 0, 82, 36, 82, 36, 62.2, 31, 12.8)
