@@ -9,4 +9,9 @@ func _on_body_entered(_body: Node2D) -> void:
 	var dialog = scene_dialogue.instantiate()
 	dialog.path_csv = path_csv
 	get_tree().root.add_child(dialog)
+	_trigger_event()
 	queue_free()
+
+
+func _trigger_event()->void:
+	pass

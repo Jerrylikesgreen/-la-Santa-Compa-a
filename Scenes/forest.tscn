@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=12 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="Script" uid="uid://bituivhn4dln4" path="res://Scripts/player_spawn_point.gd" id="2_u53w3"]
 [ext_resource type="Script" uid="uid://qdn87he2xyuw" path="res://Scripts/enviorment_generator.gd" id="3_qq45g"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://w70ymdbq7cab" path="res://Scenes/EnvChucks/forest_chunk_3.tscn" id="6_igsr3"]
 [ext_resource type="PackedScene" uid="uid://c18uy5f2nsmyl" path="res://Scenes/activador_dialogo.tscn" id="6_qq45g"]
 [ext_resource type="Shader" uid="uid://y3qq6ykhcw3p" path="res://Resources/Shaders/fog_shader.gdshader" id="7_wo0py"]
+[ext_resource type="PackedScene" uid="uid://cohjitxf6sq3u" path="res://Scenes/EnvChucks/forest_chunk_4.tscn" id="7_xgdwn"]
 [ext_resource type="Texture2D" uid="uid://cnv8ikey2s5xt" path="res://Assets/NoiseTextures/smoke.png" id="8_vh310"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vh310"]
@@ -39,7 +40,7 @@ script = ExtResource("2_u53w3")
 
 [node name="EnviormentGenerator" type="Node2D" parent="."]
 script = ExtResource("3_qq45g")
-chunk_scenes = Array[PackedScene]([ExtResource("4_vh310"), ExtResource("5_igsr3"), ExtResource("6_igsr3")])
+chunk_scenes = Array[PackedScene]([ExtResource("4_vh310"), ExtResource("5_igsr3"), ExtResource("6_igsr3"), ExtResource("7_xgdwn")])
 spawn_radius = 3
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]

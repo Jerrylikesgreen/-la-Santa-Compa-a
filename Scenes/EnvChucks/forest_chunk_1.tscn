@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://blyajoonq3fcc"]
+[gd_scene load_steps=7 format=3 uid="uid://blyajoonq3fcc"]
 
 [ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/EnvObjects/tree_large.tscn" id="1_2v1kp"]
+[ext_resource type="Script" uid="uid://dr4j7wca8y4r3" path="res://Scripts/forest_chunk_1.gd" id="1_gy8na"]
 [ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/EnvObjects/tree_small.tscn" id="2_kgydt"]
 [ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/EnvObjects/bush.tscn" id="3_wfe5x"]
+[ext_resource type="PackedScene" uid="uid://c18uy5f2nsmyl" path="res://Scenes/activador_dialogo.tscn" id="5_0j8vk"]
+[ext_resource type="Script" uid="uid://cibarthbccbgr" path="res://Scripts/forest_event.gd" id="6_gy8na"]
 
 [node name="ForestChunk1" type="Node2D"]
+script = ExtResource("1_gy8na")
+metadata/_custom_type_script = "uid://c64cy5w21m3r"
 
 [node name="LargeTrees" type="Node2D" parent="."]
 
@@ -71,3 +76,7 @@ position = Vector2(783, 286)
 
 [node name="Bush5" parent="Bushes" instance=ExtResource("3_wfe5x")]
 position = Vector2(336, 358)
+
+[node name="ForestEvent" parent="." instance=ExtResource("5_0j8vk")]
+position = Vector2(527, 343)
+script = ExtResource("6_gy8na")

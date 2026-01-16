@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cohjitxf6sq3u"]
+
+[ext_resource type="Script" uid="uid://kmfv3yl6g23" path="res://Scripts/forest_chunk_4.gd" id="1_200iw"]
+[ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/EnvObjects/tree_large.tscn" id="2_603ab"]
+[ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/EnvObjects/tree_small.tscn" id="3_tgtug"]
+[ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/EnvObjects/bush.tscn" id="4_ysrin"]
+
+[node name="ForestChunk4" type="Node2D"]
+script = ExtResource("1_200iw")
+metadata/_custom_type_script = "uid://c64cy5w21m3r"
+
+[node name="LargeTrees" type="Node2D" parent="."]
+
+[node name="TreeLarge2" parent="LargeTrees" instance=ExtResource("2_603ab")]
+position = Vector2(758, 537)
+
+[node name="TreeLarge5" parent="LargeTrees" instance=ExtResource("2_603ab")]
+position = Vector2(699, 261)
+
+[node name="TreeLarge3" parent="LargeTrees" instance=ExtResource("2_603ab")]
+position = Vector2(87, 541)
+
+[node name="SmallTrees" type="Node2D" parent="."]
+
+[node name="TreeSmall" parent="SmallTrees" instance=ExtResource("3_tgtug")]
+position = Vector2(378, 407)
+
+[node name="TreeSmall3" parent="SmallTrees" instance=ExtResource("3_tgtug")]
+position = Vector2(352, 137)
+
+[node name="TreeSmall4" parent="SmallTrees" instance=ExtResource("3_tgtug")]
+position = Vector2(380, 170)
+
+[node name="Bushes" type="Node2D" parent="."]
+
+[node name="Bush" parent="Bushes" instance=ExtResource("4_ysrin")]
+position = Vector2(133, 560)
+
+[node name="Bush2" parent="Bushes" instance=ExtResource("4_ysrin")]
+position = Vector2(1088, 592)
+
+[node name="Bush3" parent="Bushes" instance=ExtResource("4_ysrin")]
+position = Vector2(747, 45)

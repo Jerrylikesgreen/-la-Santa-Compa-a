@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dewjwph3mmxm4"]
+[gd_scene load_steps=5 format=3 uid="uid://dewjwph3mmxm4"]
 
 [ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/EnvObjects/tree_large.tscn" id="1_qbrk2"]
+[ext_resource type="Script" uid="uid://caodoonxbfbi" path="res://Scripts/forest_chunk_2.gd" id="1_wq3p0"]
 [ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/EnvObjects/tree_small.tscn" id="2_27ct2"]
 [ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/EnvObjects/bush.tscn" id="3_wq3p0"]
 
 [node name="ForestChunk2" type="Node2D"]
+script = ExtResource("1_wq3p0")
+metadata/_custom_type_script = "uid://c64cy5w21m3r"
 
 [node name="LargeTrees" type="Node2D" parent="."]
 
