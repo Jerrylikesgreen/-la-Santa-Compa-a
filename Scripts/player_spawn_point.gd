@@ -20,3 +20,4 @@ func spawn_player()->void:
 func spawn_player_camera()->void:
 	player_camera = Camera2D.new()
 	player.player_position.add_child(player_camera)
+	CD.player_camera = player_camera

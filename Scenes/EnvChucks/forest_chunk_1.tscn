@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://blyajoonq3fcc"]
+
+[ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/EnvObjects/tree_large.tscn" id="1_2v1kp"]
+[ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/EnvObjects/tree_small.tscn" id="2_kgydt"]
+[ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/EnvObjects/bush.tscn" id="3_wfe5x"]
+
+[node name="ForestChunk1" type="Node2D"]
+
+[node name="LargeTrees" type="Node2D" parent="."]
+
+[node name="TreeLarge" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(112, 91)
+
+[node name="TreeLarge2" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(283, 36)
+
+[node name="TreeLarge3" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(538, 38)
+
+[node name="TreeLarge4" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(812, 57)
+
+[node name="TreeLarge5" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(1008, 186)
+
+[node name="TreeLarge6" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(1052, 410)
+
+[node name="TreeLarge7" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(896, 524)
+
+[node name="TreeLarge8" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(656, 556)
+
+[node name="TreeLarge9" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(371, 566)
+
+[node name="TreeLarge10" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(147, 555)
+
+[node name="TreeLarge11" parent="LargeTrees" instance=ExtResource("1_2v1kp")]
+position = Vector2(111, 386)
+
+[node name="SmallTrees" type="Node2D" parent="."]
+
+[node name="TreeSmall" parent="SmallTrees" instance=ExtResource("2_kgydt")]
+position = Vector2(491, 262)
+
+[node name="TreeSmall2" parent="SmallTrees" instance=ExtResource("2_kgydt")]
+position = Vector2(527, 260)
+
+[node name="TreeSmall3" parent="SmallTrees" instance=ExtResource("2_kgydt")]
+position = Vector2(567, 260)
+
+[node name="TreeSmall4" parent="SmallTrees" instance=ExtResource("2_kgydt")]
+position = Vector2(529, 281)
+
+[node name="Bushes" type="Node2D" parent="."]
+
+[node name="Bush" parent="Bushes" instance=ExtResource("3_wfe5x")]
+position = Vector2(500, 611)
+
+[node name="Bush2" parent="Bushes" instance=ExtResource("3_wfe5x")]
+position = Vector2(532, 634)
+
+[node name="Bush3" parent="Bushes" instance=ExtResource("3_wfe5x")]
+position = Vector2(473, 630)
+
+[node name="Bush4" parent="Bushes" instance=ExtResource("3_wfe5x")]
+position = Vector2(783, 286)
+
+[node name="Bush5" parent="Bushes" instance=ExtResource("3_wfe5x")]
+position = Vector2(336, 358)
