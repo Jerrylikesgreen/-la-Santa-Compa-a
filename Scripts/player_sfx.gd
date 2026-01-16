@@ -18,7 +18,7 @@ func play_step() -> void:
 			stream = GRASS_STEP
 			play()
 		Player.StepTerrain.DIRT:
-			stream = DIRT_STEP # replace when you have dirt
+			stream = DIRT_STEP
 			play()
 		_:
 			stream = DEFAULT_STEP
