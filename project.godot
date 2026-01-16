@@ -27,7 +27,6 @@ CD="*res://Scripts/Autoloads/CommonData.gd"
 
 folder_colors={
 "res://Assets/": "red",
-"res://Autoloads/": "orange",
 "res://Resources/": "yellow",
 "res://Scenes/": "green",
 "res://Scripts/": "purple"

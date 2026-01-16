@@ -2,13 +2,13 @@ class_name PlayerBody
 extends CharacterBody2D
 
 @export var debug: bool = false
-@export var speed: float = 200.0
+@export var speed: float = 100.0
 @onready var anim: AnimationPlayer = %AnimationPlayer
 @onready var player_sfx: PlayerSfx = %PlayerSfx
 
 
-var front_facing := true
-var facing_left := true
+var front_facing : bool = true
+var facing_left : bool = true
 
 
 
