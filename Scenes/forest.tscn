@@ -55,7 +55,7 @@ small_tree_scene = ExtResource("2_8hnfc")
 bush_scene = ExtResource("1_uee5o")
 map_width = 60
 map_height = 60
-cell_size = 45
+cell_size = 60
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
 color = Color(0.1254902, 0.1254902, 0.1254902, 1)
