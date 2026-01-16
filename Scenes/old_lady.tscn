@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://ch8d6bhyayput"]
 
-[ext_resource type="Texture2D" uid="uid://dn5sr54upb1sv" path="res://Assets/OldLady/OldLadyBody.png" id="1_yer64"]
-[ext_resource type="Texture2D" uid="uid://cxnxhyk75g68a" path="res://Assets/OldLady/OldLadyLeftHand.png" id="2_vkm10"]
-[ext_resource type="Texture2D" uid="uid://qwokx8tv1qf" path="res://Assets/OldLady/OldLadyRightHand.png" id="3_xtqmk"]
-[ext_resource type="Texture2D" uid="uid://c4f8cqngaok7l" path="res://Assets/OldLady/OldLadyRightShoe.png" id="4_d7ufm"]
-[ext_resource type="Texture2D" uid="uid://dicv0nraar4oi" path="res://Assets/OldLady/OldLadyLeftShoe.png" id="5_gs6fi"]
-[ext_resource type="Texture2D" uid="uid://cmt3s2pfk42pb" path="res://Assets/OldLady/OldLadyHead.png" id="6_8er6c"]
-[ext_resource type="Texture2D" uid="uid://b8rt5c8gov8kn" path="res://Assets/OldLady/OldLadyGlasses.png" id="7_semq7"]
+[ext_resource type="Texture2D" uid="uid://dn5sr54upb1sv" path="res://Assets/Characters/OldLady/OldLadyBody.png" id="1_yer64"]
+[ext_resource type="Texture2D" uid="uid://cxnxhyk75g68a" path="res://Assets/Characters/OldLady/OldLadyLeftHand.png" id="2_vkm10"]
+[ext_resource type="Texture2D" uid="uid://qwokx8tv1qf" path="res://Assets/Characters/OldLady/OldLadyRightHand.png" id="3_xtqmk"]
+[ext_resource type="Texture2D" uid="uid://c4f8cqngaok7l" path="res://Assets/Characters/OldLady/OldLadyRightShoe.png" id="4_d7ufm"]
+[ext_resource type="Texture2D" uid="uid://dicv0nraar4oi" path="res://Assets/Characters/OldLady/OldLadyLeftShoe.png" id="5_gs6fi"]
+[ext_resource type="Texture2D" uid="uid://cmt3s2pfk42pb" path="res://Assets/Characters/OldLady/OldLadyHead.png" id="6_8er6c"]
+[ext_resource type="Texture2D" uid="uid://b8rt5c8gov8kn" path="res://Assets/Characters/OldLady/OldLadyGlasses.png" id="7_semq7"]
 
 [sub_resource type="Animation" id="Animation_0mxaq"]
 resource_name = "Idle"

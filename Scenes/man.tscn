@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://80xeka1fq5kn"]
 
-[ext_resource type="Texture2D" uid="uid://dd6c2227ernw4" path="res://Assets/Man/ManLeftHand.png" id="1_gx25d"]
-[ext_resource type="Texture2D" uid="uid://c7l2t85klis" path="res://Assets/Man/ManRightHand.png" id="2_05ua0"]
-[ext_resource type="Texture2D" uid="uid://cx31ytcqyghv8" path="res://Assets/Man/ManBody.png" id="3_3sfh2"]
-[ext_resource type="Texture2D" uid="uid://m46xh3xq6q11" path="res://Assets/Man/ManCross.png" id="4_kigh1"]
-[ext_resource type="Texture2D" uid="uid://vtueihrnnajo" path="res://Assets/Man/ManHead.png" id="5_nnwb7"]
-[ext_resource type="Texture2D" uid="uid://dbg2ern5kl1fx" path="res://Assets/Man/ManShoe.png" id="6_haaxd"]
+[ext_resource type="Texture2D" uid="uid://dd6c2227ernw4" path="res://Assets/Characters/Man/ManLeftHand.png" id="1_gx25d"]
+[ext_resource type="Texture2D" uid="uid://c7l2t85klis" path="res://Assets/Characters/Man/ManRightHand.png" id="2_05ua0"]
+[ext_resource type="Texture2D" uid="uid://cx31ytcqyghv8" path="res://Assets/Characters/Man/ManBody.png" id="3_3sfh2"]
+[ext_resource type="Texture2D" uid="uid://m46xh3xq6q11" path="res://Assets/Characters/Man/ManCross.png" id="4_kigh1"]
+[ext_resource type="Texture2D" uid="uid://vtueihrnnajo" path="res://Assets/Characters/Man/ManHead.png" id="5_nnwb7"]
+[ext_resource type="Texture2D" uid="uid://dbg2ern5kl1fx" path="res://Assets/Characters/Man/ManShoe.png" id="6_haaxd"]
 
 [sub_resource type="Animation" id="Animation_2x0nd"]
 resource_name = "Idle"
