@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="Script" uid="uid://bituivhn4dln4" path="res://Scripts/player_spawn_point.gd" id="2_u53w3"]
-[ext_resource type="Script" uid="uid://qdn87he2xyuw" path="res://enviorment_generator.gd" id="3_qq45g"]
+[ext_resource type="Script" uid="uid://qdn87he2xyuw" path="res://Scripts/enviorment_generator.gd" id="3_qq45g"]
 [ext_resource type="PackedScene" uid="uid://blyajoonq3fcc" path="res://Scenes/EnvChucks/forest_chunk_1.tscn" id="4_vh310"]
 [ext_resource type="PackedScene" uid="uid://dewjwph3mmxm4" path="res://Scenes/EnvChucks/forest_chunk_2.tscn" id="5_igsr3"]
 [ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="5_u53w3"]

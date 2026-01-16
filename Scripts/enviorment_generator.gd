@@ -20,6 +20,7 @@ func _ready():
 		last_camera_grid = get_camera_grid()
 		spawn_chunks_around_camera()  # spawn initial chunks
 
+
 # Helper: get camera grid
 func get_camera_grid() -> Vector2:
 	return Vector2(
@@ -86,3 +87,4 @@ func mark_chunk_visited(grid_pos: Vector2, chunk_scene: PackedScene, chunk_insta
 			"events_triggered": []
 		}
 		print("Player entered chunk at ", grid_pos, " using scene ", chunk_scene)
+		print(visited_chunks)
