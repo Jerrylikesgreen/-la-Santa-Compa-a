@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://v53kb433tvy8"]
 
-[ext_resource type="Texture2D" uid="uid://x65q5wljfch8" path="res://Assets/RedLady/RedLadyBackHair.png" id="1_xwl8v"]
-[ext_resource type="Texture2D" uid="uid://p737v0qgwtp2" path="res://Assets/RedLady/RedLadyHead.png" id="2_qcnlb"]
-[ext_resource type="Texture2D" uid="uid://d2pxgro6ajhp0" path="res://Assets/RedLady/RedLadyFrontHair.png" id="3_odyg3"]
-[ext_resource type="Texture2D" uid="uid://cxnxhyk75g68a" path="res://Assets/OldLady/OldLadyLeftHand.png" id="4_q5dti"]
-[ext_resource type="Texture2D" uid="uid://qwokx8tv1qf" path="res://Assets/OldLady/OldLadyRightHand.png" id="5_quxe4"]
-[ext_resource type="Texture2D" uid="uid://c3vrtxiepkv32" path="res://Assets/RedLady/RedLadyBody.png" id="6_vkt5n"]
-[ext_resource type="Texture2D" uid="uid://c71qm1ligjgsl" path="res://Assets/RedLady/RedLadyRightShoe.png" id="7_w4tns"]
+[ext_resource type="Texture2D" uid="uid://x65q5wljfch8" path="res://Assets/Characters/RedLady/RedLadyBackHair.png" id="1_xwl8v"]
+[ext_resource type="Texture2D" uid="uid://p737v0qgwtp2" path="res://Assets/Characters/RedLady/RedLadyHead.png" id="2_qcnlb"]
+[ext_resource type="Texture2D" uid="uid://d2pxgro6ajhp0" path="res://Assets/Characters/RedLady/RedLadyFrontHair.png" id="3_odyg3"]
+[ext_resource type="Texture2D" uid="uid://cxnxhyk75g68a" path="res://Assets/Characters/OldLady/OldLadyLeftHand.png" id="4_q5dti"]
+[ext_resource type="Texture2D" uid="uid://qwokx8tv1qf" path="res://Assets/Characters/OldLady/OldLadyRightHand.png" id="5_quxe4"]
+[ext_resource type="Texture2D" uid="uid://c3vrtxiepkv32" path="res://Assets/Characters/RedLady/RedLadyBody.png" id="6_vkt5n"]
+[ext_resource type="Texture2D" uid="uid://c71qm1ligjgsl" path="res://Assets/Characters/RedLady/RedLadyRightShoe.png" id="7_w4tns"]
 
 [sub_resource type="Animation" id="Animation_88bm8"]
 resource_name = "Idle"

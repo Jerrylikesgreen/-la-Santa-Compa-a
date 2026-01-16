@@ -24,10 +24,10 @@ normal = Vector2(1, 0)
 shader = ExtResource("7_wo0py")
 shader_parameter/noise_tex = ExtResource("8_vh310")
 shader_parameter/tiling = Vector2(1, 1)
-shader_parameter/scroll_speed = Vector2(0.05, 0.02)
+shader_parameter/scroll_speed = Vector2(0.02, 0.01)
 shader_parameter/density = 0.75
-shader_parameter/softness = 0.3
-shader_parameter/fog_color = Color(0.32285896, 0.3147444, 0.3633848, 1)
+shader_parameter/softness = 0.5
+shader_parameter/fog_color = Color(0.6392157, 0.6392157, 0.8392157, 0.21176471)
 
 [node name="Forest" type="Node2D"]
 
@@ -230,7 +230,7 @@ shape = SubResource("WorldBoundaryShape2D_y1epu")
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
 color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-energy = 0.9
+energy = 5.0
 blend_mode = 1
 
 [node name="ActivadorDialogo" parent="." instance=ExtResource("6_qq45g")]
