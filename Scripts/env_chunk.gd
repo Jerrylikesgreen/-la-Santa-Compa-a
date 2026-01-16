@@ -17,4 +17,3 @@ func _on_event_triggered(event_type: Signals.EventType, event_id: int, chuck_id:
 		
 	if event_type == Signals.EventType.FOREST_EVENT and chuck_id == ui:
 		events_trigered[chuck_id] = event_id
-		print(events_trigered)
