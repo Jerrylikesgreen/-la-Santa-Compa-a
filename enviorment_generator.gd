@@ -6,7 +6,7 @@ var camera: Camera2D
 @export var chunk_scenes: Array[PackedScene]
 @export var screen_size := Vector2(1152, 648)  # size of one chunk/screen
 @export var spawn_radius := 2                  # how many screens around the camera to spawn
-@export var remove_radius := 4                 # how many screens away to remove chunks
+@export var remove_radius := 3                 # how many screens away to remove chunks
 
 # Internal tracking
 var active_chunks := {}         # Dictionary of currently active chunks

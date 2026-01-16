@@ -41,7 +41,6 @@ script = ExtResource("2_u53w3")
 script = ExtResource("3_qq45g")
 chunk_scenes = Array[PackedScene]([ExtResource("4_vh310"), ExtResource("5_igsr3"), ExtResource("6_igsr3")])
 spawn_radius = 3
-remove_radius = 3
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
 color = Color(0.1254902, 0.1254902, 0.1254902, 1)
