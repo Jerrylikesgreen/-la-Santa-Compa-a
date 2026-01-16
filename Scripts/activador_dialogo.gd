@@ -13,5 +13,6 @@ func _on_body_entered(_body: Node2D) -> void:
 	queue_free()
 
 
+# left empty for sublass inharatence. 
 func _trigger_event()->void:
 	pass
