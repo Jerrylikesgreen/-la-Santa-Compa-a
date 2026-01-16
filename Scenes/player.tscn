@@ -3090,7 +3090,6 @@ position = Vector2(-273.7964, -10.531006)
 color = Color(1, 1, 1, 0.8392157)
 range_z_max = 1
 shadow_enabled = true
-shadow_filter = 2
 shadow_filter_smooth = 7.6
 texture = ExtResource("16_fd4e3")
 texture_scale = 10.0
@@ -3111,8 +3110,7 @@ position = Vector2(-136.8981, -5.265414)
 color = Color(1, 1, 1, 0.8392157)
 range_z_max = 1
 shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 7.6
+shadow_filter_smooth = 5.0
 texture = ExtResource("16_fd4e3")
 texture_scale = 10.0
 

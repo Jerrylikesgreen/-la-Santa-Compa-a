@@ -230,7 +230,7 @@ shape = SubResource("WorldBoundaryShape2D_y1epu")
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
 color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-energy = 5.0
+energy = 6.0
 blend_mode = 1
 
 [node name="ActivadorDialogo" parent="." instance=ExtResource("6_qq45g")]
