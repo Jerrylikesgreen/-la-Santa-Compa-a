@@ -61,7 +61,7 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	Chico
 	- Descuida, no me ha pasado nada
 	Chica
-	- Estas bien? Te noto muy delgado y palido
+	- Te noto muy delgado y palido
 	Chico
 	- No te preocupes por eso, de verdad que estoy bien
 	La chica respira aliviada
@@ -159,7 +159,6 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Si, de hecho tengo las dos partes
 	Chica
 	- Bien, entonces vamos a ir ahora mismo a la Guardia Civil, iras voluntariamente y devolveras todo cuanto has robado
-	- Asi no tendras una pena tan larga
 	Chico
 	- Pero...
 	Chica
@@ -204,8 +203,6 @@ ESCENA 2 (Animacion/Novela visual Clasica)
 	- Empecemos a andar ya, estoy agotada de trabajar y mañana tengo que volver
 	Chico
 	- Si...
-	
-	Animacion de ellos dos andando
 	
 	Fundido a negro
 	
@@ -286,7 +283,7 @@ ESCENA
 	Chica
 	- A DONDE VAS?
 	- NO ME DEJES SOLA
-	- PORFAVOR AYUDAME
+	- POR FAVOR AYUDAME
 	
 	Comienza a acercarse luz azulada por varios lados de la pantalla
 	
@@ -322,6 +319,13 @@ ESCENA 3 (Bosque, Movimiento automatico, Dialogo automatico normal)
 	[Termina cuando dice que se esta acercando a casa]
 	
 ESCENA 4 (Escena negra, madre)
+
+	Se ve una escena en negro
+	
+	La chica empieza a asomarse por un lado, andando con la santa compaña
+	
+	Llegadoa un punto, se va acercando por el lado contrario la madre
+
 	Chica
 	- Hola mama, siento haber salido de casa sin avisarte
 	- Recibi una nota de el, pidiendo vernos en el bosque
@@ -350,7 +354,7 @@ ESCENA 4 (Escena negra, madre)
 	- Niña mia nos acaba de robar, A NOSOTRAS
 	- No busques defenderle esta vez
 	Chica
-	- No busco defenderlo, reeme que si pudiera lo haria
+	- No busco defenderlo, creeme que si pudiera lo haria
 	Madre
 	- Claro que puedes, tienes piernas para ir corriendo
 	Chica
@@ -444,7 +448,7 @@ ESCENA 5 (Escena negra, loop) [Aqui suena la version de la cantiga mediaval de a
 	- Se ha vuelto tal rutina esto a la noche que ya no me rompo a llorar cuando lo hago
 	- Tengo que agradecer que al menos no es otro niño, dios, ayer creo que mate a 3
 	- Lo unico que me gustaria a la noche ya en este punto es que tuviera control en algo mas que solo mis pensamientos
-	- Mis ojos por ejemplo, me gustaria ver algo mas que solo la gente antes de morir, salvo eso lo veo todo negro
+	- Mis ojos por ejemplo, me gustaria ver algo mas que solo la gente antes de morir, salvo eso lo sigo viendo todo negro
 	- O almenos poder respirar cuando yo quisiera...
 	- Supongo que por eso cuando es de dia ni siquiera pienso con claridad, dejo la mente en blanco y evito pensar porque me duele la cabeza
 	- Casi ni puedo hablar ni leer, y paso la mayor parte del tiempo durmiendo para guardar energias
@@ -503,11 +507,11 @@ ESCENA 5 (Escena negra, loop) [Aqui suena la version de la cantiga mediaval de a
 	- No voy a pasarle la maldicion a nadie
 	- ...
 	- Un dia el parroco nos conto un cuento
-	- Sobre una tortuga que eventualmente llega a la meta antes que un soldado, o algo asi
+	- Sobre una tortuga que eventualmente llega a la meta antes que un lobo, o algo asi
 	- No me acuerdo muy bien como iba
 	- Se me hacia tonto tambien esa historia, como muchas otras que nos contaba
 	- Pero ahora me da igual el tiempo que me lleve, yo ahora soy la tortuga
-	- Y el es ese soldado
+	- Y el es ese lobo
 	- Y cuando te sobrepase...
 	- Te juro que te matare
 	
@@ -623,7 +627,8 @@ ESCENA 6 (Visual novel final)
 	Anciano
 	- Al final llegaste a la meta, es como la fabula de aquiles y la tortuga
 	Anciana
-	- Jajaja, que idiota, no atendiste al parroco? Era un soldado
+	- Jajaja, que idiota, no atendiste al parroco? Era un lobo
+	- Que es un Aquiles?
 	
 	Los dos comienzan a reir, como no lo habian hecho en años
 	
@@ -660,10 +665,9 @@ ESCENA 6 (Visual novel final)
 
 FINAL (Creditos) (Aqui que suente otra cantiga mediaval, pero de escarnio e maldicer? Que son mas de broma o con mas chicha)
 	Un juego de PyramidHead83 y jerrylikes_72469 (pendiente nombre mio/tuyo final)
-	Codigo: PyramidHead83 y jerrylikes_72469
+	Codigo: jerrylikes_72469 y PyramidHead83 
 	Arte/Textos en ingles: jerrylikes_72469
 	Sonido/Historia/Textos en español/gallego: PyramidHead883
-	
 	
 	Programas usados:
 		Godot
