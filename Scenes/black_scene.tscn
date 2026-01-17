@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3fs5eofsy1p6"]
+[gd_scene load_steps=10 format=3 uid="uid://3fs5eofsy1p6"]
 
 [ext_resource type="Script" uid="uid://xd416cvs6qlh" path="res://Scripts/black_scene.gd" id="1_caadg"]
 [ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="2_sp2b8"]
@@ -61,6 +61,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1284, 317)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScene/BlackEndScene:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_cwmt8"]
 resource_name = "player_walk"
@@ -92,9 +104,40 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_6jlvp"]
+resource_name = "end_scene"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/BlackEndScene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.99),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1puc"]
 _data = {
 &"RESET": SubResource("Animation_oub6m"),
+&"end_scene": SubResource("Animation_6jlvp"),
 &"fade_background": SubResource("Animation_r1puc"),
 &"player_walk": SubResource("Animation_cwmt8")
 }
@@ -103,8 +146,13 @@ _data = {
 libraries = {
 &"": SubResource("AnimationLibrary_r1puc")
 }
-autoplay = "fade_background"
+autoplay = "end_scene"
 script = ExtResource("1_caadg")
+
+[node name="BlackEndScene" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+z_index = 31
+texture = ExtResource("2_sp2b8")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.20871016, 0.20871013, 0.2087102, 1)
@@ -113,10 +161,16 @@ texture = ExtResource("2_sp2b8")
 [node name="DialogGui" parent="." instance=ExtResource("3_cwmt8")]
 
 [node name="Player" parent="." instance=ExtResource("4_cwmt8")]
-position = Vector2(1284, 317)
+position = Vector2(902, 296)
 player_interactable = false
 
 [node name="LightOccluder2D" parent="Player/PlayerBody" index="0"]
+visible = false
+
+[node name="PointLight2D2" parent="Player/PlayerBody/VisualRoot/Left/PlaceholderLampRight" index="0"]
+visible = false
+
+[node name="PointLight2D" parent="Player/PlayerBody/VisualRoot/Right/PlaceholderLampLeft" index="0"]
 visible = false
 
 [editable path="Player"]
