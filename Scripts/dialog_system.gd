@@ -31,7 +31,7 @@ signal end_dialogue
 const RANDOM_PITCH_MIN = 0.95
 const RANDOM_PITCH_MAX = 1.05
 # Char Img Path
-const char_img_path = "res://Assets/Characters/"
+const char_img_path = "res://Assets/Characters/PlaceHolder/"
 const bkgr_img_path = "res://Assets/Background/"
 # Path Sounds
 const voice_missigno = preload("res://Assets/Sounds/sans_sound_placeholder.mp3")

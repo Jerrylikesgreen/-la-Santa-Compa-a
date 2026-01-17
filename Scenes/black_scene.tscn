@@ -1,5 +1,90 @@
-[gd_scene format=3 uid="uid://3fs5eofsy1p6"]
+[gd_scene load_steps=9 format=3 uid="uid://3fs5eofsy1p6"]
+
+[ext_resource type="Script" uid="uid://xd416cvs6qlh" path="res://Scripts/black_scene.gd" id="1_caadg"]
+[ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="2_sp2b8"]
+[ext_resource type="PackedScene" uid="uid://jwv8wc12q1j" path="res://Scenes/dialog_gui.tscn" id="3_cwmt8"]
+[ext_resource type="PackedScene" uid="uid://v53kb433tvy8" path="res://Scenes/Characters/red_lady.tscn" id="4_r1puc"]
+
+[sub_resource type="Animation" id="Animation_cwmt8"]
+resource_name = "lady_walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/RedLady:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_r1puc"]
+resource_name = "fade_background"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.20871016, 0.20871013, 0.2087102, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/santa_compaña_dialgue_test_short.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_oub6m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.20871016, 0.20871013, 0.2087102, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r1puc"]
+_data = {
+&"RESET": SubResource("Animation_oub6m"),
+&"fade_background": SubResource("Animation_r1puc"),
+&"lady_walk": SubResource("Animation_cwmt8")
+}
 
 [node name="BlackScene" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_r1puc")
+}
+autoplay = "fade_background"
+script = ExtResource("1_caadg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.20871016, 0.20871013, 0.2087102, 1)
+texture = ExtResource("2_sp2b8")
+
+[node name="DialogGui" parent="." instance=ExtResource("3_cwmt8")]
+
+[node name="RedLady" parent="." instance=ExtResource("4_r1puc")]
+position = Vector2(1244, 225)
+scale = Vector2(0.25, 0.25)
