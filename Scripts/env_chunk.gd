@@ -4,7 +4,7 @@ class_name ForestEnvChunk extends Node2D
 # Stores events triggerd inside its own scene.  Key = Chunk id Value = Event Id
 var events_trigered: Dictionary[int, int] 
 # Left unassigned for subclass assignment. 
-var ui: int
+@export var ui: int
 
 func _ready() -> void:
 	Signals.event_triggered.connect(_on_event_triggered)
