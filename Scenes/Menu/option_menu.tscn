@@ -1,0 +1,118 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0rwpihb8mj0c"]
+
+[ext_resource type="Script" uid="uid://dkvj7cme3dn8i" path="res://Scripts/Menu/option_menu.gd" id="1_0cc5a"]
+
+[node name="OptionMenu" type="CanvasLayer"]
+script = ExtResource("1_0cc5a")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Opciones" type="MarginContainer" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 112.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect/Opciones"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AAA"
+
+[node name="Button2" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AAA"
+
+[node name="Button3" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AAA"
+
+[node name="Button4" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AAA"
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 131.0
+offset_bottom = 186.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "VENTANA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Control/TextureRect"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TextureRect/Node"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -131.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSlider" type="HSlider" parent="Control/TextureRect/Node/VBoxContainer"]
+layout_mode = 2
+
+[node name="Ventanas" type="MarginContainer" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -565.0
+offset_top = -188.0
+offset_right = 496.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sonido" type="VBoxContainer" parent="Control/TextureRect/Ventanas"]
+layout_mode = 2
+
+[node name="Salir" type="MarginContainer" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -112.0
+offset_right = 576.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect/Salir"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/TextureRect/Salir/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AAA"

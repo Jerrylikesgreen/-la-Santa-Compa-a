@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://begu0hedbb7rc"]
+
+[ext_resource type="Script" uid="uid://dx7jro8r2u4aj" path="res://Scripts/Menu/start_menu.gd" id="1_hvsph"]
+
+[node name="StartMenu" type="CanvasLayer"]
+script = ExtResource("1_hvsph")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -251.5
+offset_right = 251.5
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "LA SANTA COMPAÑA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -354.0
+offset_right = 414.0
+grow_vertical = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TextureRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="bot_continue" type="Button" parent="Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="bot_new_game" type="Button" parent="Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Play"
+
+[node name="bot_options" type="Button" parent="Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="bot_exit" type="Button" parent="Control/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Control/TextureRect/MarginContainer/VBoxContainer/bot_continue" to="." method="_on_bot_continue_pressed"]
+[connection signal="pressed" from="Control/TextureRect/MarginContainer/VBoxContainer/bot_new_game" to="." method="_on_bot_new_game_pressed"]
+[connection signal="pressed" from="Control/TextureRect/MarginContainer/VBoxContainer/bot_options" to="." method="_on_bot_options_pressed"]
+[connection signal="pressed" from="Control/TextureRect/MarginContainer/VBoxContainer/bot_exit" to="." method="_on_bot_exit_pressed"]
