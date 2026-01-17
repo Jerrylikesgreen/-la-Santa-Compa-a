@@ -20,6 +20,8 @@ func _process(_delta):
 	pass
 
 	
+func start_dialogue(csv_path):
+	pass
 
 func _on_event_triggered(event_type: Signals.EventType, event_id: int, chuck_id: int) ->void:
 	events_trigered[chuck_id] = event_id

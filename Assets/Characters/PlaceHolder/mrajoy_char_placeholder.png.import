@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db3klnlsib1tj"
-path="res://.godot/imported/papyrus_char_placeholder.png-0183791cfc80264d77f2fc7c51933caf.ctex"
+uid="uid://xaymj80drd03"
+path="res://.godot/imported/mrajoy_char_placeholder.png-4ef46c8934a586203095cc9c35c87758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/papyrus_char_placeholder.png"
-dest_files=["res://.godot/imported/papyrus_char_placeholder.png-0183791cfc80264d77f2fc7c51933caf.ctex"]
+source_file="res://Assets/Characters/PlaceHolder/mrajoy_char_placeholder.png"
+dest_files=["res://.godot/imported/mrajoy_char_placeholder.png-4ef46c8934a586203095cc9c35c87758.ctex"]
 
 [params]
 

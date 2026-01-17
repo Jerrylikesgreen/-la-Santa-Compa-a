@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xaymj80drd03"
-path="res://.godot/imported/mrajoy_char_placeholder.png-4eca3939f54c74868e3da6a5ef41d4c7.ctex"
+uid="uid://bmj1q7olv4omv"
+path="res://.godot/imported/sans_char_placeholder.png-04218ea6d6523d17c132297c36785019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/mrajoy_char_placeholder.png"
-dest_files=["res://.godot/imported/mrajoy_char_placeholder.png-4eca3939f54c74868e3da6a5ef41d4c7.ctex"]
+source_file="res://Assets/Characters/PlaceHolder/sans_char_placeholder.png"
+dest_files=["res://.godot/imported/sans_char_placeholder.png-04218ea6d6523d17c132297c36785019.ctex"]
 
 [params]
 

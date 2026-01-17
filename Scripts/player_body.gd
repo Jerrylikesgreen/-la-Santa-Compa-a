@@ -9,14 +9,18 @@ extends CharacterBody2D
 
 var front_facing : bool = true
 var facing_left : bool = true
-
+var interactable
 
 
 func _on_body_entered()->void:
 	print("Enterd")
 
+func _ready():
+	interactable = get_parent().player_interactable
 
 func _physics_process(_delta: float) -> void:
+	if !interactable: return
+	
 	#if CD.player_movement:
 	var direction := Vector2.ZERO
 	direction.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")

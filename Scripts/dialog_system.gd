@@ -5,6 +5,7 @@ extends CanvasLayer
 @export var path_csv = "res://Assets/Dialogues/santa_compaña_dialgue_test.csv"
 @export var languaje_key = "gl"
 # OnReady
+@onready var anim_main = get_tree().get_nodes_in_group("animation_main")[0]
 @onready var dialogue_text = $DialogContainer/TextOutput
 @onready var name_text = $SpeakerNameLabel
 @onready var asp_talk = $AudioStreamPlayer2D
@@ -31,7 +32,7 @@ signal end_dialogue
 const RANDOM_PITCH_MIN = 0.95
 const RANDOM_PITCH_MAX = 1.05
 # Char Img Path
-const char_img_path = "res://Assets/Characters/"
+const char_img_path = "res://Assets/Characters/PlaceHolder/"
 const bkgr_img_path = "res://Assets/Background/"
 # Path Sounds
 const voice_missigno = preload("res://Assets/Sounds/sans_sound_placeholder.mp3")
@@ -156,17 +157,34 @@ func get_next_line():
 	var code = row["key"].split("-")
 	match code[0]:
 		# Change the text name
-		"change_name":
-			changue_voice(code[1],row[languaje_key])
+		"change_name": changue_voice(code[1],row[languaje_key])
 		# Change the img of the character
-		"character_img":
-			changue_char_img(code[1])
+		"character_img": changue_char_img(code[1])
 		# Change the background image
-		"background_img":
-			changue_background_img(code[1])
+		"background_img": changue_background_img(code[1])
+		"load_animation": change_animation(code[1])
 		# No Code
-		_:
-			progressive_text(row[languaje_key])
+		_: progressive_text(row[languaje_key])
+		
+func progressive_text(new_text):
+	
+	writting = true
+	
+	# We clear the previous string from the dialogue
+	dialogue_text.text = ""
+	
+	# We add every character and wait x seconds to add the next
+	for character in new_text:
+		if !writting: break
+		dialogue_text.text += character
+		asp_talk.play()
+		asp_talk.pitch_scale = randf_range(RANDOM_PITCH_MIN, RANDOM_PITCH_MAX)
+		await get_tree().create_timer(text_speed).timeout
+
+	end_line.emit()
+	writting = false
+
+## COMMAND TEXTS
 func changue_voice(id,name_voice):
 	
 	# We turn on the name box
@@ -197,20 +215,6 @@ func changue_background_img(id):
 	spr_img.texture = load(bkgr_img_path+id+".png")
 	# Process the next line
 	get_next_line()
-func progressive_text(new_text):
-	
-	writting = true
-	
-	# We clear the previous string from the dialogue
-	dialogue_text.text = ""
-	
-	# We add every character and wait x seconds to add the next
-	for character in new_text:
-		if !writting: break
-		dialogue_text.text += character
-		asp_talk.play()
-		asp_talk.pitch_scale = randf_range(RANDOM_PITCH_MIN, RANDOM_PITCH_MAX)
-		await get_tree().create_timer(text_speed).timeout
-
-	end_line.emit()
-	writting = false
+func change_animation(id):
+	anim_main.play(id)
+	get_next_line()
