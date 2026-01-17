@@ -14,12 +14,7 @@ func _ready() -> void:
 
 func play_step() -> void:
 	match current_terrain:
-		Player.StepTerrain.GRASS:
-			stream = GRASS_STEP
-			play()
-		Player.StepTerrain.DIRT:
-			stream = DIRT_STEP
-			play()
-		_:
-			stream = DEFAULT_STEP
-			play()
+		Player.StepTerrain.GRASS:	stream = GRASS_STEP
+		Player.StepTerrain.DIRT:	stream = DIRT_STEP
+		_:							stream = DEFAULT_STEP
+	play()
