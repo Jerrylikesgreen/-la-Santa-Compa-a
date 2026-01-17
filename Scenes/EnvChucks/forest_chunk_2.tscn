@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://dewjwph3mmxm4"]
+
+[ext_resource type="PackedScene" uid="uid://but60y80xv8di" path="res://Scenes/EnvObjects/tree_large.tscn" id="1_qbrk2"]
+[ext_resource type="Script" uid="uid://caodoonxbfbi" path="res://Scripts/forest_chunk_2.gd" id="1_wq3p0"]
+[ext_resource type="PackedScene" uid="uid://d3yws4mqhe6ru" path="res://Scenes/EnvObjects/tree_small.tscn" id="2_27ct2"]
+[ext_resource type="PackedScene" uid="uid://dxsrwakxllvjb" path="res://Scenes/EnvObjects/bush.tscn" id="3_wq3p0"]
+
+[node name="ForestChunk2" type="Node2D"]
+script = ExtResource("1_wq3p0")
+metadata/_custom_type_script = "uid://c64cy5w21m3r"
+
+[node name="LargeTrees" type="Node2D" parent="."]
+
+[node name="TreeLarge" parent="LargeTrees" instance=ExtResource("1_qbrk2")]
+position = Vector2(572, 306)
+
+[node name="TreeLarge2" parent="LargeTrees" instance=ExtResource("1_qbrk2")]
+position = Vector2(161, 144)
+
+[node name="TreeLarge3" parent="LargeTrees" instance=ExtResource("1_qbrk2")]
+position = Vector2(1037, 317)
+
+[node name="SmallTrees" type="Node2D" parent="."]
+
+[node name="TreeSmall" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(234, 431)
+
+[node name="TreeSmall2" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(268, 444)
+
+[node name="TreeSmall3" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(205, 438)
+
+[node name="TreeSmall4" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(863, 569)
+
+[node name="TreeSmall5" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(833, 109)
+
+[node name="TreeSmall6" parent="SmallTrees" instance=ExtResource("2_27ct2")]
+position = Vector2(411, 546)
+
+[node name="Bushes" type="Node2D" parent="."]
+
+[node name="Bush" parent="Bushes" instance=ExtResource("3_wq3p0")]
+position = Vector2(388, 72)
+
+[node name="Bush2" parent="Bushes" instance=ExtResource("3_wq3p0")]
+position = Vector2(424, 91)
+
+[node name="Bush3" parent="Bushes" instance=ExtResource("3_wq3p0")]
+position = Vector2(812, 296)
+
+[node name="Bush4" parent="Bushes" instance=ExtResource("3_wq3p0")]
+position = Vector2(624, 536)

@@ -22,6 +22,7 @@ buses/default_bus_layout="res://Resources/Audio/default_bus_layout.tres"
 [autoload]
 
 CD="*res://Scripts/Autoloads/CommonData.gd"
+Signals="*res://Scripts/Autoloads/signals.gd"
 
 [file_customization]
 
