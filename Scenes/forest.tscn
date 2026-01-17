@@ -45,7 +45,7 @@ chunk_scenes = Array[PackedScene]([ExtResource("4_vh310"), ExtResource("5_igsr3"
 spawn_radius = 3
 
 [node name="WorldLight" type="DirectionalLight2D" parent="."]
-color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+color = Color(0.556953, 0.556953, 0.5569529, 1)
 blend_mode = 1
 shadow_filter = 2
 shadow_filter_smooth = 1.5
