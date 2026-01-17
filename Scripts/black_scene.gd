@@ -4,7 +4,7 @@ enum enum_scene {MOTHER,LOOP,OLDMAN}
 @export var scene_type : enum_scene
 
 @onready var dialogue = $DialogGui
-@onready var char_lady = $RedLady
+@onready var player = $Player
 
 func _ready():
 	dialogue.anim_controller.play("hide_dialogue")
