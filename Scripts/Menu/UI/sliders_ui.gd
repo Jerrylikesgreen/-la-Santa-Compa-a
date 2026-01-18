@@ -15,7 +15,7 @@ extends Control
 @onready var slider = $HBoxContainer/Slider
 @onready var label_valor = $HBoxContainer/Valor
 
-@onready var menu_main = get_tree().get_nodes_in_group("menu_main")[0]
+#@onready var menu_main = get_tree().get_nodes_in_group("menu_main")[0]
 
 signal slider_actualizado
 
