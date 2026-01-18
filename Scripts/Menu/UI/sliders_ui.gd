@@ -17,7 +17,7 @@ extends Control
 
 #@onready var menu_main = get_tree().get_nodes_in_group("menu_main")[0]
 
-signal slider_actualizado
+signal slider_updated
 
 var color_focus = Color(0.281, 0.281, 0.281, 1.0)
 var color_no_focus = Color(0.541,0.541,0.541,1.0)
@@ -51,7 +51,7 @@ func _on_slider_value_changed(value):
 		
 	guardar()
 	
-	slider_actualizado.emit()
+	slider_updated.emit()
 
 func guardar():
 	#CD.config.set_value(section_save, key_save, slider.value)

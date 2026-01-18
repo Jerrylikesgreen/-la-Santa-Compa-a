@@ -39,12 +39,7 @@ func _on_a_11y_btn_pressed() -> void:
 func _on_reset_option_btn_pressed() -> void:
 	pass # Replace with function body.
 
-
-func _on_exit_button_pressed() -> void:
+func _on_exit_btn_pressed() -> void:
 	hide()
 	titulo_menu.show()
 	menu_base.show()
-
-
-func _on_exit_btn_pressed() -> void:
-	pass # Replace with function body.

@@ -11,7 +11,7 @@ extends Control
 @onready var label_titulo = $HBoxContainer/Label
 @onready var check_box = $HBoxContainer/CheckBox
 
-signal check_box_actualizado
+signal check_box_updated
 
 var color_focus = Color(0.95,0.95,0.95,1.0)
 var color_no_focus = Color(0.541,0.541,0.541,1.0)
@@ -29,7 +29,7 @@ func _ready():
 	
 func _on_check_box_value_changed(_toggle):
 	guardar()
-	check_box_actualizado.emit()
+	check_box_updated.emit()
 	
 func guardar():
 	#CD.config.set_value(section_save, key_save, slider.value)

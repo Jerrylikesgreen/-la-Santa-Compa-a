@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0rwpihb8mj0c"]
+[gd_scene load_steps=11 format=3 uid="uid://d0rwpihb8mj0c"]
 
 [ext_resource type="Script" uid="uid://dkvj7cme3dn8i" path="res://Scripts/Menu/option_menu.gd" id="1_0cc5a"]
 [ext_resource type="PackedScene" uid="uid://c5qvk16clgbry" path="res://Scenes/Menu/block_options.tscn" id="2_iqqtd"]
 [ext_resource type="PackedScene" uid="uid://cmbn014d7gvgl" path="res://Scenes/Menu/UI/dropdown_ui.tscn" id="2_nn3g2"]
 [ext_resource type="PackedScene" uid="uid://bs2hw087rge6w" path="res://Scenes/Menu/UI/sliders_ui.tscn" id="3_t15ed"]
+[ext_resource type="Script" uid="uid://dw7e6c48ud5sa" path="res://Scripts/Menu/Options/sound_opt.gd" id="3_y1j8o"]
 [ext_resource type="PackedScene" uid="uid://ca6wntate58p5" path="res://Scenes/Menu/UI/remap_button_ui.tscn" id="4_5mdcn"]
 [ext_resource type="PackedScene" uid="uid://b76bxnu7a7bas" path="res://Scenes/Menu/UI/check_box_ui.tscn" id="5_iqqtd"]
+[ext_resource type="Script" uid="uid://rilrrlbb1q2u" path="res://Scripts/Menu/Options/screen_opt.gd" id="5_px3lc"]
+[ext_resource type="Script" uid="uid://c0urts770xiqw" path="res://Scripts/Menu/Options/control_opt.gd" id="7_cwc5w"]
+[ext_resource type="Script" uid="uid://dbwia0kurbj1u" path="res://Scripts/Menu/Options/a11y_opt.gd" id="9_72pa6"]
 
 [node name="OptionMenu" type="Control"]
 layout_mode = 3
@@ -87,6 +91,7 @@ theme_override_constants/margin_bottom = 12
 visible = false
 layout_mode = 2
 mouse_filter = 2
+script = ExtResource("3_y1j8o")
 
 [node name="master_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
@@ -110,6 +115,7 @@ text = "MUSIC_SLIDER"
 [node name="screen_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
 visible = false
 layout_mode = 2
+script = ExtResource("5_px3lc")
 
 [node name="scren_type_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
@@ -150,6 +156,7 @@ text = "SATURATION_SLIDER"
 [node name="control_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
 visible = false
 layout_mode = 2
+script = ExtResource("7_cwc5w")
 
 [node name="move_left_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
@@ -189,6 +196,7 @@ text = "AUTO_MODE_BUTTON"
 
 [node name="a11y_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
 layout_mode = 2
+script = ExtResource("9_72pa6")
 
 [node name="language_dropdown" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
@@ -257,6 +265,12 @@ text = "EXIT_BTN"
 [connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/screen_btn" to="." method="_on_screen_btn_pressed"]
 [connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/control_btn" to="." method="_on_control_btn_pressed"]
 [connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/a11y_btn" to="." method="_on_a_11y_btn_pressed"]
+[connection signal="slider_updated" from="TextureRect/types_options/sound_opt/master_slider" to="TextureRect/types_options/sound_opt" method="_on_master_slider_slider_updated"]
+[connection signal="slider_updated" from="TextureRect/types_options/sound_opt/effects_slider" to="TextureRect/types_options/sound_opt" method="_on_effects_slider_slider_updated"]
+[connection signal="slider_updated" from="TextureRect/types_options/sound_opt/music_slider" to="TextureRect/types_options/sound_opt" method="_on_music_slider_slider_updated"]
+[connection signal="dropdown_updated" from="TextureRect/types_options/a11y_opt/language_dropdown" to="TextureRect/types_options/a11y_opt" method="_on_language_dropdown_dropdown_updated"]
+[connection signal="slider_updated" from="TextureRect/types_options/a11y_opt/text_size_slider" to="TextureRect/types_options/a11y_opt" method="_on_text_size_slider_slider_updated"]
+[connection signal="check_box_updated" from="TextureRect/types_options/a11y_opt/dyslexic_font_check_box" to="TextureRect/types_options/a11y_opt" method="_on_dyslexic_font_check_box_check_box_updated"]
 [connection signal="pressed" from="TextureRect/Salir/HBoxContainer/reset_option_btn" to="." method="_on_reset_option_btn_pressed"]
 [connection signal="pressed" from="TextureRect/Salir/HBoxContainer/exit_btn" to="." method="_on_exit_btn_pressed"]
 

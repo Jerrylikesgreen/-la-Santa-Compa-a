@@ -25,7 +25,7 @@ var indice : int = 0
 @onready var bot_izq = $HBoxContainer/bot_izq
 @onready var bot_der = $HBoxContainer/bot_der
 
-signal dropdown_hiper_actualizado
+signal dropdown_updated
 
 var color_focus = Color(0.95,0.95,0.95,1.0)
 var color_no_focus = Color(0.541,0.541,0.541,1.0)
@@ -80,7 +80,7 @@ func cambiar_opcion(direccion: int) -> void:
 	actualizar_texto()
 	guardar()
 	
-	dropdown_hiper_actualizado.emit()
+	dropdown_updated.emit()
 func _input(event):
 	if not (bot_izq.has_focus() or bot_der.has_focus()):
 		return
