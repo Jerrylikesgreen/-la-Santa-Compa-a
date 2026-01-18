@@ -24,6 +24,7 @@ buses/default_bus_layout="res://Resources/Audio/default_bus_layout.tres"
 
 CD="*res://Scripts/Autoloads/CommonData.gd"
 Signals="*res://Scripts/Autoloads/Signals.gd"
+WE="*res://Scenes/world_environment.tscn"
 
 [file_customization]
 

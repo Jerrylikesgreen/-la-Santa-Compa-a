@@ -96,62 +96,91 @@ script = ExtResource("3_y1j8o")
 [node name="master_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 mouse_filter = 2
+porcentaje = true
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/master_slider/HBoxContainer" index="0"]
 text = "MASTER_SLIDER"
 
 [node name="effects_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
+porcentaje = true
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/effects_slider/HBoxContainer" index="0"]
 text = "EFFECTS_SLIDER"
 
 [node name="music_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
+porcentaje = true
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/music_slider/HBoxContainer" index="0"]
 text = "MUSIC_SLIDER"
 
 [node name="screen_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
-visible = false
 layout_mode = 2
 script = ExtResource("5_px3lc")
 
 [node name="scren_type_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
+save_value_default = "0"
+opciones = {
+"en": "Pantalla Completa",
+"es": "Ventana",
+"fr": "Pantalla Completa Sin Bordes"
+}
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/scren_type_dropdown/HBoxContainer" index="0"]
 text = "SCREEN_TYPE_DROPDOWN"
 
 [node name="screen_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
+tipo_dropdown = "Monitor"
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/screen_dropdown/HBoxContainer" index="0"]
 text = "SCREEN_DROPDOWN"
 
 [node name="resolution_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
+tipo_dropdown = "Resolucion"
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/resolution_dropdown/HBoxContainer" index="0"]
 text = "RESOLUTION_DROPDOWN"
 
 [node name="brightness_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
+porcentaje = true
+save_value_default = 1
+val_min = 0.5
+val_max = 1.5
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/brightness_slider/HBoxContainer" index="0"]
 text = "BRIGHTNESS_SLIDER"
 
+[node name="Slider" parent="TextureRect/types_options/screen_opt/brightness_slider/HBoxContainer" index="2"]
+value = 1.0
+
 [node name="contrast_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
+porcentaje = true
+val_min = 0.5
+val_max = 1.5
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/contrast_slider/HBoxContainer" index="0"]
 text = "CONTRAST_SLIDER"
 
+[node name="Slider" parent="TextureRect/types_options/screen_opt/contrast_slider/HBoxContainer" index="2"]
+value = 1.0
+
 [node name="saturation_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
+porcentaje = true
+val_min = 0.5
+val_max = 1.5
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/saturation_slider/HBoxContainer" index="0"]
 text = "SATURATION_SLIDER"
+
+[node name="Slider" parent="TextureRect/types_options/screen_opt/saturation_slider/HBoxContainer" index="2"]
+value = 1.0
 
 [node name="control_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
 visible = false
@@ -195,6 +224,7 @@ layout_mode = 2
 text = "AUTO_MODE_BUTTON"
 
 [node name="a11y_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
+visible = false
 layout_mode = 2
 script = ExtResource("9_72pa6")
 
