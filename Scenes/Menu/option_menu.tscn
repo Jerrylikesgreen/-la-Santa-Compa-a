@@ -136,3 +136,5 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "AAA"
+
+[connection signal="pressed" from="Control/TextureRect/Salir/HBoxContainer/Button" to="." method="_on_button_pressed"]

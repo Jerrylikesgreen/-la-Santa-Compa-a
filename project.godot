@@ -34,6 +34,11 @@ folder_colors={
 "res://Scripts/": "purple"
 }
 
+[global_group]
+
+menu_base=""
+titulo_menu=""
+
 [input]
 
 Up={
