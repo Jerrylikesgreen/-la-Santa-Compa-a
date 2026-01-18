@@ -3,18 +3,16 @@
 [ext_resource type="Script" uid="uid://dx7jro8r2u4aj" path="res://Scripts/Menu/start_menu.gd" id="1_hvsph"]
 [ext_resource type="PackedScene" uid="uid://d0rwpihb8mj0c" path="res://Scenes/Menu/option_menu.tscn" id="2_2242b"]
 
-[node name="StartMenu" type="CanvasLayer"]
-script = ExtResource("1_hvsph")
-
-[node name="Control" type="Control" parent="."]
+[node name="StartMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hvsph")
 
-[node name="Titulo" type="Label" parent="Control" groups=["titulo_menu"]]
+[node name="Titulo" type="Label" parent="." groups=["titulo_menu"]]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -28,7 +26,7 @@ text = "LA SANTA COMPAÑA"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Inicio" type="TextureRect" parent="Control" groups=["menu_base"]]
+[node name="Inicio" type="TextureRect" parent="." groups=["menu_base"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +34,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/Inicio"]
+[node name="MarginContainer" type="MarginContainer" parent="Inicio"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -49,30 +47,31 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Inicio/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Inicio/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="bot_continue" type="Button" parent="Control/Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_continue" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Continue"
+text = "CONTINUE_BTN"
 
-[node name="bot_new_game" type="Button" parent="Control/Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_new_game" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "New Play"
+text = "NEW_GAME_BTN"
 
-[node name="bot_options" type="Button" parent="Control/Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_options" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+text = "OPTIONS_BTN"
 
-[node name="bot_exit" type="Button" parent="Control/Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_exit" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Exit"
+text = "EXIT_BTN"
 
-[node name="OptionMenu" parent="Control" instance=ExtResource("2_2242b")]
+[node name="OptionMenu" parent="." instance=ExtResource("2_2242b")]
 visible = false
+layout_mode = 1
 
-[connection signal="pressed" from="Control/Inicio/MarginContainer/VBoxContainer/bot_continue" to="." method="_on_bot_continue_pressed"]
-[connection signal="pressed" from="Control/Inicio/MarginContainer/VBoxContainer/bot_new_game" to="." method="_on_bot_new_game_pressed"]
-[connection signal="pressed" from="Control/Inicio/MarginContainer/VBoxContainer/bot_options" to="." method="_on_bot_options_pressed"]
-[connection signal="pressed" from="Control/Inicio/MarginContainer/VBoxContainer/bot_exit" to="." method="_on_bot_exit_pressed"]
+[connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_continue" to="." method="_on_bot_continue_pressed"]
+[connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_new_game" to="." method="_on_bot_new_game_pressed"]
+[connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_options" to="." method="_on_bot_options_pressed"]
+[connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_exit" to="." method="_on_bot_exit_pressed"]

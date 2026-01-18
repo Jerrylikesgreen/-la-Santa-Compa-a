@@ -1,31 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0rwpihb8mj0c"]
+[gd_scene load_steps=7 format=3 uid="uid://d0rwpihb8mj0c"]
 
 [ext_resource type="Script" uid="uid://dkvj7cme3dn8i" path="res://Scripts/Menu/option_menu.gd" id="1_0cc5a"]
+[ext_resource type="PackedScene" uid="uid://c5qvk16clgbry" path="res://Scenes/Menu/block_options.tscn" id="2_iqqtd"]
 [ext_resource type="PackedScene" uid="uid://cmbn014d7gvgl" path="res://Scenes/Menu/UI/dropdown_ui.tscn" id="2_nn3g2"]
 [ext_resource type="PackedScene" uid="uid://bs2hw087rge6w" path="res://Scenes/Menu/UI/sliders_ui.tscn" id="3_t15ed"]
 [ext_resource type="PackedScene" uid="uid://ca6wntate58p5" path="res://Scenes/Menu/UI/remap_button_ui.tscn" id="4_5mdcn"]
 [ext_resource type="PackedScene" uid="uid://b76bxnu7a7bas" path="res://Scenes/Menu/UI/check_box_ui.tscn" id="5_iqqtd"]
 
-[node name="OptionMenu" type="CanvasLayer"]
-script = ExtResource("1_0cc5a")
-
-[node name="Control" type="Control" parent="."]
+[node name="OptionMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0cc5a")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="Opciones" type="MarginContainer" parent="Control/TextureRect"]
+[node name="Opciones" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -35,31 +36,31 @@ offset_top = 30.0
 offset_right = -50.0
 offset_bottom = -12.664001
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect/Opciones"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/Opciones"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+[node name="sound_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAA"
+text = "SOUND_BTN"
 
-[node name="Button2" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+[node name="screen_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAA"
+text = "SCREEN_BTN"
 
-[node name="Button3" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+[node name="control_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAA"
+text = "CONTROL_BTN"
 
-[node name="Button4" type="Button" parent="Control/TextureRect/Opciones/HBoxContainer"]
+[node name="a11y_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAA"
+text = "A11Y_BTN"
 
-[node name="Label" type="Label" parent="Control/TextureRect"]
+[node name="option_title" type="Label" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -67,54 +68,164 @@ offset_top = 131.0
 offset_bottom = 186.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "VENTANA"
+text = "OPTION_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Node" type="MarginContainer" parent="Control/TextureRect"]
+[node name="types_options" type="MarginContainer" parent="TextureRect"]
 layout_mode = 0
-offset_top = 186.0
+offset_top = 214.0
 offset_right = 1152.0
 offset_bottom = 513.0
+mouse_filter = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/TextureRect/Node"]
+[node name="sound_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="master_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" parent="TextureRect/types_options/sound_opt/master_slider/HBoxContainer" index="0"]
+text = "MASTER_SLIDER"
+
+[node name="effects_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/sound_opt/effects_slider/HBoxContainer" index="0"]
+text = "EFFECTS_SLIDER"
+
+[node name="music_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/sound_opt/music_slider/HBoxContainer" index="0"]
+text = "MUSIC_SLIDER"
+
+[node name="screen_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
+visible = false
+layout_mode = 2
+
+[node name="scren_type_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/scren_type_dropdown/HBoxContainer" index="0"]
+text = "SCREEN_TYPE_DROPDOWN"
+
+[node name="screen_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/screen_dropdown/HBoxContainer" index="0"]
+text = "SCREEN_DROPDOWN"
+
+[node name="resolution_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/resolution_dropdown/HBoxContainer" index="0"]
+text = "RESOLUTION_DROPDOWN"
+
+[node name="brightness_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/brightness_slider/HBoxContainer" index="0"]
+text = "BRIGHTNESS_SLIDER"
+
+[node name="contrast_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/contrast_slider/HBoxContainer" index="0"]
+text = "CONTRAST_SLIDER"
+
+[node name="saturation_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/screen_opt/saturation_slider/HBoxContainer" index="0"]
+text = "SATURATION_SLIDER"
+
+[node name="control_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
+visible = false
+layout_mode = 2
+
+[node name="move_left_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/move_left_button/HBoxContainer" index="0"]
+text = "MOVE_LEFT_BUTTON"
+
+[node name="move_right_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/move_right_button/HBoxContainer" index="0"]
+text = "MOVE_RIGHT_BUTTON"
+
+[node name="move_up_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/move_up_button/HBoxContainer" index="0"]
+text = "MOVE_UP_BUTTON"
+
+[node name="move_down_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/move_down_button/HBoxContainer" index="0"]
+text = "MOVE_DOWN_BUTTON"
+
+[node name="next_text_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/next_text_button/HBoxContainer" index="0"]
+text = "NEXT_TEXT_BUTTON"
+
+[node name="auto_mode_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/control_opt/auto_mode_button/HBoxContainer" index="0"]
+text = "AUTO_MODE_BUTTON"
+
+[node name="a11y_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
+layout_mode = 2
+
+[node name="language_dropdown" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("2_nn3g2")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/a11y_opt/language_dropdown/HBoxContainer" index="0"]
+text = "LANGUAGE_DROPDOWN"
+
+[node name="text_size_slider" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/a11y_opt/text_size_slider/HBoxContainer" index="0"]
+text = "TEXT_SIZE_SLIDER"
+
+[node name="dyslexic_font_check_box" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("5_iqqtd")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/a11y_opt/dyslexic_font_check_box/HBoxContainer" index="1"]
+text = "DYSLEXIC_FONT_CHECK_BOX"
+
+[node name="UIs" type="VBoxContainer" parent="TextureRect/types_options"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="DropdownUI" parent="Control/TextureRect/Node/VBoxContainer" instance=ExtResource("2_nn3g2")]
+[node name="DropdownUI" parent="TextureRect/types_options/UIs" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
 
-[node name="SlidersUI" parent="Control/TextureRect/Node/VBoxContainer" instance=ExtResource("3_t15ed")]
+[node name="SlidersUI" parent="TextureRect/types_options/UIs" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 
-[node name="RemapButtonUI" parent="Control/TextureRect/Node/VBoxContainer" instance=ExtResource("4_5mdcn")]
+[node name="RemapButtonUI" parent="TextureRect/types_options/UIs" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
 
-[node name="CheckBoxUI" parent="Control/TextureRect/Node/VBoxContainer" instance=ExtResource("5_iqqtd")]
+[node name="CheckBoxUI" parent="TextureRect/types_options/UIs" instance=ExtResource("5_iqqtd")]
 layout_mode = 2
 
-[node name="Ventanas" type="MarginContainer" parent="Control/TextureRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -565.0
-offset_top = -188.0
-offset_right = 496.0
-offset_bottom = 181.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Sonido" type="VBoxContainer" parent="Control/TextureRect/Ventanas"]
-layout_mode = 2
-
-[node name="Salir" type="MarginContainer" parent="Control/TextureRect"]
+[node name="Salir" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -128,13 +239,46 @@ offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect/Salir"]
+[node name="HBoxContainer" type="VBoxContainer" parent="TextureRect/Salir"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/TextureRect/Salir/HBoxContainer"]
+[node name="reset_option_btn" type="Button" parent="TextureRect/Salir/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAA"
+text = "RESET_OPTION_BTN"
 
-[connection signal="pressed" from="Control/TextureRect/Salir/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="exit_btn" type="Button" parent="TextureRect/Salir/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EXIT_BTN"
+
+[connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/sound_btn" to="." method="_on_sound_btn_pressed"]
+[connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/screen_btn" to="." method="_on_screen_btn_pressed"]
+[connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/control_btn" to="." method="_on_control_btn_pressed"]
+[connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/a11y_btn" to="." method="_on_a_11y_btn_pressed"]
+[connection signal="pressed" from="TextureRect/Salir/HBoxContainer/reset_option_btn" to="." method="_on_reset_option_btn_pressed"]
+[connection signal="pressed" from="TextureRect/Salir/HBoxContainer/exit_btn" to="." method="_on_exit_btn_pressed"]
+
+[editable path="TextureRect/types_options/sound_opt"]
+[editable path="TextureRect/types_options/sound_opt/master_slider"]
+[editable path="TextureRect/types_options/sound_opt/effects_slider"]
+[editable path="TextureRect/types_options/sound_opt/music_slider"]
+[editable path="TextureRect/types_options/screen_opt"]
+[editable path="TextureRect/types_options/screen_opt/scren_type_dropdown"]
+[editable path="TextureRect/types_options/screen_opt/screen_dropdown"]
+[editable path="TextureRect/types_options/screen_opt/resolution_dropdown"]
+[editable path="TextureRect/types_options/screen_opt/brightness_slider"]
+[editable path="TextureRect/types_options/screen_opt/contrast_slider"]
+[editable path="TextureRect/types_options/screen_opt/saturation_slider"]
+[editable path="TextureRect/types_options/control_opt"]
+[editable path="TextureRect/types_options/control_opt/move_left_button"]
+[editable path="TextureRect/types_options/control_opt/move_right_button"]
+[editable path="TextureRect/types_options/control_opt/move_up_button"]
+[editable path="TextureRect/types_options/control_opt/move_down_button"]
+[editable path="TextureRect/types_options/control_opt/next_text_button"]
+[editable path="TextureRect/types_options/control_opt/auto_mode_button"]
+[editable path="TextureRect/types_options/a11y_opt"]
+[editable path="TextureRect/types_options/a11y_opt/language_dropdown"]
+[editable path="TextureRect/types_options/a11y_opt/text_size_slider"]
+[editable path="TextureRect/types_options/a11y_opt/dyslexic_font_check_box"]

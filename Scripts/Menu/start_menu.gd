@@ -1,11 +1,11 @@
-extends CanvasLayer
+extends Control
 
 @export var first_scene = "res://Scenes/black_scene.tscn"
 
-@onready var option_menu = $Control/OptionMenu
+@onready var option_menu = $OptionMenu
 
-@onready var titulo = $Control/Titulo
-@onready var inicio = $Control/Inicio
+@onready var titulo = $Titulo
+@onready var inicio = $Inicio
 
 func _on_bot_continue_pressed() -> void:
 	get_tree().change_scene_to_file(first_scene)
