@@ -1,6 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://df6vxxd8kx8mm"]
+[gd_scene load_steps=31 format=3 uid="uid://cxyxjeulttw6j"]
 
-[ext_resource type="Script" uid="uid://cny5r6pfrn87l" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
+[ext_resource type="Script" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
 [ext_resource type="Texture2D" uid="uid://co0v7p6ir22yx" path="res://Assets/NoiseTextures/star.png" id="1_jf3ef"]
 [ext_resource type="Texture2D" uid="uid://d3y7wuh188tnd" path="res://Assets/Enviorment/Background/Cloud_B.png" id="2_hopga"]
 [ext_resource type="Texture2D" uid="uid://7xwt24j758mr" path="res://Assets/Enviorment/Background/Cloud_A.svg" id="3_aaxpg"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/Characters/player.tscn" id="15_ysfqj"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/Themes/dialog_gui_theme.tres" id="16_hopga"]
 [ext_resource type="Texture2D" uid="uid://ciyhkp5luvh8b" path="res://Assets/Houses/house1.png" id="18_svb41"]
-[ext_resource type="PackedScene" uid="uid://ch4pkk3yfiycp" path="res://Scenes/lamp.tscn" id="19_okqn5"]
+[ext_resource type="PackedScene" path="res://Scenes/lamp.tscn" id="19_okqn5"]
 
 [sub_resource type="Animation" id="Animation_aaxpg"]
 resource_name = "Idle"
@@ -648,6 +648,28 @@ tracks/27/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop:position:x")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop:position:y")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_okqn5"]
 resource_name = "animation1"
@@ -942,6 +964,28 @@ tracks/9/keys = {
 "args": [],
 "method": &"_animation_finished"
 }]
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.302185, -0.083333336, 0.21703085, 0, 0, 0, -0.083333336, -0.21703085, 0, 0, -1.302185, -0.083333336, 0.21703085, 0, 0, 0, -0.083333336, -0.21703085, 0, 0, -1.302185, -0.083333336, 0.21703085, 0, 0, 0, -0.083333336, -0.21703085, 0, 0, -1.302185, -0.083333336, 0.21703085, 0, 0, 0, -0.083333336, -0.21703085, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyTop:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4)
 }
 
 [sub_resource type="Animation" id="Animation_rfsqu"]
@@ -1450,10 +1494,11 @@ position = Vector2(-15.999575, 10.00073)
 [node name="ShoeLeft" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="0"]
 position = Vector2(5.999875, 14.999499)
 rotation = 3.1730087
-scale = Vector2(0.9999964, 0.9999964)
+scale = Vector2(0.99999636, 0.99999636)
 
 [node name="ShoeRight" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="1"]
 position = Vector2(-1.9993747, 16)
+scale = Vector2(0.99999964, 0.99999964)
 
 [node name="AnimationPlayer" parent="Player" index="1"]
 autoplay = "IdleFrontLeft"
