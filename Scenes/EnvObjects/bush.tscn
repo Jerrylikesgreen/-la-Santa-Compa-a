@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxsrwakxllvjb"]
 
-[ext_resource type="Texture2D" uid="uid://bk267ky1rjels" path="res://Assets/Enviorment/Bush1.svg" id="1_8cy4n"]
+[ext_resource type="Texture2D" uid="uid://bk267ky1rjels" path="res://Assets/Enviorment/Foliage/Bush1.svg" id="1_8cy4n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8cy4n"]
 radius = 30.016663

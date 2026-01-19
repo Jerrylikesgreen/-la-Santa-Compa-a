@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk267ky1rjels"
-path="res://.godot/imported/Bush1.svg-d3f89c6d0f9972391f9d0985e37d05e3.ctex"
+uid="uid://csnjgipleviru"
+path="res://.godot/imported/red_flower.png-e7d13fe78a016a30b5f7f1eb626af5b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enviorment/Bush1.svg"
-dest_files=["res://.godot/imported/Bush1.svg-d3f89c6d0f9972391f9d0985e37d05e3.ctex"]
+source_file="res://Assets/Enviorment/Foliage/red_flower.png"
+dest_files=["res://.godot/imported/red_flower.png-e7d13fe78a016a30b5f7f1eb626af5b4.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

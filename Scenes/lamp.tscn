@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch4pkk3yfiycp"]
+
+[ext_resource type="Texture2D" uid="uid://biatnxagavvmd" path="res://Assets/Objects/lamp.png" id="1_5vngr"]
+[ext_resource type="Texture2D" uid="uid://whwypbuqxbth" path="res://Assets/NoiseTextures/lamp_point.png" id="2_xtpkl"]
+
+[node name="Lamp" type="Sprite2D"]
+light_mask = 0
+texture = ExtResource("1_5vngr")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, 34)
+texture = ExtResource("2_xtpkl")
+texture_scale = 1.47

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://q3ksys8llb74" path="res://Assets/Characters/RedLady/Small/Right/RedLadyFrontHairRightSmall.svg" id="11_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://byk27f8c66v65" path="res://Assets/Characters/RedLady/Small/Right/red_lady_shoe__right_small.svg" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dq1bqngyjsq27" path="res://Assets/Characters/RedLady/Small/Right/RedLadyBackHairRight.svg" id="14_7dp3o"]
-[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/Enviorment/2d_lights_and_shadows_neutral_point_light (2).webp" id="16_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://cf6ccoh3rfpy8" path="res://Assets/NoiseTextures/2d_lights_and_shadows_neutral_point_light (2).webp" id="16_fd4e3"]
 [ext_resource type="Script" uid="uid://ebx4g41roshb" path="res://Scripts/player_sfx.gd" id="18_igrcy"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fd4e3"]
