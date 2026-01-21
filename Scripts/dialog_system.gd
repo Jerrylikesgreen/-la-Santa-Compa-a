@@ -44,7 +44,7 @@ var delete_after_end = true
 ## FUNC
 # ready-process
 func _ready():
-	load_csv(path_csv)
+	arr_dialogue = CD.load_csv(path_csv)
 	dialogue_text.text = ""
 	CD.player_movement = false
 	start_dialogue.connect(signal_inicio_dialogo)
@@ -110,39 +110,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		end = true
 
 # Extra
-func load_csv(path: String) -> void:
-	
-	# Try to get the file
-	var file := FileAccess.open(path, FileAccess.READ)
-	if file == null:
-		push_error("ERROR WHEN ENTER THE CSV FILE")
-		return
-
-	# Get values from CSV
-	var headers := []
-	while not file.eof_reached():
-		
-		# Check if exit loop
-		var line := file.get_line()
-		if line.is_empty():
-			continue
-
-		# Split line values from ;
-		var values := line.split(";")
-
-		# Check first line
-		if headers.is_empty():
-			headers = values
-			continue
-
-		# Appemd array
-		var row := {}
-		for i in range(headers.size()):
-			row[headers[i]] = values[i]
-		arr_dialogue.append(row)
-
-	# Close CSV
-	file.close()
 func get_next_line():
 	
 	# If we ended the text we return function

@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs2hw087rge6w"]
+
+[ext_resource type="Script" uid="uid://b3qposf0qhfo4" path="res://Scripts/Menu/UI/sliders_ui.gd" id="1_wc85a"]
+[ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_1vh0e"]
+
+[node name="SlidersUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wc85a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -17.5
+offset_right = 350.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer" groups=["tranlate_ui"]]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+text = "Opt"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_1vh0e")
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Slider" type="HSlider" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+
+[node name="SliderOLD" type="HSlider" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Valor" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "50"

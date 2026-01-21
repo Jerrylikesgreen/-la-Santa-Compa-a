@@ -1,0 +1,35 @@
+key;en;es;gl
+GAME_TITLE;The Sacred Company;La Santa Compaña;A santa Compaña
+CONTINUE_BTN;Continue;Continuar;Continuar
+NEW_GAME_BTN;New Game;Nueva Partida;Nova Partida
+OPTIONS_BTN;Options;Opciones;Opcions
+EXIT_BTN;Exit;Salir;Sair
+PAUSED_TITLE;Pause;Pausa;Pausa
+SOUND_BTN;Sound;Sonido;Sonido
+SCREEN_BTN;Screen;Pantalla;Xanela
+CONTROL_BTN;Control;Control;Control
+A11Y_BTN;Accesibility;Accesibilidad;Accesibilidade
+RESET_OPTION_BTN;Reset Options;Resetear Opciones;Resetear Opcions
+SOUND_OPTION_TITLE;SOUND;SONIDO;SONIDO
+MASTER_SLIDER;Master;Maestro;Mestre
+EFFECTS_SLIDER;Effects;Efectos;Efectos
+MUSIC_SLIDER;Music;Musica;Musica
+SCREEN_OPTION_TITLE;SCREEN;PANTALLA;XANELA
+FULLSCREEN_CHECK_BOX;Full Screen;Pantalla Completa;Xanela Completa
+SCREEN_DROPDOWN;Screen;Pantalla;Xanela
+RESOLUTION_DROPDOWN;Resolution;Resolucion;Resolucion
+BRIGHTNESS_SLIDER;Brightness;Brillo;Brillo
+CONNTRAST_SLIDER;Contrast;Contraste;Contraste
+SATURATION_SLIDER;Saturation;Saturacion;Saturacionn
+CONTROL_TYPE_DROPDOWN;CONTROL;CONTROLES;CONTROIS
+MOVE_LEFT_BUTTON;Move Left;Mov. Izq.;Mov. Izq.
+MOVE_RIGHT_BUTTON;Move Right;Mov. Der.;Mov. Der.
+MOVE_UP_BUTTON;Move Up;Mov. Arriba;Mov. Arriba
+MOVE_DOWN_BUTTON;Move Down;Mov. Abajo;Mov. Abaixo
+NEXT_TEXT_BUTTON;Next Text;Siguiente Linea;Seguinte Liña
+MENU_BUTTON;Menu Button;Boton Menu;Boton Menu
+A11Y_OPTION_TITLE;ACCESIBILITY;ACCESIBILIDAD;ACCESIBILIDADE
+LANGUAGE_DROPDOWN;Language;Idioma;Idioma
+SPEED_AUTO_SLIDER;Speed Auto;Velocidad Auto;Velocidade Auto
+TEXT_SIZE_SLIDER;Text Size;Tamaño Texto;Tamaño Texto
+DYSLEXIC_FONT_CHECK_BOX;Dyslexic Font;Fuente Dislexia;Fonte Dislexia

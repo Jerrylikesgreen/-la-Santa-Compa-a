@@ -12,7 +12,7 @@ config_version=5
 
 config/name="la Santa Compaña"
 config/version="0.01"
-run/main_scene="uid://byqulbln575fs"
+run/main_scene="uid://begu0hedbb7rc"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://dn3scpw51q8ah"
 
@@ -24,6 +24,7 @@ buses/default_bus_layout="res://Resources/Audio/default_bus_layout.tres"
 
 CD="*res://Scripts/Autoloads/CommonData.gd"
 Signals="*res://Scripts/Autoloads/Signals.gd"
+WE="*res://Scenes/world_environment.tscn"
 
 [file_customization]
 
@@ -33,6 +34,12 @@ folder_colors={
 "res://Scenes/": "green",
 "res://Scripts/": "purple"
 }
+
+[global_group]
+
+menu_base=""
+titulo_menu=""
+tranlate_ui=""
 
 [input]
 
