@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0rwpihb8mj0c"]
+[gd_scene load_steps=13 format=3 uid="uid://d0rwpihb8mj0c"]
 
 [ext_resource type="Script" uid="uid://dkvj7cme3dn8i" path="res://Scripts/Menu/option_menu.gd" id="1_0cc5a"]
+[ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_cwc5w"]
 [ext_resource type="PackedScene" uid="uid://c5qvk16clgbry" path="res://Scenes/Menu/block_options.tscn" id="2_iqqtd"]
 [ext_resource type="PackedScene" uid="uid://cmbn014d7gvgl" path="res://Scenes/Menu/UI/dropdown_ui.tscn" id="2_nn3g2"]
 [ext_resource type="PackedScene" uid="uid://bs2hw087rge6w" path="res://Scenes/Menu/UI/sliders_ui.tscn" id="3_t15ed"]
@@ -10,6 +11,7 @@
 [ext_resource type="Script" uid="uid://rilrrlbb1q2u" path="res://Scripts/Menu/Options/screen_opt.gd" id="5_px3lc"]
 [ext_resource type="Script" uid="uid://c0urts770xiqw" path="res://Scripts/Menu/Options/control_opt.gd" id="7_cwc5w"]
 [ext_resource type="Script" uid="uid://dbwia0kurbj1u" path="res://Scripts/Menu/Options/a11y_opt.gd" id="9_72pa6"]
+[ext_resource type="Script" uid="uid://c37mkfm1pkxl" path="res://Scripts/Menu/UI/change_ui_language_button.gd" id="11_px3lc"]
 
 [node name="OptionMenu" type="Control"]
 layout_mode = 3
@@ -44,27 +46,33 @@ offset_bottom = -12.664001
 layout_mode = 2
 alignment = 1
 
-[node name="sound_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
+[node name="sound_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "SOUND_BTN"
+script = ExtResource("11_px3lc")
 
-[node name="screen_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
+[node name="screen_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "SCREEN_BTN"
+script = ExtResource("11_px3lc")
 
-[node name="control_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
+[node name="control_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer" groups=["tranlate_ui"]]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "CONTROL_BTN"
+script = ExtResource("11_px3lc")
 
-[node name="a11y_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer"]
+[node name="a11y_btn" type="Button" parent="TextureRect/Opciones/HBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "A11Y_BTN"
+script = ExtResource("11_px3lc")
 
 [node name="option_title" type="Label" parent="TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -75,6 +83,7 @@ theme_override_font_sizes/font_size = 40
 text = "OPTION_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_cwc5w")
 
 [node name="types_options" type="MarginContainer" parent="TextureRect"]
 layout_mode = 0
@@ -97,6 +106,8 @@ script = ExtResource("3_y1j8o")
 layout_mode = 2
 mouse_filter = 2
 porcentaje = true
+section_save = "UI_SOUND"
+key_save = "master"
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/master_slider/HBoxContainer" index="0"]
 text = "MASTER_SLIDER"
@@ -104,6 +115,8 @@ text = "MASTER_SLIDER"
 [node name="effects_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 porcentaje = true
+section_save = "UI_SOUND"
+key_save = "effect"
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/effects_slider/HBoxContainer" index="0"]
 text = "EFFECTS_SLIDER"
@@ -111,6 +124,8 @@ text = "EFFECTS_SLIDER"
 [node name="music_slider" parent="TextureRect/types_options/sound_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 porcentaje = true
+section_save = "UI_SOUND"
+key_save = "music"
 
 [node name="Label" parent="TextureRect/types_options/sound_opt/music_slider/HBoxContainer" index="0"]
 text = "MUSIC_SLIDER"
@@ -119,21 +134,19 @@ text = "MUSIC_SLIDER"
 layout_mode = 2
 script = ExtResource("5_px3lc")
 
-[node name="scren_type_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
+[node name="full_screen_check_box" parent="TextureRect/types_options/screen_opt" instance=ExtResource("5_iqqtd")]
 layout_mode = 2
-save_value_default = "0"
-opciones = {
-"en": "Pantalla Completa",
-"es": "Ventana",
-"fr": "Pantalla Completa Sin Bordes"
-}
+section_save = "UI_SCREEN"
+key_save = "fullscreen"
 
-[node name="Label" parent="TextureRect/types_options/screen_opt/scren_type_dropdown/HBoxContainer" index="0"]
-text = "SCREEN_TYPE_DROPDOWN"
+[node name="Label" parent="TextureRect/types_options/screen_opt/full_screen_check_box/HBoxContainer" index="1"]
+text = "FULLSCREEN_CHECK_BOX"
 
 [node name="screen_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
 tipo_dropdown = "Monitor"
+section_save = "UI_SCREEN"
+key_save = "screen"
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/screen_dropdown/HBoxContainer" index="0"]
 text = "SCREEN_DROPDOWN"
@@ -141,6 +154,8 @@ text = "SCREEN_DROPDOWN"
 [node name="resolution_dropdown" parent="TextureRect/types_options/screen_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
 tipo_dropdown = "Resolucion"
+section_save = "UI_SCREEN"
+key_save = "resolution"
 
 [node name="Label" parent="TextureRect/types_options/screen_opt/resolution_dropdown/HBoxContainer" index="0"]
 text = "RESOLUTION_DROPDOWN"
@@ -148,6 +163,8 @@ text = "RESOLUTION_DROPDOWN"
 [node name="brightness_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 porcentaje = true
+section_save = "UI_SCREEN"
+key_save = "brightness"
 save_value_default = 1
 val_min = 0.5
 val_max = 1.5
@@ -161,6 +178,8 @@ value = 1.0
 [node name="contrast_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 porcentaje = true
+section_save = "UI_SCREEN"
+key_save = "contrast"
 val_min = 0.5
 val_max = 1.5
 
@@ -173,6 +192,8 @@ value = 1.0
 [node name="saturation_slider" parent="TextureRect/types_options/screen_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
 porcentaje = true
+section_save = "UI_SCREEN"
+key_save = "saturation"
 val_min = 0.5
 val_max = 1.5
 
@@ -189,39 +210,44 @@ script = ExtResource("7_cwc5w")
 
 [node name="move_left_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
+action_name = 2
 
 [node name="Label" parent="TextureRect/types_options/control_opt/move_left_button/HBoxContainer" index="0"]
 text = "MOVE_LEFT_BUTTON"
 
 [node name="move_right_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
+action_name = 3
 
 [node name="Label" parent="TextureRect/types_options/control_opt/move_right_button/HBoxContainer" index="0"]
 text = "MOVE_RIGHT_BUTTON"
 
 [node name="move_up_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
+action_name = 0
 
 [node name="Label" parent="TextureRect/types_options/control_opt/move_up_button/HBoxContainer" index="0"]
 text = "MOVE_UP_BUTTON"
 
 [node name="move_down_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
+action_name = 1
 
 [node name="Label" parent="TextureRect/types_options/control_opt/move_down_button/HBoxContainer" index="0"]
 text = "MOVE_DOWN_BUTTON"
 
 [node name="next_text_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
+action_name = 4
 
 [node name="Label" parent="TextureRect/types_options/control_opt/next_text_button/HBoxContainer" index="0"]
 text = "NEXT_TEXT_BUTTON"
 
-[node name="auto_mode_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
+[node name="menu_button" parent="TextureRect/types_options/control_opt" instance=ExtResource("4_5mdcn")]
 layout_mode = 2
 
-[node name="Label" parent="TextureRect/types_options/control_opt/auto_mode_button/HBoxContainer" index="0"]
-text = "AUTO_MODE_BUTTON"
+[node name="Label" parent="TextureRect/types_options/control_opt/menu_button/HBoxContainer" index="0"]
+text = "MENU_BUTTON"
 
 [node name="a11y_opt" parent="TextureRect/types_options" instance=ExtResource("2_iqqtd")]
 visible = false
@@ -230,9 +256,18 @@ script = ExtResource("9_72pa6")
 
 [node name="language_dropdown" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("2_nn3g2")]
 layout_mode = 2
+section_save = "UI_A11Y"
+key_save = "language"
 
 [node name="Label" parent="TextureRect/types_options/a11y_opt/language_dropdown/HBoxContainer" index="0"]
 text = "LANGUAGE_DROPDOWN"
+ui_key = "LANGUAGE_DROPDOWN"
+
+[node name="speed_auto_slider" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("3_t15ed")]
+layout_mode = 2
+
+[node name="Label" parent="TextureRect/types_options/a11y_opt/speed_auto_slider/HBoxContainer" index="0"]
+text = "SPEED_AUTO_SLIDER"
 
 [node name="text_size_slider" parent="TextureRect/types_options/a11y_opt" instance=ExtResource("3_t15ed")]
 layout_mode = 2
@@ -245,23 +280,6 @@ layout_mode = 2
 
 [node name="Label" parent="TextureRect/types_options/a11y_opt/dyslexic_font_check_box/HBoxContainer" index="1"]
 text = "DYSLEXIC_FONT_CHECK_BOX"
-
-[node name="UIs" type="VBoxContainer" parent="TextureRect/types_options"]
-visible = false
-layout_mode = 2
-theme_override_constants/separation = 50
-
-[node name="DropdownUI" parent="TextureRect/types_options/UIs" instance=ExtResource("2_nn3g2")]
-layout_mode = 2
-
-[node name="SlidersUI" parent="TextureRect/types_options/UIs" instance=ExtResource("3_t15ed")]
-layout_mode = 2
-
-[node name="RemapButtonUI" parent="TextureRect/types_options/UIs" instance=ExtResource("4_5mdcn")]
-layout_mode = 2
-
-[node name="CheckBoxUI" parent="TextureRect/types_options/UIs" instance=ExtResource("5_iqqtd")]
-layout_mode = 2
 
 [node name="Salir" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
@@ -281,15 +299,17 @@ grow_vertical = 0
 layout_mode = 2
 alignment = 1
 
-[node name="reset_option_btn" type="Button" parent="TextureRect/Salir/HBoxContainer"]
+[node name="reset_option_btn" type="Button" parent="TextureRect/Salir/HBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "RESET_OPTION_BTN"
+script = ExtResource("11_px3lc")
 
-[node name="exit_btn" type="Button" parent="TextureRect/Salir/HBoxContainer"]
+[node name="exit_btn" type="Button" parent="TextureRect/Salir/HBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "EXIT_BTN"
+script = ExtResource("11_px3lc")
 
 [connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/sound_btn" to="." method="_on_sound_btn_pressed"]
 [connection signal="pressed" from="TextureRect/Opciones/HBoxContainer/screen_btn" to="." method="_on_screen_btn_pressed"]
@@ -299,6 +319,7 @@ text = "EXIT_BTN"
 [connection signal="slider_updated" from="TextureRect/types_options/sound_opt/effects_slider" to="TextureRect/types_options/sound_opt" method="_on_effects_slider_slider_updated"]
 [connection signal="slider_updated" from="TextureRect/types_options/sound_opt/music_slider" to="TextureRect/types_options/sound_opt" method="_on_music_slider_slider_updated"]
 [connection signal="dropdown_updated" from="TextureRect/types_options/a11y_opt/language_dropdown" to="TextureRect/types_options/a11y_opt" method="_on_language_dropdown_dropdown_updated"]
+[connection signal="slider_updated" from="TextureRect/types_options/a11y_opt/speed_auto_slider" to="TextureRect/types_options/a11y_opt" method="_on_speed_auto_slider_slider_updated"]
 [connection signal="slider_updated" from="TextureRect/types_options/a11y_opt/text_size_slider" to="TextureRect/types_options/a11y_opt" method="_on_text_size_slider_slider_updated"]
 [connection signal="check_box_updated" from="TextureRect/types_options/a11y_opt/dyslexic_font_check_box" to="TextureRect/types_options/a11y_opt" method="_on_dyslexic_font_check_box_check_box_updated"]
 [connection signal="pressed" from="TextureRect/Salir/HBoxContainer/reset_option_btn" to="." method="_on_reset_option_btn_pressed"]
@@ -309,7 +330,7 @@ text = "EXIT_BTN"
 [editable path="TextureRect/types_options/sound_opt/effects_slider"]
 [editable path="TextureRect/types_options/sound_opt/music_slider"]
 [editable path="TextureRect/types_options/screen_opt"]
-[editable path="TextureRect/types_options/screen_opt/scren_type_dropdown"]
+[editable path="TextureRect/types_options/screen_opt/full_screen_check_box"]
 [editable path="TextureRect/types_options/screen_opt/screen_dropdown"]
 [editable path="TextureRect/types_options/screen_opt/resolution_dropdown"]
 [editable path="TextureRect/types_options/screen_opt/brightness_slider"]
@@ -321,8 +342,9 @@ text = "EXIT_BTN"
 [editable path="TextureRect/types_options/control_opt/move_up_button"]
 [editable path="TextureRect/types_options/control_opt/move_down_button"]
 [editable path="TextureRect/types_options/control_opt/next_text_button"]
-[editable path="TextureRect/types_options/control_opt/auto_mode_button"]
+[editable path="TextureRect/types_options/control_opt/menu_button"]
 [editable path="TextureRect/types_options/a11y_opt"]
 [editable path="TextureRect/types_options/a11y_opt/language_dropdown"]
+[editable path="TextureRect/types_options/a11y_opt/speed_auto_slider"]
 [editable path="TextureRect/types_options/a11y_opt/text_size_slider"]
 [editable path="TextureRect/types_options/a11y_opt/dyslexic_font_check_box"]

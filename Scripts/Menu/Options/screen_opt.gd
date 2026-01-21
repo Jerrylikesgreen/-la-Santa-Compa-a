@@ -4,7 +4,8 @@ extends Control
 
 #@onready var menu_main = get_tree().get_nodes_in_group("menu_main")[0]
 
-@onready var d_tipo_ventana = $scren_type_dropdown
+#@onready var d_tipo_ventana = $scren_type_dropdown
+@onready var fullscreeen_check_box = $full_screen_check_box
 @onready var d_monitor = $screen_dropdown
 @onready var d_resolucion = $resolution_dropdown
 
@@ -15,14 +16,14 @@ extends Control
 #@onready var bot_resetear = ruta_opciones.get_node("BotResetear")
 # Scroll
 @onready var scroll = $MarginContainer/VBoxContainer/ScrollContainer
-@onready var bot_focus = d_tipo_ventana.bot_izq
+#@onready var bot_focus = d_tipo_ventana.bot_izq
 #@onready var bot_fin_scroll = bot_resetear
 
 func _ready():
 	
 	await get_tree().process_frame
 	
-	d_tipo_ventana.dropdown_updated.connect(actualizar_tipo_ventana)
+	fullscreeen_check_box.check_box_updated.connect(actualizar_tipo_ventana)
 	d_monitor.dropdown_updated.connect(actualizar_monitor)
 	d_resolucion.dropdown_updated.connect(actualizar_resolucion)
 	
@@ -52,11 +53,11 @@ func _ready():
 	
 	
 func actualizar_tipo_ventana():
-	match d_tipo_ventana.indice:
-		0: elegir_tipo_pantalla(true, false)   # Ventana
-		1: elegir_tipo_pantalla(false, false)  # Pantalla Completa
-		2: elegir_tipo_pantalla(false, true)   # Pantalla Completa Sin Bordes
-		3: elegir_tipo_pantalla(true, true)    # Ventana Sin Bordes
+	if fullscreeen_check_box.check_box.button_pressed:
+		elegir_tipo_pantalla(false, false)
+	else:
+		elegir_tipo_pantalla(true, false)
+		
 func elegir_tipo_pantalla(ventana,bordes):
 	
 	if ventana: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
@@ -116,9 +117,9 @@ func _on_bot_resetear_pressed() -> void:
 	d_resolucion.guardar()
 	d_resolucion.actualizar_texto()
 	
-	d_tipo_ventana.indice = 0
-	d_tipo_ventana.guardar()
-	d_tipo_ventana.actualizar_texto()
+	#d_tipo_ventana.indice = 0
+	#d_tipo_ventana.guardar()
+	#d_tipo_ventana.actualizar_texto()
 	
 	s_brillo.slider.value = 1
 	s_contraste.slider.value = 1

@@ -32,19 +32,15 @@ func _on_check_box_value_changed(_toggle):
 	check_box_updated.emit()
 	
 func guardar():
-	#CD.config.set_value(section_save, key_save, slider.value)
-	#CD.config.save(DatosComunes.SAVE_FILE_PATH)
-	pass
+	CD.config.set_value(section_save, key_save, check_box.button_pressed)
+	CD.save_data()
+func cargar_check_box():
+	var valor = CD.config.get_value(
+		section_save, 
+		key_save, 
+		save_value_default)
+	check_box.button_pressed = valor
 	
-func cargar_slider():
-	#var valor = DatosComunes.config.get_value(
-		#section_save, 
-		#key_save, 
-		#save_value_default)
-	#slider.value = valor
-	#label_valor.text = str(valor*100)+"%"
-	pass
-
 func _on_mouse_entered() -> void:
 	check_box.grab_focus()
 	#menu_main.grab_focus_forzado(check_box)

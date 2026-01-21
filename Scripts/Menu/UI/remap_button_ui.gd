@@ -2,8 +2,12 @@ extends Control
 class_name RemapBotonUI
 
 ## VARIABLES
+
+
+
 # Nombre Valor
-@export var action_name : String = "mov_izq"
+@export_enum ("UP","DOWN","LEFT","RIGHT","ENTER") var action_name
+#@export var action_name : String = "mov_izq"
 
 #@onready var menu_main = get_tree().get_nodes_in_group("menu_main")[0]
 
@@ -88,25 +92,12 @@ func cambiar_nombre_label():
 	label.text = "Missigno"
 	match action_name:
 		# Movimiento
-		"mov_izq": label.text = "Movimineto Izquierda"
-		"mov_der": label.text = "Movimiento Derecha"
-		"mov_arr": label.text = "Movimiento Arriba"
-		"mov_aba": label.text = "Movimiento Abajo"
+		"UP": label.text = "Movimineto Izquierda"
+		"DOWN": label.text = "Movimiento Derecha"
+		"LEFT": label.text = "Movimiento Arriba"
+		"RIGHT": label.text = "Movimiento Abajo"
 		# Gravedad
-		"grav_abajo": label.text = "Gravedad Abajo"
-		"grav_arriba": label.text = "Gravedad Arriba"
-		"grav_izq": label.text = "Gravedad Izquierda"
-		"grav_der": label.text = "Gravedad Derecha"
-		# UI
-		"ui_arr": label.text = "UI Arriba"
-		"ui_aba": label.text = "Ui Abajo"
-		"ui_izq": label.text = "UI Izquierda"
-		"ui_der": label.text = "Ui Derecha"
-		"ui_aceptar": label.text = "UI Aceptar"
-		# Extra
-		"menu": label.text = "Menu"
-		"puerta_aceptar": label.text = "Entrar Puerta"
-		"salto_dash": label.text = "Salto/Dash"
+		"ENTER": label.text = "Gravedad Abajo"
 func dar_nombre_boton():
 	var acciones = InputMap.action_get_events(action_name)
 

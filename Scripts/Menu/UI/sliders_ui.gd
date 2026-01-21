@@ -54,17 +54,17 @@ func _on_slider_value_changed(value):
 	slider_updated.emit()
 
 func guardar():
-	#CD.config.set_value(section_save, key_save, slider.value)
-	#CD.config.save(DatosComunes.SAVE_FILE_PATH)
+	CD.config.set_value(section_save, key_save, slider.value)
+	CD.save_data()
 	pass
 	
 func cargar_slider():
-	#var valor = DatosComunes.config.get_value(
-		#section_save, 
-		#key_save, 
-		#save_value_default)
-	#slider.value = valor
-	#label_valor.text = str(valor*100)+"%"
+	var valor = CD.config.get_value(
+		section_save, 
+		key_save, 
+		save_value_default)
+	slider.value = valor
+	label_valor.text = str(valor*100)+"%"
 	pass
 
 func _on_mouse_entered() -> void:

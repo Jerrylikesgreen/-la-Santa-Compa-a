@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://begu0hedbb7rc"]
+[gd_scene load_steps=5 format=3 uid="uid://begu0hedbb7rc"]
 
 [ext_resource type="Script" uid="uid://dx7jro8r2u4aj" path="res://Scripts/Menu/start_menu.gd" id="1_hvsph"]
 [ext_resource type="PackedScene" uid="uid://d0rwpihb8mj0c" path="res://Scenes/Menu/option_menu.tscn" id="2_2242b"]
+[ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_b01ah"]
+[ext_resource type="Script" uid="uid://c37mkfm1pkxl" path="res://Scripts/Menu/UI/change_ui_language_button.gd" id="2_h5ikw"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -12,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hvsph")
 
-[node name="Titulo" type="Label" parent="." groups=["titulo_menu"]]
+[node name="Titulo" type="Label" parent="." groups=["titulo_menu", "tranlate_ui"]]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -22,9 +24,10 @@ offset_right = 251.5
 offset_bottom = 90.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "LA SANTA COMPAÑA"
+text = "GAME_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_b01ah")
 
 [node name="Inicio" type="TextureRect" parent="." groups=["menu_base"]]
 layout_mode = 1
@@ -51,21 +54,25 @@ theme_override_constants/margin_bottom = 12
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="bot_continue" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_continue" type="Button" parent="Inicio/MarginContainer/VBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 text = "CONTINUE_BTN"
+script = ExtResource("2_h5ikw")
 
-[node name="bot_new_game" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_new_game" type="Button" parent="Inicio/MarginContainer/VBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 text = "NEW_GAME_BTN"
+script = ExtResource("2_h5ikw")
 
-[node name="bot_options" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_options" type="Button" parent="Inicio/MarginContainer/VBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 text = "OPTIONS_BTN"
+script = ExtResource("2_h5ikw")
 
-[node name="bot_exit" type="Button" parent="Inicio/MarginContainer/VBoxContainer"]
+[node name="bot_exit" type="Button" parent="Inicio/MarginContainer/VBoxContainer" groups=["tranlate_ui"]]
 layout_mode = 2
 text = "EXIT_BTN"
+script = ExtResource("2_h5ikw")
 
 [node name="OptionMenu" parent="." instance=ExtResource("2_2242b")]
 visible = false

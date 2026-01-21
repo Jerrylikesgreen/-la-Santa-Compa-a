@@ -8,13 +8,13 @@ extends Control
 
 @export var section_save : String
 @export var key_save : String
-@export var save_value_default : String = "es" # valor por defecto, clave
+@export var save_value_default : String = "en" # valor por defecto, clave
 
 # Diccionario: clave = código, valor = idioma visible
 @export var opciones = {
-	"es": "Español",
 	"en": "English",
-	"fr": "Français"
+	"es": "Español",
+	"gl": "Gallego"
 }
 
 var claves : Array = []
@@ -60,8 +60,8 @@ func _ready():
 	match tipo_dropdown:
 		"Por_Defecto":
 			pass
-		"Idioma":
-			obtener_idiomas()
+		#"Idioma":
+			#obtener_idiomas()
 		"Resolucion":
 			obtener_resoluciones_validas()
 		"Monitor":
@@ -113,19 +113,19 @@ func _gui_input(event):
 		#menu_main.grab_focus_forzado(self)
 ## GUARDAR / CARGAR
 func guardar():
-	#var clave = claves[indice]
-	#DatosComunes.config.set_value(section_save, key_save, clave)
-	#DatosComunes.config.save(DatosComunes.SAVE_FILE_PATH)
+	var clave = claves[indice]
+	CD.config.set_value(section_save, key_save, clave)
+	CD.save_data()
 	pass
 func cargar_dropdown_hipervitaminado():
-	#var clave_guardada
-	#
-	#
-	#clave_guardada = DatosComunes.config.get_value(
-		#section_save,
-		#key_save,
-		#save_value_default
-	#)
+	var clave_guardada
+	
+	
+	clave_guardada = CD.config.get_value(
+		section_save,
+		key_save,
+		save_value_default
+	)
 #
 	##if save_value_default == "none":
 		##clave_guardada = DatosComunes.config.get_value(
@@ -140,38 +140,38 @@ func cargar_dropdown_hipervitaminado():
 			##save_value_default
 		##)
 		#
-	#if clave_guardada in claves:
-		#indice = claves.find(clave_guardada)
-	#else:
-		#indice = 0
-	#actualizar_texto()
+	if clave_guardada in claves:
+		indice = claves.find(clave_guardada)
+	else:
+		indice = 0
+	actualizar_texto()
 	pass
 
 ## TIPO_DATOS
-func obtener_idiomas():
-
-	var file := FileAccess.open("res://assets/idiomas/traduccionAntroriaAlpha.csv", FileAccess.READ)
-	if file == null:
-		push_error("No se pudo abrir el archivo")
-		return []
-	
-	var lines := []
-	if not file.eof_reached():
-		lines.append(file.get_line().strip_edges()) # primera línea
-	if not file.eof_reached():
-		lines.append(file.get_line().strip_edges()) # segunda línea
-	
-	file.close()
-	
-	var headers = lines[0].split(",")
-	var values = lines[1].split(",")
-
-	opciones = {}
-	for i in range(1, headers.size()):
-		opciones[headers[i]] = values[i]
-	
-	print(opciones)
-	
+#func obtener_idiomas():
+#
+	#var file := FileAccess.open("res://assets/idiomas/traduccionAntroriaAlpha.csv", FileAccess.READ)
+	#if file == null:
+		#push_error("No se pudo abrir el archivo")
+		#return []
+	#
+	#var lines := []
+	#if not file.eof_reached():
+		#lines.append(file.get_line().strip_edges()) # primera línea
+	#if not file.eof_reached():
+		#lines.append(file.get_line().strip_edges()) # segunda línea
+	#
+	#file.close()
+	#
+	#var headers = lines[0].split(",")
+	#var values = lines[1].split(",")
+#
+	#opciones = {}
+	#for i in range(1, headers.size()):
+		#opciones[headers[i]] = values[i]
+	#
+	#print(opciones)
+	#
 func obtener_monitores():
 	
 	opciones = {}

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b76bxnu7a7bas"]
+[gd_scene load_steps=3 format=3 uid="uid://b76bxnu7a7bas"]
 
 [ext_resource type="Script" uid="uid://ciwxuuq63j0ai" path="res://Scripts/Menu/UI/check_box_ui.gd" id="1_jbu66"]
+[ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_bobq4"]
 
 [node name="CheckBoxUI" type="Control"]
 layout_mode = 3
@@ -33,12 +34,13 @@ layout_mode = 2
 text = "Opt"
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer" groups=["tranlate_ui"]]
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 2
 text = "Opt"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_bobq4")
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2

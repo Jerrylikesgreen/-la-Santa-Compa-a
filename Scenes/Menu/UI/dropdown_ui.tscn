@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmbn014d7gvgl"]
+[gd_scene load_steps=3 format=3 uid="uid://cmbn014d7gvgl"]
 
 [ext_resource type="Script" uid="uid://mb6qto75e08c" path="res://Scripts/Menu/UI/dropdown_ui.gd" id="1_d4ncn"]
+[ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_c22es"]
 
 [node name="DropdownUI" type="Control"]
 layout_mode = 3
@@ -26,12 +27,13 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer" groups=["tranlate_ui"]]
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 2
 text = "Opt"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_c22es")
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
