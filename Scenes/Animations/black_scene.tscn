@@ -5,36 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://jwv8wc12q1j" path="res://Scenes/dialog_gui.tscn" id="3_cwmt8"]
 [ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/Characters/player.tscn" id="4_cwmt8"]
 
-[sub_resource type="Animation" id="Animation_r1puc"]
-resource_name = "fade_background"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScene/Background:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.20871016, 0.20871013, 0.2087102, 1), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BlackScene")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["res://Assets/Dialogues/santa_compaña_dialgue_test_short.csv"],
-"method": &"start_dialogue_brigde"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_oub6m"]
 length = 0.001
 tracks/0/type = "value"
@@ -74,36 +44,6 @@ tracks/2/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_cwmt8"]
-resource_name = "player_walk"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScene/Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1284, 317), Vector2(876, 317)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BlackScene/Player")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"static_play_animation"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_6jlvp"]
 resource_name = "end_scene"
 length = 3.0
@@ -134,6 +74,66 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_r1puc"]
+resource_name = "fade_background"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.20871016, 0.20871013, 0.2087102, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/santa_compaña_dialgue_test_short.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cwmt8"]
+resource_name = "player_walk"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1284, 317), Vector2(876, 317)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene/Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"static_play_animation"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1puc"]
 _data = {
 &"RESET": SubResource("Animation_oub6m"),
@@ -146,7 +146,7 @@ _data = {
 libraries = {
 &"": SubResource("AnimationLibrary_r1puc")
 }
-autoplay = "end_scene"
+autoplay = "fade_background"
 script = ExtResource("1_caadg")
 
 [node name="BlackEndScene" type="Sprite2D" parent="."]
@@ -161,7 +161,7 @@ texture = ExtResource("2_sp2b8")
 [node name="DialogGui" parent="." instance=ExtResource("3_cwmt8")]
 
 [node name="Player" parent="." instance=ExtResource("4_cwmt8")]
-position = Vector2(902, 296)
+position = Vector2(1284, 317)
 player_interactable = false
 
 [node name="LightOccluder2D" parent="Player/PlayerBody" index="0"]

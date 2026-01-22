@@ -17,7 +17,7 @@ extends CanvasLayer
 # Text
 var arr_dialogue = []
 var text_speed = 0.05
-var index_text = 0
+var index_text = -1
 var writting = false
 var fin_fade_in = false
 # AutoMode
@@ -155,6 +155,7 @@ func progressive_text(new_text):
 func changue_voice(id,name_voice):
 	
 	# We turn on the name box
+	var aaaaa = name_text.text
 	if name_text.text == "no_name":
 		anim_name_box.play("show_name")
 	
