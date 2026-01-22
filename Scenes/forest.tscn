@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://byqulbln575fs"]
+[gd_scene load_steps=15 format=3 uid="uid://byqulbln575fs"]
 
 [ext_resource type="Script" uid="uid://bituivhn4dln4" path="res://Scripts/player_spawn_point.gd" id="2_u53w3"]
 [ext_resource type="Script" uid="uid://qdn87he2xyuw" path="res://Scripts/enviorment_generator.gd" id="3_qq45g"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cohjitxf6sq3u" path="res://Scenes/EnvChucks/forest_chunk_4.tscn" id="7_xgdwn"]
 [ext_resource type="Texture2D" uid="uid://cnv8ikey2s5xt" path="res://Assets/NoiseTextures/smoke.png" id="8_vh310"]
 [ext_resource type="PackedScene" uid="uid://ci0lkhxovvxym" path="res://Scenes/EnvChucks/forest_chunk_5.tscn" id="8_y1epu"]
+[ext_resource type="PackedScene" uid="uid://deokb11offj2d" path="res://Scenes/Menu/UI/pause_screen.tscn" id="12_0jrfa"]
+[ext_resource type="Script" uid="uid://bxvk4mef6jhq2" path="res://Scripts/Menu/UI/pause_screen.gd" id="13_l3vkk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vh310"]
 shader = ExtResource("7_wo0py")
@@ -69,3 +71,6 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.29709315, 0.29709288, 0.2970929, 0.3764706)
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("12_0jrfa")]
+script = ExtResource("13_l3vkk")
