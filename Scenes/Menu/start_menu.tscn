@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://begu0hedbb7rc"]
+[gd_scene load_steps=10 format=3 uid="uid://begu0hedbb7rc"]
 
 [ext_resource type="Script" uid="uid://dx7jro8r2u4aj" path="res://Scripts/Menu/start_menu.gd" id="1_hvsph"]
 [ext_resource type="PackedScene" uid="uid://d0rwpihb8mj0c" path="res://Scenes/Menu/option_menu.tscn" id="2_2242b"]
 [ext_resource type="Script" uid="uid://bl2yppgmlpvtt" path="res://Scripts/Menu/UI/change_ui_language_label.gd" id="2_b01ah"]
 [ext_resource type="Script" uid="uid://c37mkfm1pkxl" path="res://Scripts/Menu/UI/change_ui_language_button.gd" id="2_h5ikw"]
+[ext_resource type="Script" uid="uid://dhptkrsubr6np" path="res://Scripts/Menu/sfx_player.gd" id="5_nx3cd"]
+[ext_resource type="AudioStream" uid="uid://dd86vlpke0heu" path="res://Assets/Sounds/button_press.wav" id="6_hd6bf"]
+[ext_resource type="AudioStream" uid="uid://cayn87alom2a4" path="res://Assets/Sounds/cancel_blip.wav" id="7_n4dd1"]
+[ext_resource type="AudioStream" uid="uid://dp2f2ob8mej75" path="res://Assets/Sounds/notification_blip.wav" id="8_86dkm"]
+[ext_resource type="AudioStream" uid="uid://dor7n82wssg84" path="res://Assets/Sounds/text_click.wav" id="9_c35al"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -77,6 +82,15 @@ script = ExtResource("2_h5ikw")
 [node name="OptionMenu" parent="." instance=ExtResource("2_2242b")]
 visible = false
 layout_mode = 1
+
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("5_nx3cd")
+sfx_tracks = Dictionary[int, AudioStream]({
+0: ExtResource("6_hd6bf"),
+1: ExtResource("7_n4dd1"),
+2: ExtResource("8_86dkm"),
+3: ExtResource("9_c35al")
+})
 
 [connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_continue" to="." method="_on_bot_continue_pressed"]
 [connection signal="pressed" from="Inicio/MarginContainer/VBoxContainer/bot_new_game" to="." method="_on_bot_new_game_pressed"]
