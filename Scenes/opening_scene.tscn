@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://cxyxjeulttw6j"]
 
-[ext_resource type="Script" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
+[ext_resource type="Script" uid="uid://cny5r6pfrn87l" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
 [ext_resource type="Texture2D" uid="uid://co0v7p6ir22yx" path="res://Assets/NoiseTextures/star.png" id="1_jf3ef"]
 [ext_resource type="Texture2D" uid="uid://d3y7wuh188tnd" path="res://Assets/Enviorment/Background/Cloud_B.png" id="2_hopga"]
 [ext_resource type="Texture2D" uid="uid://7xwt24j758mr" path="res://Assets/Enviorment/Background/Cloud_A.svg" id="3_aaxpg"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/Characters/player.tscn" id="15_ysfqj"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/Themes/dialog_gui_theme.tres" id="16_hopga"]
 [ext_resource type="Texture2D" uid="uid://ciyhkp5luvh8b" path="res://Assets/Houses/house1.png" id="18_svb41"]
-[ext_resource type="PackedScene" path="res://Scenes/lamp.tscn" id="19_okqn5"]
+[ext_resource type="PackedScene" uid="uid://ch4pkk3yfiycp" path="res://Scenes/lamp.tscn" id="19_okqn5"]
 
 [sub_resource type="Animation" id="Animation_aaxpg"]
 resource_name = "Idle"
@@ -1494,7 +1494,7 @@ position = Vector2(-15.999575, 10.00073)
 [node name="ShoeLeft" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="0"]
 position = Vector2(5.999875, 14.999499)
 rotation = 3.1730087
-scale = Vector2(0.99999636, 0.99999636)
+scale = Vector2(0.9999963, 0.9999963)
 
 [node name="ShoeRight" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="1"]
 position = Vector2(-1.9993747, 16)

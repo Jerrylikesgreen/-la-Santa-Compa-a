@@ -40,6 +40,7 @@ folder_colors={
 menu_base=""
 titulo_menu=""
 tranlate_ui=""
+sfx_player="Sfx Player"
 
 [input]
 
