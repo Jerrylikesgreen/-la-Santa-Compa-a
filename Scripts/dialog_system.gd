@@ -17,7 +17,7 @@ extends CanvasLayer
 # Text
 var arr_dialogue = []
 var text_speed = 0.05
-var index_text = 0
+var index_text = -1
 var writting = false
 var fin_fade_in = false
 # AutoMode
@@ -74,7 +74,8 @@ func _process(_delta):
 					end_line.emit()
 					
 					# Set text
-					dialogue_text.text = arr_dialogue[index_text - 1][languaje_key]
+					#dialogue_text.text = arr_dialogue[index_text - 1][languaje_key]
+					dialogue_text.text = arr_dialogue[index_text][languaje_key]
 				
 				else:
 					
@@ -112,12 +113,12 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 # Extra
 func get_next_line():
 	
+	# Get the next value
+	index_text += 1
+	
 	# If we ended the text we return function
 	if index_text >= arr_dialogue.size():
 		return
-	
-	# Get the next value
-	index_text += 1
 	
 	# Check if line is a code and id
 	var row = arr_dialogue[index_text]
@@ -155,6 +156,7 @@ func progressive_text(new_text):
 func changue_voice(id,name_voice):
 	
 	# We turn on the name box
+	var aaaaa = name_text.text
 	if name_text.text == "no_name":
 		anim_name_box.play("show_name")
 	

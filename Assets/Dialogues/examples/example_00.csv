@@ -1,0 +1,23 @@
+key;en;es;gl
+change_name-pyramid;Pyramid;Pyramid;Pyramid
+text;Heyyyyy;Heyyyyy;Olaaaaa
+text;Hello Jerry;Hola Jerry;Ola Jerry
+text;This is a example of how animation works;Esto es un ejemplo de como una animacion funciona;Este é un exemplo de como funciona unha animación.
+text;Did you notice that an animation was released first, and then this wonderful dialogue from the future?;Has visto que primero se ha lanzado una animacion, y luego este dialogo maravilloso del futuro?;Viches que primeiro se reproduciu unha animación e despois este diálogo marabilloso do futuro?
+text;That's because I'm a VERY SMART guy;Pues eso es porque soy un tio MUY LISTO;Pois iso é porque son un tipo MOI INTELIXENTE.
+text;Nah, I'm just kidding, I'm so stupid;Nah, es coña, soy tontisimo;Non, é broma, son moi parvo.
+text;Basically, this is done by "scenes";Basicamente esto va por "escenas";Basicamente, isto funciona por "escenas".
+text;In other words, what you're launching is a clone of black_scene;Es decir, esto que estas lanzando esta clonado de black_scene;É dicir, o que estás a lanzar é clonado de black_scene.
+text;But it's called example_animation_dialogue;Pero se ha llamado example_animation_dialogue;Pero chámase example_animation_dialogue.
+text;The first thing you absolutely must do is choose an animation to launch first, simply by checking the idle button on the animation you want.;Lo primero que se debe hacer, si o si, es escoger una animacion que se lanzara de primera, sencillamente marcando el boton de idle en la animacion que queramos;O primeiro que debes facer é escoller unha animación para lanzar primeiro, simplemente marcando o botón de repouso na animación que queres.
+text;I did it this way because it really makes sense to always start with an animation, even a very simple one, like a fade-in or, as in this case, the protagonist walking.;Lo hice asi porque realmente tiene sentido empezar siempre con una animacion, aunque sea muy simple, como un fade in o como en este caso, la prota andando;Fixeno deste xeito porque realmente ten sentido comezar sempre cunha animación, mesmo que sexa moi sinxela, como un fade-in ou, como neste caso, o protagonista camiñando.
+text;I can see the future, and don't worry.;Leo el futuro, y no te preocupes;Eu podo ver o futuro e non te preocupes.
+text;Even though it's been duplicated, the animator controllers work regardless of whether they've been cloned.;Pese a que se ha duplicado, los animator controllers funcionan independientemente de que se hayan clonado;Aínda que foi duplicado, os controladores do animador funcionan independentemente de se foron clonados.
+text;(See that in black_scene, a fade-in is set as idle, and here the first thing you saw was the protagonist walking.);(ver que en black_scene, esta puesto como idle un fade in, y aqui lo primero que has visto es a la jamba andar);(Mira que en black_scene, un fade-in está configurado como inactivo, e aquí o primeiro que viches foi o protagonista camiñando).
+text;This means that, ideally, you should duplicate the files once the animations are ready.;Eso implica que, lo ideal seria duplicar los archivos una vez las animaciones estuvieran listas;Iso significa que, idealmente, deberías duplicar os ficheiros unha vez que as animacións estean listas.
+text;In the worst-case scenario, I think you can copy and paste animations, but I haven't tried it and I'm just guessing.;En el peor de los casos, creo que se pueden copiar pegar animaciones, pero no lo he provado y solo suponngo;No peor dos casos, creo que podes copialas e pegalas. Animacións, pero non o probei e só estou a adiviñar.
+text;Mmmmmm;Mmmmmm;Mmmmmm
+text;I'm getting incredibly bored.;Me estoy aburriendo mazo;Estou a aburrirme moito.
+text;You wouldn't believe it.;Que no veas;Non o crerías.
+text;I'm going to turn around.;Voy a dar la vuelta;Voume dar a volta.
+load_animation-do_a_barrel_roll;a;a;a

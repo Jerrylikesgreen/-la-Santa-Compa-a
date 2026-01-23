@@ -1,0 +1,233 @@
+[gd_scene load_steps=11 format=3 uid="uid://dup17jx3ccgw5"]
+
+[ext_resource type="Script" uid="uid://xd416cvs6qlh" path="res://Scripts/black_scene.gd" id="1_1t8kk"]
+[ext_resource type="Texture2D" uid="uid://ugomqfrpbhwj" path="res://Assets/Background/ForestFloor.png" id="2_016my"]
+[ext_resource type="PackedScene" uid="uid://jwv8wc12q1j" path="res://Scenes/dialog_gui.tscn" id="3_s8lrw"]
+[ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/Characters/player.tscn" id="4_2d1x1"]
+
+[sub_resource type="Animation" id="Animation_oub6m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.20871016, 0.20871013, 0.2087102, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene/Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1284, 317)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScene/BlackEndScene:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackScene/Player:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1t8kk"]
+resource_name = "do_a_barrel_roll"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Player:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/examples/example_01.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_6jlvp"]
+resource_name = "end_scene"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/BlackEndScene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.99),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_r1puc"]
+resource_name = "fade_background"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.20871016, 0.20871013, 0.2087102, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/santa_compaña_dialgue_test_short.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cwmt8"]
+resource_name = "player_walk"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1284, 317), Vector2(876, 317)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene/Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"static_play_animation"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScene")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.9666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/examples/example_00.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r1puc"]
+_data = {
+&"RESET": SubResource("Animation_oub6m"),
+&"do_a_barrel_roll": SubResource("Animation_1t8kk"),
+&"end_scene": SubResource("Animation_6jlvp"),
+&"fade_background": SubResource("Animation_r1puc"),
+&"player_walk": SubResource("Animation_cwmt8")
+}
+
+[node name="BlackScene" type="AnimationPlayer" groups=["animation_main"]]
+libraries = {
+&"": SubResource("AnimationLibrary_r1puc")
+}
+autoplay = "player_walk"
+script = ExtResource("1_1t8kk")
+next_scene = "res://Scenes/Animations/example_animation_dialogue.tscn"
+
+[node name="BlackEndScene" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+z_index = 31
+texture = ExtResource("2_016my")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.20871016, 0.20871013, 0.2087102, 1)
+texture = ExtResource("2_016my")
+
+[node name="DialogGui" parent="." instance=ExtResource("3_s8lrw")]
+
+[node name="Player" parent="." instance=ExtResource("4_2d1x1")]
+position = Vector2(1284, 317)
+player_interactable = false
+
+[node name="LightOccluder2D" parent="Player/PlayerBody" index="0"]
+visible = false
+
+[node name="PointLight2D2" parent="Player/PlayerBody/VisualRoot/Left/PlaceholderLampRight" index="0"]
+visible = false
+
+[node name="PointLight2D" parent="Player/PlayerBody/VisualRoot/Right/PlaceholderLampLeft" index="0"]
+visible = false
+
+[editable path="Player"]
