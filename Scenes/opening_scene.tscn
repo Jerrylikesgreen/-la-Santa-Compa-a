@@ -1,6 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://cxyxjeulttw6j"]
+[gd_scene load_steps=35 format=3 uid="uid://cxyxjeulttw6j"]
 
-[ext_resource type="Script" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
+[ext_resource type="Script" uid="uid://cny5r6pfrn87l" path="res://Scripts/opening_scene.gd" id="1_aaxpg"]
 [ext_resource type="Texture2D" uid="uid://co0v7p6ir22yx" path="res://Assets/NoiseTextures/star.png" id="1_jf3ef"]
 [ext_resource type="Texture2D" uid="uid://d3y7wuh188tnd" path="res://Assets/Enviorment/Background/Cloud_B.png" id="2_hopga"]
 [ext_resource type="Texture2D" uid="uid://7xwt24j758mr" path="res://Assets/Enviorment/Background/Cloud_A.svg" id="3_aaxpg"]
@@ -17,8 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://rsixlb8adiy" path="res://Assets/Objects/note.png" id="14_10qb2"]
 [ext_resource type="PackedScene" uid="uid://csvilirrsotay" path="res://Scenes/Characters/player.tscn" id="15_ysfqj"]
 [ext_resource type="Theme" uid="uid://dc834v3v77k4d" path="res://Resources/Themes/dialog_gui_theme.tres" id="16_hopga"]
+[ext_resource type="AudioStream" uid="uid://q5rhq4n3081j" path="res://Assets/Sounds/dirt_step.wav" id="17_5xteb"]
+[ext_resource type="AudioStream" uid="uid://5pqnnespohag" path="res://Assets/Sounds/writing_sfx.ogg" id="17_fruud"]
+[ext_resource type="AudioStream" uid="uid://dl7q44hkavsyf" path="res://Assets/Sounds/pick_sfx.ogg" id="18_rfsqu"]
 [ext_resource type="Texture2D" uid="uid://ciyhkp5luvh8b" path="res://Assets/Houses/house1.png" id="18_svb41"]
-[ext_resource type="PackedScene" path="res://Scenes/lamp.tscn" id="19_okqn5"]
+[ext_resource type="PackedScene" uid="uid://ch4pkk3yfiycp" path="res://Scenes/lamp.tscn" id="19_okqn5"]
+[ext_resource type="PackedScene" uid="uid://wfmh3i1po6kj" path="res://Scenes/Menu/sfx_player.tscn" id="21_rfsqu"]
 
 [sub_resource type="Animation" id="Animation_aaxpg"]
 resource_name = "Idle"
@@ -710,6 +714,21 @@ tracks/2/keys = {
 "method": &"_animation_finished"
 }]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SfxPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.61451316,
+"start_offset": 0.9303045,
+"stream": ExtResource("17_fruud")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_q8ma7"]
 resource_name = "animation2"
@@ -987,6 +1006,33 @@ tracks/11/keys = {
 "points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0, -11.872864, -0.083333336, 0.1454773, 0, 0, -11, -0.083333336, -0.1454773, 0, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4)
 }
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SfxPlayer")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}],
+"times": PackedFloat32Array(0, 1, 2, 3)
+}
+tracks/12/use_blend = true
 
 [sub_resource type="Animation" id="Animation_rfsqu"]
 resource_name = "animation4"
@@ -1161,6 +1207,33 @@ tracks/14/keys = {
 "method": &"_animation_finished"
 }]
 }
+tracks/15/type = "audio"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("SfxPlayer")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_5xteb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0525,
+"stream": ExtResource("18_rfsqu")
+}],
+"times": PackedFloat32Array(0, 1, 2, 2.5)
+}
+tracks/15/use_blend = true
 
 [sub_resource type="Animation" id="Animation_fruud"]
 resource_name = "animation5"
@@ -1494,7 +1567,7 @@ position = Vector2(-15.999575, 10.00073)
 [node name="ShoeLeft" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="0"]
 position = Vector2(5.999875, 14.999499)
 rotation = 3.1730087
-scale = Vector2(0.99999636, 0.99999636)
+scale = Vector2(0.99999624, 0.99999624)
 
 [node name="ShoeRight" parent="Player/PlayerBody/VisualRoot/Skeleton2D/BodyCore/BodyBottom" index="1"]
 position = Vector2(-1.9993747, 16)
@@ -1557,5 +1630,7 @@ position = Vector2(573, 249)
 
 [node name="Lamp2" parent="." instance=ExtResource("19_okqn5")]
 position = Vector2(1107, 261)
+
+[node name="SfxPlayer" parent="." instance=ExtResource("21_rfsqu")]
 
 [editable path="Player"]
