@@ -1,0 +1,16 @@
+[gd_scene load_steps=6 format=3 uid="uid://wfmh3i1po6kj"]
+
+[ext_resource type="Script" uid="uid://dhptkrsubr6np" path="res://Scripts/Menu/sfx_player.gd" id="1_r6pbq"]
+[ext_resource type="AudioStream" uid="uid://dd86vlpke0heu" path="res://Assets/Sounds/button_press.wav" id="2_tt6ts"]
+[ext_resource type="AudioStream" uid="uid://cayn87alom2a4" path="res://Assets/Sounds/cancel_blip.wav" id="3_umstf"]
+[ext_resource type="AudioStream" uid="uid://dp2f2ob8mej75" path="res://Assets/Sounds/notification_blip.wav" id="4_xiyex"]
+[ext_resource type="AudioStream" uid="uid://dor7n82wssg84" path="res://Assets/Sounds/text_click.wav" id="5_50b4c"]
+
+[node name="SfxPlayer" type="AudioStreamPlayer" groups=["sfx_player"]]
+script = ExtResource("1_r6pbq")
+sfx_bank = Dictionary[int, AudioStream]({
+0: ExtResource("2_tt6ts"),
+1: ExtResource("3_umstf"),
+2: ExtResource("4_xiyex"),
+3: ExtResource("5_50b4c")
+})
