@@ -297,12 +297,9 @@ theme = ExtResource("1_t61ho")
 
 [node name="TextOutput" type="RichTextLabel" parent="DialogContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 bbcode_enabled = true
 text = "fsdfsdfsfsdfsdfdsfdsfdsf
 Dialog Test "
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="EndLine" type="TextureRect" parent="DialogContainer"]
 layout_mode = 2

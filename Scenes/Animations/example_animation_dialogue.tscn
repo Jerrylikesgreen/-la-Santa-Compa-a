@@ -56,6 +56,35 @@ tracks/3/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_1t8kk"]
+resource_name = "do_a_barrel_roll"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScene/Player:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Assets/Dialogues/examples/example_01.csv"],
+"method": &"start_dialogue_brigde"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_6jlvp"]
 resource_name = "end_scene"
 length = 3.0
@@ -160,35 +189,6 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_1t8kk"]
-resource_name = "do_a_barrel_roll"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScene/Player:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, -6.2831855]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BlackScene")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.0333333),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["res://Assets/Dialogues/examples/example_01.csv"],
-"method": &"start_dialogue_brigde"
-}]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1puc"]
 _data = {
 &"RESET": SubResource("Animation_oub6m"),
@@ -204,6 +204,7 @@ libraries = {
 }
 autoplay = "player_walk"
 script = ExtResource("1_1t8kk")
+next_scene = "res://Scenes/Animations/example_animation_dialogue.tscn"
 
 [node name="BlackEndScene" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0)

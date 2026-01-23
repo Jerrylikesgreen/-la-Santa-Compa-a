@@ -32,3 +32,21 @@ text;Animation 1 player_walk;Animacion 1 player_walk;Animacion 1 player_walk
 text;Dialog 1 example_00;Dialogo 1 example_00;Dialogo 1 example_00
 text;Animation 2 do_a_barrel_roll;Animacion 2  do_a_barrel_roll;Animacion 2  do_a_barrel_roll
 text;Dialog 2 example_01;Dialogo 2 example_01;Dialogo 2 example_01
+text;BUT WAIT;PERO ESPERA;PERO ESPERA
+text;THAT'S NOT ALL;ESO NO ES TODO;ISO NON É TODO
+text;Fixing the bug I mentioned, I realized that the second animation wasn't triggering the dialogue box at the end.;Arreglando el fallo que te habia dicho, me he dado cuenta que la segunda animacion no lanzaba el dialgo al acabar;Ao arranxar o erro que mencionei, decateime de que a segunda animación non activaba a caixa de diálogo ao final.
+text;This is very important.;Esto es muy importante;Isto é moi importante.
+text;It was happening because I had accidentally placed the function's diamond shape AFTER the animation's maximum duration.;Pasaba porque sin querer habia puesto el rombo de la func LUEGO del tiempo maximo de la animacion;Sucedía porque colocara accidentalmente a forma de diamante da función DESPOIS da duración máxima da animación.
+text;And therefore, it was never triggering.;Y por tanto, nunca llegaba a lanzarlo;E, polo tanto, nunca se activaba.
+text;We need to make sure to place it right at the end, or a little before.;Tenemos que procurar ponerla justo al final, o un poquillo antes;Temos que asegurarnos de colocala xusto ao final, ou un pouco antes.
+text;And now it's working.;Y ahora si que si;E agora funciona.
+text;Now, I'm going to relaunch this scene. This is also done using animations. You just need to look at the next animation and see which function it uses at the end.;Ahora, voy a relanzar esta escena, esto se hace mediante animaciones tambien, solo te bastara ver la siguiente animacion y ver que func usa al final;Agora, vou relanzar esta escena. Isto tamén se fai usando animacións. Só tes que mirar a seguinte animación e ver que función usa ao final.
+text;Specifically, the next animation that will be triggered is `end_scene` (pretty appropriate, don't you think?).;En concreto, la siguiente animacion que se lanzara es end_scene (bastante apropiado no crees);Especificamente, a seguinte animación que se activará é `end_scene` (bastante apropiado, non cres?).
+text;The same logic applies here: add a function called `change_scene`.;Aqui se aplica la misma logica, es añadir una func llamada change_scene;A mesma lóxica aplícase aquí: engade unha función chamada `change_scene`.
+text;BUT BE CAREFUL!;PERO OJO;PERO COIDADO!
+text;If you look closely, the animator doesn't contain the path to the next scene.;Si te fijas bien, en el animator no esta la ruta a la siguiente escena;Se miras con atención, o animador non contén a ruta á seguinte escena.
+text;For convenience, I thought it would be better to write the scene path from the node itself, as an export variable.;Por comodidad, pense que seria mejor escribir la ruta de la escena desde el propio nodo, como una variable export;Para maior comodidade, pensei que sería mellor escribir a ruta da escena desde o propio nodo, como unha variable de exportación.
+text;And that's it!;Y ya estaria todo;E iso é todo!
+text;Take care. monster;Se me cuida monstruo;Coidate. monstro
+text;UwU;UwU;UwU
+load_animation-end_scene;;;
