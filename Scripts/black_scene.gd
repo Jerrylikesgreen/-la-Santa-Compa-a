@@ -20,10 +20,10 @@ func start_dialogue_brigde(csv_path):
 	#dialogue.path_csv = csv_path
 	#var b = dialogue.path_csv
 	#var c = csv_path
-	var aaa = dialogue.arr_dialogue
+	#var aaa = dialogue.arr_dialogue
 	dialogue.arr_dialogue = CD.load_csv(csv_path)
 	dialogue.index_text = -1
-	var bbb = dialogue.arr_dialogue
+	#var bbb = dialogue.arr_dialogue
 	dialogue.anim_controller.play("fade_in")
 	#CD.start_dialogue(csv_path)
 

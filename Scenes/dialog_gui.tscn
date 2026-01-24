@@ -10,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/path = NodePath("Control/EndLine:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("DialogContainer:modulate")
+tracks/1/path = NodePath("Control/DialogContainer:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -46,7 +46,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("DialogContainer/EndLine:visible")
+tracks/3/path = NodePath("Control/EndLine:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -55,6 +55,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/TextOutput:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/TextOutput:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
 
 [sub_resource type="Animation" id="Animation_53n05"]
 resource_name = "end_line"
@@ -62,7 +86,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/path = NodePath("Control/EndLine:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -74,7 +98,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("DialogContainer/EndLine:visible")
+tracks/1/path = NodePath("Control/EndLine:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -86,14 +110,15 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_86ohs"]
 resource_name = "fade_in"
+length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer:modulate")
+tracks/0/path = NodePath("Control/DialogContainer:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.16666669),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -101,50 +126,51 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = false
-tracks/1/path = NodePath("SpeakerNameLabel:modulate")
+tracks/1/path = NodePath("Control/EndLine:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("DialogContainer/EndLine:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0.03333336),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("DialogContainer/EndLine:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/EndLine:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/TextOutput:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_as34n"]
 resource_name = "fade_out"
+length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer:modulate")
+tracks/0/path = NodePath("Control/DialogContainer:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.16666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -156,7 +182,43 @@ tracks/1/path = NodePath("SpeakerNameLabel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/TextOutput:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/TextOutput:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/EndLine:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -167,7 +229,7 @@ resource_name = "dialogue_off"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer:modulate")
+tracks/0/path = NodePath("Control/DialogContainer:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -183,7 +245,7 @@ step = 0.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DialogContainer/EndLine:modulate")
+tracks/0/path = NodePath("Control/EndLine:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -281,69 +343,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_5dtf6")
 }
 
-[node name="DialogContainer" type="PanelContainer" parent="."]
-anchors_preset = -1
-anchor_top = 0.75000006
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -3.0517578e-05
-offset_right = -17.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme = ExtResource("1_t61ho")
-
-[node name="TextOutput" type="RichTextLabel" parent="DialogContainer"]
-layout_mode = 2
-bbcode_enabled = true
-text = "fsdfsdfsfsdfsdfdsfdsfdsf
-Dialog Test "
-
-[node name="EndLine" type="TextureRect" parent="DialogContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-texture = ExtResource("4_opk4c")
-stretch_mode = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="DialogContainer"]
-visible = false
-layout_mode = 2
-
-[node name="DialogOptions" type="HBoxContainer" parent="DialogContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.5
-theme = ExtResource("1_t61ho")
-
-[node name="HideButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme = ExtResource("1_t61ho")
-text = "Hide Dialog"
-
-[node name="NextButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme = ExtResource("1_t61ho")
-text = "Next"
-
-[node name="SkipButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme = ExtResource("1_t61ho")
-text = "Skip"
-
-[node name="AutoButton" type="Button" parent="DialogContainer/VBoxContainer/DialogOptions"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme = ExtResource("1_t61ho")
-text = "Auto"
-
 [node name="SpeakerNameLabel" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_left = 22.0
@@ -354,6 +353,8 @@ size_flags_horizontal = 0
 theme = ExtResource("1_t61ho")
 text = "no_name"
 label_settings = SubResource("LabelSettings_0kst1")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="SpeakerNameLabel"]
 z_index = -1
@@ -370,6 +371,92 @@ stream = ExtResource("4_7ydem")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -572.0
+offset_top = -163.0
+offset_right = 572.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_t61ho")
+
+[node name="DialogContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TextOutput" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 15.0
+offset_right = -16.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="EndLine" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1113.0
+offset_top = 121.0
+offset_right = 1159.0
+offset_bottom = 180.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("4_opk4c")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 0
+
+[node name="DialogOptions" type="HBoxContainer" parent="Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("1_t61ho")
+
+[node name="HideButton" type="Button" parent="Control/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
+text = "Hide Dialog"
+
+[node name="NextButton" type="Button" parent="Control/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
+text = "Next"
+
+[node name="SkipButton" type="Button" parent="Control/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
+text = "Skip"
+
+[node name="AutoButton" type="Button" parent="Control/VBoxContainer/DialogOptions"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_t61ho")
+text = "Auto"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

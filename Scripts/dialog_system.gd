@@ -6,17 +6,17 @@ extends CanvasLayer
 @export var languaje_key = "gl"
 # OnReady
 @onready var anim_main = get_tree().get_nodes_in_group("animation_main")[0]
-@onready var dialogue_text = $DialogContainer/TextOutput
+@onready var dialogue_text = $Control/TextOutput
 @onready var name_text = $SpeakerNameLabel
 @onready var asp_talk = $AudioStreamPlayer2D
 @onready var anim_controller = $AnimationPlayer
 @onready var anim_name_box = $AnimName
-@onready var end_line_icon = $DialogContainer/EndLine
+@onready var end_line_icon = $Control/EndLine
 @onready var timer = $Timer
 @onready var spr_img = $Image
 # Text
 var arr_dialogue = []
-var text_speed = 0.05
+var text_speed = 0.025
 var index_text = -1
 var writting = false
 var fin_fade_in = false
@@ -51,7 +51,6 @@ func _ready():
 	end_line.connect(signal_end_line)
 func _process(_delta):
 	if !end:
-		
 		# Stop timer if is auto mode walk and you are not walking
 		if CD.auto_mode == CD.auto_mode_enum.AUTO_WALK and  timer.time_left > 0:
 			if CD.moving: timer.paused = false
@@ -64,6 +63,10 @@ func _process(_delta):
 				click_auto = false
 				anim_controller.play("idle")
 				
+				#var aaaaaa = arr_dialogue.size()-1
+				#if index_text >= arr_dialogue.size()-1:
+					#anim_controller.play("fade_out")
+					
 				if writting:
 					
 					# If auto we return
@@ -81,15 +84,13 @@ func _process(_delta):
 					
 					# The CSV ended?
 					#var aaaa = arr_dialogue.size()
-					if index_text >= arr_dialogue.size()-1:
-						anim_controller.play("fade_out")
 					
 					# Next line
-					else:
+					#else:
 						get_next_line()
 	elif delete_after_end: 
 		CD.player_movement = true
-		queue_free()
+		#queue_free()
 # Signals
 func signal_inicio_dialogo():
 	if CD.auto_mode_normal: timer.start() #can_start_timer = true
@@ -105,7 +106,9 @@ func _on_timer_timeout() -> void:
 	click_auto = true
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_in":
+		name_text.text = "no_name"
 		start_dialogue.emit()
+		end = false
 	elif anim_name == "fade_out":
 		end_dialogue.emit()
 		end = true
@@ -185,5 +188,6 @@ func changue_background_img(id):
 	# Process the next line
 	get_next_line()
 func change_animation(id):
-	anim_main.play(id)
 	get_next_line()
+	anim_controller.play("fade_out")
+	anim_main.play(id)
